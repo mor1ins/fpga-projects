@@ -1,0 +1,138 @@
+|main
+num1_view[0] <= display_view:inst3.segs[0]
+num1_view[1] <= display_view:inst3.segs[1]
+num1_view[2] <= display_view:inst3.segs[2]
+num1_view[3] <= display_view:inst3.segs[3]
+num1_view[4] <= display_view:inst3.segs[4]
+num1_view[5] <= display_view:inst3.segs[5]
+num1_view[6] <= display_view:inst3.segs[6]
+num1[0] => display_view:inst3.value[0]
+num1[0] => comp2:inst.x[0]
+num1[1] => display_view:inst3.value[1]
+num1[1] => comp2:inst.x[1]
+num2_view[0] <= display_view:inst4.segs[0]
+num2_view[1] <= display_view:inst4.segs[1]
+num2_view[2] <= display_view:inst4.segs[2]
+num2_view[3] <= display_view:inst4.segs[3]
+num2_view[4] <= display_view:inst4.segs[4]
+num2_view[5] <= display_view:inst4.segs[5]
+num2_view[6] <= display_view:inst4.segs[6]
+num2[0] => display_view:inst4.value[0]
+num2[0] => comp2:inst.y[0]
+num2[1] => display_view:inst4.value[1]
+num2[1] => comp2:inst.y[1]
+sign[0] <= display_view:inst2.segs[0]
+sign[1] <= display_view:inst2.segs[1]
+sign[2] <= display_view:inst2.segs[2]
+sign[3] <= display_view:inst2.segs[3]
+sign[4] <= display_view:inst2.segs[4]
+sign[5] <= display_view:inst2.segs[5]
+sign[6] <= display_view:inst2.segs[6]
+
+
+|main|display_view:inst3
+value[0] => Mux0.IN10
+value[0] => Mux1.IN10
+value[0] => Mux2.IN10
+value[0] => Mux3.IN10
+value[0] => Mux4.IN10
+value[0] => Mux5.IN10
+value[0] => Mux6.IN5
+value[1] => Mux0.IN9
+value[1] => Mux1.IN9
+value[1] => Mux2.IN9
+value[1] => Mux3.IN9
+value[1] => Mux4.IN9
+value[1] => Mux5.IN9
+value[1] => Mux6.IN4
+is_num => Mux0.IN8
+is_num => Mux1.IN8
+is_num => Mux2.IN8
+is_num => Mux3.IN8
+is_num => Mux4.IN8
+is_num => Mux5.IN8
+segs[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segs[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segs[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segs[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segs[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segs[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segs[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|display_view:inst4
+value[0] => Mux0.IN10
+value[0] => Mux1.IN10
+value[0] => Mux2.IN10
+value[0] => Mux3.IN10
+value[0] => Mux4.IN10
+value[0] => Mux5.IN10
+value[0] => Mux6.IN5
+value[1] => Mux0.IN9
+value[1] => Mux1.IN9
+value[1] => Mux2.IN9
+value[1] => Mux3.IN9
+value[1] => Mux4.IN9
+value[1] => Mux5.IN9
+value[1] => Mux6.IN4
+is_num => Mux0.IN8
+is_num => Mux1.IN8
+is_num => Mux2.IN8
+is_num => Mux3.IN8
+is_num => Mux4.IN8
+is_num => Mux5.IN8
+segs[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segs[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segs[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segs[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segs[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segs[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segs[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|display_view:inst2
+value[0] => Mux0.IN10
+value[0] => Mux1.IN10
+value[0] => Mux2.IN10
+value[0] => Mux3.IN10
+value[0] => Mux4.IN10
+value[0] => Mux5.IN10
+value[0] => Mux6.IN5
+value[1] => Mux0.IN9
+value[1] => Mux1.IN9
+value[1] => Mux2.IN9
+value[1] => Mux3.IN9
+value[1] => Mux4.IN9
+value[1] => Mux5.IN9
+value[1] => Mux6.IN4
+is_num => Mux0.IN8
+is_num => Mux1.IN8
+is_num => Mux2.IN8
+is_num => Mux3.IN8
+is_num => Mux4.IN8
+is_num => Mux5.IN8
+segs[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segs[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segs[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segs[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segs[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segs[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segs[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|comp2:inst
+x[0] => z1.IN1
+x[0] => z1.IN0
+x[0] => z2.IN0
+x[1] => z1.IN1
+x[1] => nX1_and_nY0.IN0
+x[1] => z2.IN1
+y[0] => z2.IN1
+y[0] => nX1_and_nY0.IN1
+y[1] => z2.IN1
+y[1] => z1.IN1
+y[1] => z2.IN1
+res[0] <= z2.DB_MAX_OUTPUT_PORT_TYPE
+res[1] <= z1.DB_MAX_OUTPUT_PORT_TYPE
+
+
