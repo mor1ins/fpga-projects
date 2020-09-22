@@ -1,0 +1,7 @@
+i clk
+m 0 0
+u 2 3
+p {p:clk}{t:current_value.C}
+e ckid0_0 {t:current_value.C} dffre
+c ckid0_0 {p:clk} Unconstrained_port Inferred clock from port
+l 0 0 0 0 0

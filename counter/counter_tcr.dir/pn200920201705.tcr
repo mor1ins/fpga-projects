@@ -1,0 +1,4 @@
+#Start recording tcl command: 9/20/2020 19:52:57
+#Project Location: C:/Users/Eduard/Documents/GitHub/fpga/counter; Project name: counter
+prj_project open "C:/Users/Eduard/Documents/GitHub/fpga/counter/counter.ldf"
+#Stop recording: 9/20/2020 20:17:05

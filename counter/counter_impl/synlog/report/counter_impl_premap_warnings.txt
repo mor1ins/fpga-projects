@@ -1,0 +1,2 @@
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MT529 :"c:\users\eduard\documents\github\fpga\counter\counter.vhd":23:8:23:9|Found inferred clock led|clk which controls 3 sequential elements including current_value. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

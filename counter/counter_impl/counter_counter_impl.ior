@@ -1,0 +1,58 @@
+Loading design for application iotiming from file counter_counter_impl.ncd.
+Design name: led
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HE
+Package:     TQFP144
+Performance: 5
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file counter_counter_impl.ncd.
+Design name: led
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HE
+Package:     TQFP144
+Performance: 6
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file counter_counter_impl.ncd.
+Design name: led
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HE
+Package:     TQFP144
+Performance: M
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: led
+// Package: TQFP144
+// ncd File: counter_counter_impl.ncd
+// Version: Diamond (64-bit) 3.11.0.396.4
+// Written on Sun Sep 20 00:19:43 2020
+// M: Minimum Performance Grade
+// iotiming counter_counter_impl.ncd counter_counter_impl.prf -gui
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5, 4):
+
+// Input Setup and Hold Times
+
+Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+(no input setup/hold data)
+
+
+// Clock to Output Delay
+
+Port    Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+leds[0] clk   R     9.571         4        2.663          M
+leds[1] clk   R     9.571         4        2.663          M
+leds[2] clk   R     9.181         4        2.553          M
+leds[3] clk   R     9.181         4        2.553          M
+leds[4] clk   R     9.066         4        2.531          M
+leds[5] clk   R     9.466         4        2.640          M
+leds[6] clk   R     9.466         4        2.640          M
+leds[7] clk   R     9.496         4        2.634          M

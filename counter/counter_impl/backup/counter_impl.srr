@@ -1,0 +1,631 @@
+#Build: Synplify Pro (R) N-2018.03L-SP1-1, Build 443R, Apr  1 2019
+#install: C:\lscc\diamond\3.11_x64\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-9NPFMK2
+
+# Sat Sep 19 22:52:22 2020
+
+#Implementation: counter_impl
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-9NPFMK2
+
+Implementation : counter_impl
+Synopsys HDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-9NPFMK2
+
+Implementation : counter_impl
+Synopsys VHDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+@N:"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":5:7:5:9|Top entity is set to led.
+@N: CD895 :"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":15:20:15:32|Setting attribute syn_ramstyle to "no_rw_check" on shared variable current_value
+VHDL syntax check successful!
+@N: CD630 :"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":5:7:5:9|Synthesizing work.led.rtl.
+Post processing for work.led.rtl
+Running optimization stage 1 on led .......
+Running optimization stage 2 on led .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synwork\layer0.rt.csv
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 69MB peak: 70MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Sep 19 22:52:22 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-9NPFMK2
+
+Implementation : counter_impl
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+@N: NF107 :"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":5:7:5:9|Selected library: work cell: led view rtl as top level
+@N: NF107 :"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":5:7:5:9|Selected library: work cell: led view rtl as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Sep 19 22:52:22 2020
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synwork\counter_impl_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Sep 19 22:52:23 2020
+
+###########################################################]
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-9NPFMK2
+
+Database state : C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synwork\|counter_impl
+Synopsys Synopsys Netlist Linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+@N|Running in 64-bit mode
+@N: NF107 :"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":5:7:5:9|Selected library: work cell: led view rtl as top level
+@N: NF107 :"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":5:7:5:9|Selected library: work cell: led view rtl as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Sep 19 22:52:24 2020
+
+###########################################################]
+Premap Report
+
+# Sat Sep 19 22:52:24 2020
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-9NPFMK2
+
+Implementation : counter_impl
+Synopsys Lattice Technology Pre-mapping, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@N: MF284 |Setting synthesis effort to medium for the design
+@L: C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\counter_impl_scck.rpt 
+Printing clock  summary report in "C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\counter_impl_scck.rpt" file 
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: MH105 |UMR3 is only supported for HAPS-80.
+@N: MH105 |UMR3 is only supported for HAPS-80.
+syn_allowed_resources : blockrams=26  set on top level netlist led
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+
+
+Clock Summary
+******************
+
+          Start       Requested     Requested     Clock        Clock                     Clock
+Level     Clock       Frequency     Period        Type         Group                     Load 
+----------------------------------------------------------------------------------------------
+0 -       led|clk     635.5 MHz     1.574         inferred     Autoconstr_clkgroup_0     3    
+==============================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+            Clock     Source        Clock Pin        Non-clock Pin     Non-clock Pin
+Clock       Load      Pin           Seq Example      Seq Example       Comb Example 
+------------------------------------------------------------------------------------
+led|clk     3         clk(port)     count[1:0].C     -                 -            
+====================================================================================
+
+@W: MT529 :"c:\users\eduard\documents\github\fpga\counter\counter.vhd":23:8:23:9|Found inferred clock led|clk which controls 3 sequential elements including current_value. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 3 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       clk                 Unconstrained_port     3          current_value  
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 142MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 55MB peak: 142MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 19 22:52:25 2020
+
+###########################################################]
+Map & Optimize Report
+
+# Sat Sep 19 22:52:25 2020
+
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-9NPFMK2
+
+Implementation : counter_impl
+Synopsys Lattice Technology Mapper, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+@N: MF284 |Setting synthesis effort to medium for the design
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Auto Constrain mode is enabled
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -0.71ns		   4 /         3
+
+
+
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 141MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 141MB)
+
+Writing Analyst data base C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synwork\counter_impl_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 141MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\counter_impl.edi
+N-2018.03L-SP1-1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 145MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 144MB peak: 145MB)
+
+@W: MT420 |Found inferred clock led|clk with period 1.51ns. Please declare a user-defined clock on port clk.
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Sat Sep 19 22:52:26 2020
+#
+
+
+Top view:               led
+Requested Frequency:    660.4 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.267
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group                
+------------------------------------------------------------------------------------------------------------------------
+led|clk            660.4 MHz     561.4 MHz     1.514         1.781         -0.267     inferred     Autoconstr_clkgroup_0
+========================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks             |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------
+Starting  Ending   |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------
+led|clk   led|clk  |  1.514       -0.267  |  No paths    -      |  No paths    -      |  No paths    -    
+==========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: led|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                  Starting                                        Arrival           
+Instance          Reference     Type        Pin     Net           Time        Slack 
+                  Clock                                                             
+------------------------------------------------------------------------------------
+count[0]          led|clk       FD1S3AX     Q       count[0]      1.108       -0.267
+count[1]          led|clk       FD1S3AX     Q       count[1]      1.044       -0.058
+current_value     led|clk       FD1S3AX     Q       leds_c[7]     1.044       -0.058
+====================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                  Starting                                              Required           
+Instance          Reference     Type        Pin     Net                 Time         Slack 
+                  Clock                                                                    
+-------------------------------------------------------------------------------------------
+count[0]          led|clk       FD1S3AX     D       count_i[0]          1.409        -0.267
+count[1]          led|clk       FD1S3AX     D       count_RNO[1]        1.603        -0.122
+current_value     led|clk       FD1S3AX     D       current_value_0     1.603        -0.122
+===========================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1.514
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.409
+
+    - Propagation time:                      1.676
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.267
+
+    Number of logic level(s):                1
+    Starting point:                          count[0] / Q
+    Ending point:                            count[0] / D
+    The start point is clocked by            led|clk [rising] on pin CK
+    The end   point is clocked by            led|clk [rising] on pin CK
+
+Instance / Net                 Pin      Pin               Arrival     No. of    
+Name               Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------
+count[0]           FD1S3AX     Q        Out     1.108     1.108       -         
+count[0]           Net         -        -       -         -           3         
+count_RNO[0]       INV         A        In      0.000     1.108       -         
+count_RNO[0]       INV         Z        Out     0.568     1.676       -         
+count_i[0]         Net         -        -       -         -           1         
+count[0]           FD1S3AX     D        In      0.000     1.676       -         
+================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      1.514
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.603
+
+    - Propagation time:                      1.725
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.122
+
+    Number of logic level(s):                1
+    Starting point:                          count[0] / Q
+    Ending point:                            count[1] / D
+    The start point is clocked by            led|clk [rising] on pin CK
+    The end   point is clocked by            led|clk [rising] on pin CK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+count[0]           FD1S3AX      Q        Out     1.108     1.108       -         
+count[0]           Net          -        -       -         -           3         
+count_RNO[1]       ORCALUT4     A        In      0.000     1.108       -         
+count_RNO[1]       ORCALUT4     Z        Out     0.617     1.725       -         
+count_RNO[1]       Net          -        -       -         -           1         
+count[1]           FD1S3AX      D        In      0.000     1.725       -         
+=================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      1.514
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.603
+
+    - Propagation time:                      1.725
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.122
+
+    Number of logic level(s):                1
+    Starting point:                          count[0] / Q
+    Ending point:                            current_value / D
+    The start point is clocked by            led|clk [rising] on pin CK
+    The end   point is clocked by            led|clk [rising] on pin CK
+
+Instance / Net                   Pin      Pin               Arrival     No. of    
+Name                Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------
+count[0]            FD1S3AX      Q        Out     1.108     1.108       -         
+count[0]            Net          -        -       -         -           3         
+current_value_0     ORCALUT4     C        In      0.000     1.108       -         
+current_value_0     ORCALUT4     Z        Out     0.617     1.725       -         
+current_value_0     Net          -        -       -         -           1         
+current_value       FD1S3AX      D        In      0.000     1.725       -         
+==================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      1.514
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.603
+
+    - Propagation time:                      1.661
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.058
+
+    Number of logic level(s):                1
+    Starting point:                          count[1] / Q
+    Ending point:                            count[1] / D
+    The start point is clocked by            led|clk [rising] on pin CK
+    The end   point is clocked by            led|clk [rising] on pin CK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+count[1]           FD1S3AX      Q        Out     1.044     1.044       -         
+count[1]           Net          -        -       -         -           2         
+count_RNO[1]       ORCALUT4     B        In      0.000     1.044       -         
+count_RNO[1]       ORCALUT4     Z        Out     0.617     1.661       -         
+count_RNO[1]       Net          -        -       -         -           1         
+count[1]           FD1S3AX      D        In      0.000     1.661       -         
+=================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      1.514
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.603
+
+    - Propagation time:                      1.661
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.058
+
+    Number of logic level(s):                1
+    Starting point:                          current_value / Q
+    Ending point:                            current_value / D
+    The start point is clocked by            led|clk [rising] on pin CK
+    The end   point is clocked by            led|clk [rising] on pin CK
+
+Instance / Net                   Pin      Pin               Arrival     No. of    
+Name                Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------
+current_value       FD1S3AX      Q        Out     1.044     1.044       -         
+leds_c[7]           Net          -        -       -         -           2         
+current_value_0     ORCALUT4     A        In      0.000     1.044       -         
+current_value_0     ORCALUT4     Z        Out     0.617     1.661       -         
+current_value_0     Net          -        -       -         -           1         
+current_value       FD1S3AX      D        In      0.000     1.661       -         
+==================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 144MB peak: 145MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 144MB peak: 145MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo2_7000he-4
+
+Register bits: 3 of 6864 (0%)
+PIC Latch:       0
+I/O cells:       9
+
+
+Details:
+FD1S3AX:        3
+GSR:            1
+IB:             1
+INV:            1
+OB:             8
+ORCALUT4:       2
+PUR:            1
+VHI:            1
+VLO:            1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 30MB peak: 145MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 19 22:52:27 2020
+
+###########################################################]

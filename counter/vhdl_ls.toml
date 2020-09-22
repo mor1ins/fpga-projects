@@ -1,0 +1,7 @@
+# File names are either absolute or relative to the parent folder of the
+# vhdl_ls.toml file and supports glob-style patterns.
+[libraries]
+
+lib1.files = [
+  '*.vhd',
+]

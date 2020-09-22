@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Report>
+<ReportView version="2.0">
+    <Implement name="counter_impl">
+        <ToolReport id="tooldec" path="" status="0"/>
+        <ToolReport id="toolhle_genhierarchy" path="C:/Users/Eduard/Documents/GitHub/fpga/counter/counter_impl/hdla_gen_hierarchy.html" status="1"/>
+        <ToolReport id="toolpio" path="" status="2"/>
+        <ToolReport id="toolsso" path="C:/Users/Eduard/Documents/GitHub/fpga/counter/sso_rpt.htm" status="2"/>
+    </Implement>
+</ReportView>

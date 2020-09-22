@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="counter" device="LCMXO2-7000HE-4TG144I" default_implementation="counter_impl">
+    <Options/>
+    <Implementation title="counter_impl" dir="counter_impl" description="counter_impl" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="led"/>
+        <Source name="counter.vhd" type="VHDL" type_short="VHDL">
+            <Options top_module="led"/>
+        </Source>
+        <Source name="counter.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="counter_impl/counter_impl.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="counter_simulation/counter_simulation.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="counter1.sty"/>
+</BaliProject>

@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe  -link  -multisrs  C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synwork\counter_impl_comp.srs  -osyn  C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synwork\counter_impl_mult.srs  -log  C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synlog\counter_impl_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe -link -multisrs ..\synwork\counter_impl_comp.srs -osyn ..\synwork\counter_impl_mult.srs -log ..\synlog\counter_impl_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\counter_impl_comp.srs|io:i|time:1600545142|size:2011|exec:0|csum:7229BDA168812D1CA8DD6789EFA5BF7E
+file:..\synwork\counter_impl_mult.srs|io:o|time:1600545144|size:1724|exec:0|csum:
+file:..\synlog\counter_impl_multi_srs_gen.srr|io:o|time:1600545144|size:1324|exec:0|csum:
+file:..\..\..\..\..\..\..\..\lscc\diamond\3.11_x64\synpbase\bin64\syn_nfilter.exe|io:i|time:1554099752|size:8734720|exec:1|csum:0A206A5298321BBDD627E7975EAE3EC2

@@ -1,0 +1,9 @@
+@N: CD630 :"C:\Users\Eduard\Documents\GitHub\fpga\counter\counter.vhd":5:7:5:9|Synthesizing work.led.rtl.
+Post processing for work.led.rtl
+Running optimization stage 1 on led .......
+Running optimization stage 2 on led .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\Eduard\Documents\GitHub\fpga\counter\counter_impl\synwork\layer0.rt.csv
+

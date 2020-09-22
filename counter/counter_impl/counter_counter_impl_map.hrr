@@ -1,0 +1,9 @@
+---------------------------------------------------
+Report for cell led
+   Instance path: led
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      20.00        100.0
+                                 IOBUF	          9        100.0
+                                PFUREG	         40        100.0
+                                RIPPLE	         17        100.0
