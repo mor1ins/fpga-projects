@@ -1,0 +1,29 @@
+PAR: Place And Route Diamond (64-bit) 3.11.3.469.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Sep 28 22:59:43 2020
+
+C:/lscc/diamond/3.11_x64/ispfpga\bin\nt64\par -f
+Crosslink_CSI2ToRaw10_Crosslink.p2t Crosslink_CSI2ToRaw10_Crosslink_map.ncd
+Crosslink_CSI2ToRaw10_Crosslink.dir Crosslink_CSI2ToRaw10_Crosslink.prf -gui
+
+
+Preference file: Crosslink_CSI2ToRaw10_Crosslink.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1          -            -            -            -            -            04:20        Failed
+
+* : Design saved.
+
+INFO - par: Iteration 5_1 failed due to design error(s).
+
+ERROR - par: All 1 iterations failed with design error(s). It is recommended to correct all design errors before running multiple iterations. Please check the Place and Route reports (.par) for the individual iterations under the directory "C:\Users\Eduard\Documents\GitHub\fpga-projects\Crosslink_CSI2ToRaw10\Crosslink\Crosslink_CSI2ToRaw10_Crosslink.dir".
+
+Total (real) run time for 1-seed: 4 mins 21 secs 
+
+par failed!

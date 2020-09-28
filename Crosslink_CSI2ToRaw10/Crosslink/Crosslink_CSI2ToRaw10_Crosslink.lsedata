@@ -1,0 +1,586 @@
+<top name = "Crosslink_CSI2ToRaw10"  library = "work"  arch = "RTL"  entry = "VHDL">
+
+<clocks>
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 0
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+<library name = "work">
+
+<unit name = "Crosslink_CSI2ToRaw10">
+
+    <!--
+        Top Level Pins: 33
+    -->
+
+    <pins>
+        <pitem  name = "csi2_dphy_bd0_o[7]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_bd0_o[6]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_bd0_o[5]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_bd0_o[4]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_bd0_o[3]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_bd0_o[2]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_bd0_o[1]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_bd0_o[0]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_lp_hs_state_clk_o[1]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_lp_hs_state_clk_o[0]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_lp_hs_state_d_o[1]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_lp_hs_state_d_o[0]"  direction = "out"  />
+        <pitem  name = "csi2_dphy_capture_en_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_cd_d0_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_clk_byte_fr_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_clk_byte_hs_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_clk_byte_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_clk_lp_ctrl_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_clk_n_i"  direction = "inout"  />
+        <pitem  name = "csi2_dphy_clk_p_i"  direction = "inout"  />
+        <pitem  name = "csi2_dphy_d0_n_i"  direction = "inout"  />
+        <pitem  name = "csi2_dphy_d0_p_i"  direction = "inout"  />
+        <pitem  name = "csi2_dphy_hs_d_en_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_hs_sync_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_lp_d0_rx_n_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_lp_d0_rx_p_o"  direction = "out"  />
+        <pitem  name = "csi2_dphy_pd_dphy_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_pll_lock_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_reset_byte_fr_n_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_reset_byte_n_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_reset_lp_n_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_reset_n_i"  direction = "in"  />
+        <pitem  name = "csi2_dphy_term_clk_en_o"  direction = "out"  />
+    </pins>
+
+    <!--
+        Instances in netlist: 9
+    -->
+
+    <instance  name = "csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "clk_byte_fr_i"  direction = "in"  />
+        <pitem  name = "reset_n_i"  direction = "in"  />
+        <pitem  name = "reset_byte_n_i"  direction = "in"  />
+        <pitem  name = "reset_byte_fr_n_i"  direction = "in"  />
+        <pitem  name = "clk_byte_i"  direction = "in"  />
+        <pitem  name = "hs_d0_en_i"  direction = "in"  />
+        <pitem  name = "hs_sync_o"  direction = "out"  />
+        <pitem  name = "term_d0_en_i"  direction = "in"  />
+        <pitem  name = "term_d1_en_i"  direction = "in"  />
+        <pitem  name = "term_d2_en_i"  direction = "in"  />
+        <pitem  name = "term_d3_en_i"  direction = "in"  />
+        <pitem  name = "hs_d1_en_i"  direction = "in"  />
+        <pitem  name = "hs_d2_en_i"  direction = "in"  />
+        <pitem  name = "hs_d3_en_i"  direction = "in"  />
+        <pitem  name = "bd0_o[7]"  direction = "out"  />
+        <pitem  name = "bd0_o[6]"  direction = "out"  />
+        <pitem  name = "bd0_o[5]"  direction = "out"  />
+        <pitem  name = "bd0_o[4]"  direction = "out"  />
+        <pitem  name = "bd0_o[3]"  direction = "out"  />
+        <pitem  name = "bd0_o[2]"  direction = "out"  />
+        <pitem  name = "bd0_o[1]"  direction = "out"  />
+        <pitem  name = "bd0_o[0]"  direction = "out"  />
+        <pitem  name = "bd1_o[7]"  direction = "out"  />
+        <pitem  name = "bd1_o[6]"  direction = "out"  />
+        <pitem  name = "bd1_o[5]"  direction = "out"  />
+        <pitem  name = "bd1_o[4]"  direction = "out"  />
+        <pitem  name = "bd1_o[3]"  direction = "out"  />
+        <pitem  name = "bd1_o[2]"  direction = "out"  />
+        <pitem  name = "bd1_o[1]"  direction = "out"  />
+        <pitem  name = "bd1_o[0]"  direction = "out"  />
+        <pitem  name = "bd2_o[7]"  direction = "out"  />
+        <pitem  name = "bd2_o[6]"  direction = "out"  />
+        <pitem  name = "bd2_o[5]"  direction = "out"  />
+        <pitem  name = "bd2_o[4]"  direction = "out"  />
+        <pitem  name = "bd2_o[3]"  direction = "out"  />
+        <pitem  name = "bd2_o[2]"  direction = "out"  />
+        <pitem  name = "bd2_o[1]"  direction = "out"  />
+        <pitem  name = "bd2_o[0]"  direction = "out"  />
+        <pitem  name = "bd3_o[7]"  direction = "out"  />
+        <pitem  name = "bd3_o[6]"  direction = "out"  />
+        <pitem  name = "bd3_o[5]"  direction = "out"  />
+        <pitem  name = "bd3_o[4]"  direction = "out"  />
+        <pitem  name = "bd3_o[3]"  direction = "out"  />
+        <pitem  name = "bd3_o[2]"  direction = "out"  />
+        <pitem  name = "bd3_o[1]"  direction = "out"  />
+        <pitem  name = "bd3_o[0]"  direction = "out"  />
+        <pitem  name = "d_sot_det[3]"  direction = "in"  />
+        <pitem  name = "d_sot_det[2]"  direction = "in"  />
+        <pitem  name = "d_sot_det[1]"  direction = "in"  />
+        <pitem  name = "d_sot_det[0]"  direction = "in"  />
+        <pitem  name = "d_sote_det[3]"  direction = "in"  />
+        <pitem  name = "d_sote_det[2]"  direction = "in"  />
+        <pitem  name = "d_sote_det[1]"  direction = "in"  />
+        <pitem  name = "d_sote_det[0]"  direction = "in"  />
+        <pitem  name = "bd0_i[7]"  direction = "in"  />
+        <pitem  name = "bd0_i[6]"  direction = "in"  />
+        <pitem  name = "bd0_i[5]"  direction = "in"  />
+        <pitem  name = "bd0_i[4]"  direction = "in"  />
+        <pitem  name = "bd0_i[3]"  direction = "in"  />
+        <pitem  name = "bd0_i[2]"  direction = "in"  />
+        <pitem  name = "bd0_i[1]"  direction = "in"  />
+        <pitem  name = "bd0_i[0]"  direction = "in"  />
+        <pitem  name = "bd1_i[7]"  direction = "in"  />
+        <pitem  name = "bd1_i[6]"  direction = "in"  />
+        <pitem  name = "bd1_i[5]"  direction = "in"  />
+        <pitem  name = "bd1_i[4]"  direction = "in"  />
+        <pitem  name = "bd1_i[3]"  direction = "in"  />
+        <pitem  name = "bd1_i[2]"  direction = "in"  />
+        <pitem  name = "bd1_i[1]"  direction = "in"  />
+        <pitem  name = "bd1_i[0]"  direction = "in"  />
+        <pitem  name = "bd2_i[7]"  direction = "in"  />
+        <pitem  name = "bd2_i[6]"  direction = "in"  />
+        <pitem  name = "bd2_i[5]"  direction = "in"  />
+        <pitem  name = "bd2_i[4]"  direction = "in"  />
+        <pitem  name = "bd2_i[3]"  direction = "in"  />
+        <pitem  name = "bd2_i[2]"  direction = "in"  />
+        <pitem  name = "bd2_i[1]"  direction = "in"  />
+        <pitem  name = "bd2_i[0]"  direction = "in"  />
+        <pitem  name = "bd3_i[7]"  direction = "in"  />
+        <pitem  name = "bd3_i[6]"  direction = "in"  />
+        <pitem  name = "bd3_i[5]"  direction = "in"  />
+        <pitem  name = "bd3_i[4]"  direction = "in"  />
+        <pitem  name = "bd3_i[3]"  direction = "in"  />
+        <pitem  name = "bd3_i[2]"  direction = "in"  />
+        <pitem  name = "bd3_i[1]"  direction = "in"  />
+        <pitem  name = "bd3_i[0]"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "csi2_dphy_clk_byte_fr_i"  />
+        <nitem  name = "csi2_dphy_reset_n_i"  />
+        <nitem  name = "csi2_dphy_reset_byte_n_i"  />
+        <nitem  name = "csi2_dphy_reset_byte_fr_n_i"  />
+        <nitem  name = "csi2_dphy_clk_byte_o"  />
+        <nitem  name = "csi2_dphy_hs_d_en_o"  />
+        <nitem  name = "csi2_dphy_hs_sync_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d0_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d1_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d2_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d3_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_d1_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_d2_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_d3_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sot_det_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sot_det_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sot_det_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sot_det_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sote_det_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sote_det_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sote_det_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/d_sote_det_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "reset_n_i"  direction = "in"  />
+        <pitem  name = "bd0_o[7]"  direction = "out"  />
+        <pitem  name = "bd0_o[6]"  direction = "out"  />
+        <pitem  name = "bd0_o[5]"  direction = "out"  />
+        <pitem  name = "bd0_o[4]"  direction = "out"  />
+        <pitem  name = "bd0_o[3]"  direction = "out"  />
+        <pitem  name = "bd0_o[2]"  direction = "out"  />
+        <pitem  name = "bd0_o[1]"  direction = "out"  />
+        <pitem  name = "bd0_o[0]"  direction = "out"  />
+        <pitem  name = "bd1_o[7]"  direction = "out"  />
+        <pitem  name = "bd1_o[6]"  direction = "out"  />
+        <pitem  name = "bd1_o[5]"  direction = "out"  />
+        <pitem  name = "bd1_o[4]"  direction = "out"  />
+        <pitem  name = "bd1_o[3]"  direction = "out"  />
+        <pitem  name = "bd1_o[2]"  direction = "out"  />
+        <pitem  name = "bd1_o[1]"  direction = "out"  />
+        <pitem  name = "bd1_o[0]"  direction = "out"  />
+        <pitem  name = "bd2_o[7]"  direction = "out"  />
+        <pitem  name = "bd2_o[6]"  direction = "out"  />
+        <pitem  name = "bd2_o[5]"  direction = "out"  />
+        <pitem  name = "bd2_o[4]"  direction = "out"  />
+        <pitem  name = "bd2_o[3]"  direction = "out"  />
+        <pitem  name = "bd2_o[2]"  direction = "out"  />
+        <pitem  name = "bd2_o[1]"  direction = "out"  />
+        <pitem  name = "bd2_o[0]"  direction = "out"  />
+        <pitem  name = "bd3_o[7]"  direction = "out"  />
+        <pitem  name = "bd3_o[6]"  direction = "out"  />
+        <pitem  name = "bd3_o[5]"  direction = "out"  />
+        <pitem  name = "bd3_o[4]"  direction = "out"  />
+        <pitem  name = "bd3_o[3]"  direction = "out"  />
+        <pitem  name = "bd3_o[2]"  direction = "out"  />
+        <pitem  name = "bd3_o[1]"  direction = "out"  />
+        <pitem  name = "bd3_o[0]"  direction = "out"  />
+        <pitem  name = "hs_d0_en_i"  direction = "in"  />
+        <pitem  name = "hs_d1_en_i"  direction = "in"  />
+        <pitem  name = "hs_d2_en_i"  direction = "in"  />
+        <pitem  name = "hs_d3_en_i"  direction = "in"  />
+        <pitem  name = "hs_clk_en_i"  direction = "in"  />
+        <pitem  name = "lp_d0_tx_en_i"  direction = "in"  />
+        <pitem  name = "lp_d0_tx_p_i"  direction = "in"  />
+        <pitem  name = "lp_d0_tx_n_i"  direction = "in"  />
+        <pitem  name = "lp_clk_rx_p_o"  direction = "out"  />
+        <pitem  name = "lp_clk_rx_n_o"  direction = "out"  />
+        <pitem  name = "lp_d0_rx_p_o"  direction = "out"  />
+        <pitem  name = "lp_d0_rx_n_o"  direction = "out"  />
+        <pitem  name = "lp_d1_rx_p_o"  direction = "out"  />
+        <pitem  name = "lp_d1_rx_n_o"  direction = "out"  />
+        <pitem  name = "lp_d2_rx_p_o"  direction = "out"  />
+        <pitem  name = "lp_d2_rx_n_o"  direction = "out"  />
+        <pitem  name = "lp_d3_rx_p_o"  direction = "out"  />
+        <pitem  name = "lp_d3_rx_n_o"  direction = "out"  />
+        <pitem  name = "cd_clk_o"  direction = "out"  />
+        <pitem  name = "cd_d0_o"  direction = "out"  />
+        <pitem  name = "clk_byte_o"  direction = "out"  />
+        <pitem  name = "clk_p_i"  direction = "inout"  />
+        <pitem  name = "clk_n_i"  direction = "inout"  />
+        <pitem  name = "d0_p_io"  direction = "inout"  />
+        <pitem  name = "d0_n_io"  direction = "inout"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "csi2_dphy_reset_n_i"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_w[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_settle_en_w"  />
+        <nitem  name = "csi2_dphy_term_clk_en_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/gnd"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_clk_rx_p"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_clk_rx_n"  />
+        <nitem  name = "csi2_dphy_lp_d0_rx_p_o"  />
+        <nitem  name = "csi2_dphy_lp_d0_rx_n_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d1_rx_p_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d1_rx_n_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d2_rx_p_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d2_rx_n_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d3_rx_p_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d3_rx_n_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/cd_clk_o"  />
+        <nitem  name = "csi2_dphy_cd_d0_o"  />
+        <nitem  name = "csi2_dphy_clk_byte_o"  />
+        <nitem  name = "csi2_dphy_clk_p_i"  />
+        <nitem  name = "csi2_dphy_clk_n_i"  />
+        <nitem  name = "csi2_dphy_d0_p_i"  />
+        <nitem  name = "csi2_dphy_d0_n_i"  />
+        </nets>
+    </instance>
+
+    <instance  name = "csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst"  library = "work"  arch = "RTL"  type = "comb">
+        <pins>
+        <pitem  name = "clk_lp_ctrl_i"  direction = "in"  />
+        <pitem  name = "clk_byte_fr_i"  direction = "in"  />
+        <pitem  name = "reset_n_i"  direction = "in"  />
+        <pitem  name = "reset_lp_n_i"  direction = "in"  />
+        <pitem  name = "reset_byte_fr_n_i"  direction = "in"  />
+        <pitem  name = "pll_lock_i"  direction = "in"  />
+        <pitem  name = "clk_byte_i"  direction = "in"  />
+        <pitem  name = "clk_byte_hs_i"  direction = "in"  />
+        <pitem  name = "lp_d0_p_i"  direction = "in"  />
+        <pitem  name = "lp_d0_n_i"  direction = "in"  />
+        <pitem  name = "lp_d1_p_i"  direction = "in"  />
+        <pitem  name = "lp_d1_n_i"  direction = "in"  />
+        <pitem  name = "lp_d2_p_i"  direction = "in"  />
+        <pitem  name = "lp_d2_n_i"  direction = "in"  />
+        <pitem  name = "lp_d3_p_i"  direction = "in"  />
+        <pitem  name = "lp_d3_n_i"  direction = "in"  />
+        <pitem  name = "bd0_o[7]"  direction = "out"  />
+        <pitem  name = "bd0_o[6]"  direction = "out"  />
+        <pitem  name = "bd0_o[5]"  direction = "out"  />
+        <pitem  name = "bd0_o[4]"  direction = "out"  />
+        <pitem  name = "bd0_o[3]"  direction = "out"  />
+        <pitem  name = "bd0_o[2]"  direction = "out"  />
+        <pitem  name = "bd0_o[1]"  direction = "out"  />
+        <pitem  name = "bd0_o[0]"  direction = "out"  />
+        <pitem  name = "bd1_o[7]"  direction = "out"  />
+        <pitem  name = "bd1_o[6]"  direction = "out"  />
+        <pitem  name = "bd1_o[5]"  direction = "out"  />
+        <pitem  name = "bd1_o[4]"  direction = "out"  />
+        <pitem  name = "bd1_o[3]"  direction = "out"  />
+        <pitem  name = "bd1_o[2]"  direction = "out"  />
+        <pitem  name = "bd1_o[1]"  direction = "out"  />
+        <pitem  name = "bd1_o[0]"  direction = "out"  />
+        <pitem  name = "bd2_o[7]"  direction = "out"  />
+        <pitem  name = "bd2_o[6]"  direction = "out"  />
+        <pitem  name = "bd2_o[5]"  direction = "out"  />
+        <pitem  name = "bd2_o[4]"  direction = "out"  />
+        <pitem  name = "bd2_o[3]"  direction = "out"  />
+        <pitem  name = "bd2_o[2]"  direction = "out"  />
+        <pitem  name = "bd2_o[1]"  direction = "out"  />
+        <pitem  name = "bd2_o[0]"  direction = "out"  />
+        <pitem  name = "bd3_o[7]"  direction = "out"  />
+        <pitem  name = "bd3_o[6]"  direction = "out"  />
+        <pitem  name = "bd3_o[5]"  direction = "out"  />
+        <pitem  name = "bd3_o[4]"  direction = "out"  />
+        <pitem  name = "bd3_o[3]"  direction = "out"  />
+        <pitem  name = "bd3_o[2]"  direction = "out"  />
+        <pitem  name = "bd3_o[1]"  direction = "out"  />
+        <pitem  name = "bd3_o[0]"  direction = "out"  />
+        <pitem  name = "hs_sync_o"  direction = "out"  />
+        <pitem  name = "term_clk_en_o"  direction = "out"  />
+        <pitem  name = "hs_d0_en_o"  direction = "out"  />
+        <pitem  name = "lp_hs_state_d_o[1]"  direction = "out"  />
+        <pitem  name = "lp_hs_state_d_o[0]"  direction = "out"  />
+        <pitem  name = "hs_sync_i"  direction = "in"  />
+        <pitem  name = "term_d0_en_o"  direction = "out"  />
+        <pitem  name = "term_d1_en_o"  direction = "out"  />
+        <pitem  name = "term_d2_en_o"  direction = "out"  />
+        <pitem  name = "term_d3_en_o"  direction = "out"  />
+        <pitem  name = "hs_d1_en_o"  direction = "out"  />
+        <pitem  name = "hs_d2_en_o"  direction = "out"  />
+        <pitem  name = "hs_d3_en_o"  direction = "out"  />
+        <pitem  name = "bd0_i[7]"  direction = "in"  />
+        <pitem  name = "bd0_i[6]"  direction = "in"  />
+        <pitem  name = "bd0_i[5]"  direction = "in"  />
+        <pitem  name = "bd0_i[4]"  direction = "in"  />
+        <pitem  name = "bd0_i[3]"  direction = "in"  />
+        <pitem  name = "bd0_i[2]"  direction = "in"  />
+        <pitem  name = "bd0_i[1]"  direction = "in"  />
+        <pitem  name = "bd0_i[0]"  direction = "in"  />
+        <pitem  name = "bd1_i[7]"  direction = "in"  />
+        <pitem  name = "bd1_i[6]"  direction = "in"  />
+        <pitem  name = "bd1_i[5]"  direction = "in"  />
+        <pitem  name = "bd1_i[4]"  direction = "in"  />
+        <pitem  name = "bd1_i[3]"  direction = "in"  />
+        <pitem  name = "bd1_i[2]"  direction = "in"  />
+        <pitem  name = "bd1_i[1]"  direction = "in"  />
+        <pitem  name = "bd1_i[0]"  direction = "in"  />
+        <pitem  name = "bd2_i[7]"  direction = "in"  />
+        <pitem  name = "bd2_i[6]"  direction = "in"  />
+        <pitem  name = "bd2_i[5]"  direction = "in"  />
+        <pitem  name = "bd2_i[4]"  direction = "in"  />
+        <pitem  name = "bd2_i[3]"  direction = "in"  />
+        <pitem  name = "bd2_i[2]"  direction = "in"  />
+        <pitem  name = "bd2_i[1]"  direction = "in"  />
+        <pitem  name = "bd2_i[0]"  direction = "in"  />
+        <pitem  name = "bd3_i[7]"  direction = "in"  />
+        <pitem  name = "bd3_i[6]"  direction = "in"  />
+        <pitem  name = "bd3_i[5]"  direction = "in"  />
+        <pitem  name = "bd3_i[4]"  direction = "in"  />
+        <pitem  name = "bd3_i[3]"  direction = "in"  />
+        <pitem  name = "bd3_i[2]"  direction = "in"  />
+        <pitem  name = "bd3_i[1]"  direction = "in"  />
+        <pitem  name = "bd3_i[0]"  direction = "in"  />
+        <pitem  name = "lp_clk_p_i"  direction = "in"  />
+        <pitem  name = "lp_clk_n_i"  direction = "in"  />
+        <pitem  name = "hs_settle_en_o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "csi2_dphy_clk_lp_ctrl_i"  />
+        <nitem  name = "csi2_dphy_clk_byte_fr_i"  />
+        <nitem  name = "csi2_dphy_reset_n_i"  />
+        <nitem  name = "csi2_dphy_reset_lp_n_i"  />
+        <nitem  name = "csi2_dphy_reset_byte_fr_n_i"  />
+        <nitem  name = "csi2_dphy_pll_lock_i"  />
+        <nitem  name = "csi2_dphy_clk_byte_o"  />
+        <nitem  name = "csi2_dphy_lp_d0_rx_p_o"  />
+        <nitem  name = "csi2_dphy_lp_d0_rx_n_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d1_rx_p_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d1_rx_n_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d2_rx_p_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d2_rx_n_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d3_rx_p_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_d3_rx_n_o"  />
+        <nitem  name = "csi2_dphy_bd0_o[7]"  />
+        <nitem  name = "csi2_dphy_bd0_o[6]"  />
+        <nitem  name = "csi2_dphy_bd0_o[5]"  />
+        <nitem  name = "csi2_dphy_bd0_o[4]"  />
+        <nitem  name = "csi2_dphy_bd0_o[3]"  />
+        <nitem  name = "csi2_dphy_bd0_o[2]"  />
+        <nitem  name = "csi2_dphy_bd0_o[1]"  />
+        <nitem  name = "csi2_dphy_bd0_o[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1_o[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2_o[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3_o[0]"  />
+        <nitem  name = "csi2_dphy_capture_en_o"  />
+        <nitem  name = "csi2_dphy_term_clk_en_o"  />
+        <nitem  name = "csi2_dphy_hs_d_en_o"  />
+        <nitem  name = "csi2_dphy_lp_hs_state_d_o[1]"  />
+        <nitem  name = "csi2_dphy_lp_hs_state_d_o[0]"  />
+        <nitem  name = "csi2_dphy_hs_sync_o"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d0_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d1_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d2_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/term_d3_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_d1_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_d2_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_d3_en_w"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd0[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd1[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd2[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[7]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[6]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[5]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[4]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[3]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[2]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[1]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/bd3[0]"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_clk_rx_p"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/lp_clk_rx_n"  />
+        <nitem  name = "csi2_dphy_inst/dphy_rx_inst/hs_settle_en_w"  />
+        </nets>
+    </instance>
+
+    <instance  name = "LATTICE.dphy_rx"  />
+    <instance  name = "csi2_dphy_inst"  />
+    <instance  name = "dphy_rx_inst"  />
+    <instance  name = "dphy_rx_wrap_inst"  />
+    <instance  name = "rx_global_ctrl_inst"  />
+    <instance  name = "u_dphy_wrapper"  />
+    <!--
+        Views in design "Crosslink_CSI2ToRaw10": 3
+    -->
+
+    <views>
+        <view  name = "csi2_dphy"  />
+        <view  name = "csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT")"  />
+        <view  name = "csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)"  />
+    </views>
+
+</unit>
+
+</library>
+
+<library name = "vl">
+
+</library>
+
+</top>

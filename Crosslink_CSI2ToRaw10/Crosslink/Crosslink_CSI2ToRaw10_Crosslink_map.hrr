@@ -1,0 +1,195 @@
+---------------------------------------------------
+Report for cell Crosslink_CSI2ToRaw10
+   Instance path: Crosslink_CSI2ToRaw10
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     189.00        100.0
+                                  LUT4	     197.00        100.0
+                                 IOBUF	         28        100.0
+                                PFUREG	        132        100.0
+                                RIPPLE	         36        100.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             csi2_dphy	          1        100.0
+---------------------------------------------------
+Report for cell csi2_dphy
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     189.00        100.0
+                                  LUT4	     196.00        99.5
+                                 IOBUF	          4        14.3
+                                PFUREG	        132        100.0
+                                RIPPLE	         36        100.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT")	          1        100.0
+---------------------------------------------------
+Report for cell csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT")
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     189.00        100.0
+                                  LUT4	     196.00        99.5
+                                 IOBUF	          4        14.3
+                                PFUREG	        132        100.0
+                                RIPPLE	         36        100.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              csi2_dphy_rx_global_ctrl	          1        20.6
+                csi2_dphy_dphy_rx_wrap	          1        78.3
+csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)	          1         1.1
+---------------------------------------------------
+Report for cell csi2_dphy_rx_global_ctrl
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.00        20.6
+                                  LUT4	      41.00        20.8
+                                PFUREG	         34        25.8
+                                RIPPLE	          9        25.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+rx_global_ctrl(NUM_RX_LANE=1,BYTECLK_MHZ=125,RX_CLK_MODE="HS_ONLY",SETTLEPER=14)	          1        20.1
+---------------------------------------------------
+Report for cell rx_global_ctrl(NUM_RX_LANE=1,BYTECLK_MHZ=125,RX_CLK_MODE="HS_ONLY",SETTLEPER=14)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.00        20.1
+                                  LUT4	      40.00        20.3
+                                PFUREG	         34        25.8
+                                RIPPLE	          9        25.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                            lp_hs_ctrl	          1        11.1
+---------------------------------------------------
+Report for cell lp_hs_ctrl
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      21.00        11.1
+                                  LUT4	      33.00        16.8
+                                PFUREG	         17        12.9
+---------------------------------------------------
+Report for cell csi2_dphy_dphy_rx_wrap
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     148.00        78.3
+                                  LUT4	     153.00        77.7
+                                PFUREG	         98        74.2
+                                RIPPLE	         27        75.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+dphy_rx_wrap(NUM_RX_LANE=1,RX_GEAR=8,WORD_ALIGN="ON",RX_CLK_MODE="HS_ONLY",BYTECLK_MHZ=125,FIFO_TYPE="LUT",RX_FIFO_DEPTH=16,RX_FIFO_IMPL="SINGLE",RX_FIFO_CTR_WIDTH=1)	          1        78.3
+---------------------------------------------------
+Report for cell dphy_rx_wrap(NUM_RX_LANE=1,RX_GEAR=8,WORD_ALIGN="ON",RX_CLK_MODE="HS_ONLY",BYTECLK_MHZ=125,FIFO_TYPE="LUT",RX_FIFO_DEPTH=16,RX_FIFO_IMPL="SINGLE",RX_FIFO_CTR_WIDTH=1)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     148.00        78.3
+                                  LUT4	     153.00        77.7
+                                PFUREG	         98        74.2
+                                RIPPLE	         27        75.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+word_align(NUM_RX_LANE=1,BYTECLK_MHZ=125)	          1        47.6
+rx_fifo(RX_FIFO_IMPL="SINGLE",NUM_RX_LANE=1,FR_FIFO_DEPTH=16,CTR_WIDTH=1)	          1        30.7
+---------------------------------------------------
+Report for cell word_align(NUM_RX_LANE=1,BYTECLK_MHZ=125)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      90.00        47.6
+                                  LUT4	     128.00        65.0
+                                PFUREG	         37        28.0
+---------------------------------------------------
+Report for cell rx_fifo(RX_FIFO_IMPL="SINGLE",NUM_RX_LANE=1,FR_FIFO_DEPTH=16,CTR_WIDTH=1)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      58.00        30.7
+                                  LUT4	      25.00        12.7
+                                PFUREG	         61        46.2
+                                RIPPLE	         27        75.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+rx_fifo_single(NUM_RX_LANE=1,FR_FIFO_DEPTH=16)	          1        30.7
+---------------------------------------------------
+Report for cell rx_fifo_single(NUM_RX_LANE=1,FR_FIFO_DEPTH=16)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      58.00        30.7
+                                  LUT4	      25.00        12.7
+                                PFUREG	         61        46.2
+                                RIPPLE	         27        75.0
+                                   EBR	          1        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+    pmi_fifo_dcELar115016161688fe082cf	          1        29.6
+---------------------------------------------------
+Report for cell pmi_fifo_dcELar115016161688fe082cf
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      56.00        29.6
+                                  LUT4	      24.00        12.2
+                                PFUREG	         58        43.9
+                                RIPPLE	         27        75.0
+                                   EBR	          1        100.0
+---------------------------------------------------
+Report for cell csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         1.1
+                                  LUT4	       2.00         1.0
+                                 IOBUF	          4        14.3
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                csi2_dphy_soft_dphy_rx	          1         1.1
+---------------------------------------------------
+Report for cell csi2_dphy_soft_dphy_rx
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         1.1
+                                  LUT4	       2.00         1.0
+                                 IOBUF	          4        14.3
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+ soft_dphy_rx(NUM_RX_LANE=1,RX_GEAR=8)	          1         1.1
+---------------------------------------------------
+Report for cell soft_dphy_rx(NUM_RX_LANE=1,RX_GEAR=8)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         1.1
+                                  LUT4	       2.00         1.0
+                                 IOBUF	          4        14.3
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+          soft_dphy_data_rx(RX_GEAR=8)	          1         1.1
+           soft_dphy_clk_rx(RX_GEAR=8)	          1         0.0
+---------------------------------------------------
+Report for cell soft_dphy_data_rx(RX_GEAR=8)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/d0_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         1.1
+                                  LUT4	       2.00         1.0
+                                 IOBUF	          2         7.1
+---------------------------------------------------
+Report for cell soft_dphy_clk_rx(RX_GEAR=8)
+   Instance path: Crosslink_CSI2ToRaw10/csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          2         7.1

@@ -1,0 +1,54 @@
+----------------------------------------------------------------------
+Report for cell Crosslink_CSI2ToRaw10.TECH
+Register bits:  0 of 6047 (0.000%)
+I/O cells:      28
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                GSR         1          100.0
+                                 IB         7          100.0
+                                 OB        21          100.0
+SUB MODULES
+                          csi2_dphy         1
+csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT")         1
+             csi2_dphy_dphy_rx_wrap         1
+csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)         1
+           csi2_dphy_rx_global_ctrl         1
+             csi2_dphy_soft_dphy_rx         1
+                              TOTAL        35
+----------------------------------------------------------------------
+Report for cell csi2_dphy.v1
+Instance Path : csi2_dphy_inst
+SUB MODULES
+csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT")         1
+             csi2_dphy_dphy_rx_wrap         1
+csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)         1
+           csi2_dphy_rx_global_ctrl         1
+             csi2_dphy_soft_dphy_rx         1
+                              TOTAL         5
+----------------------------------------------------------------------
+Report for cell csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT").v1
+Instance Path : csi2_dphy_inst.dphy_rx_inst
+SUB MODULES
+             csi2_dphy_dphy_rx_wrap         1
+csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)         1
+           csi2_dphy_rx_global_ctrl         1
+             csi2_dphy_soft_dphy_rx         1
+                              TOTAL         4
+----------------------------------------------------------------------
+Report for cell csi2_dphy_rx_global_ctrl.<NoName>
+Instance Path : 
+                              TOTAL         0
+----------------------------------------------------------------------
+Report for cell csi2_dphy_dphy_rx_wrap.<NoName>
+Instance Path : 
+                              TOTAL         0
+----------------------------------------------------------------------
+Report for cell csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1).v1
+Instance Path : csi2_dphy_inst.dphy_rx_inst.u_dphy_wrapper
+SUB MODULES
+             csi2_dphy_soft_dphy_rx         1
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell csi2_dphy_soft_dphy_rx.<NoName>
+Instance Path : 
+                              TOTAL         0

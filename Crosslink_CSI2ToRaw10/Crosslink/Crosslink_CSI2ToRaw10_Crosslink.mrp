@@ -1,0 +1,864 @@
+
+    Lattice Mapping Report File for Design Module 'Crosslink_CSI2ToRaw10'
+
+
+Design Information
+------------------
+
+Command line:   map -a LIFMD -p LIF-MD6000 -t CSFBGA81 -s 6 -oc Industrial
+     Crosslink_CSI2ToRaw10_Crosslink.ngd -o
+     Crosslink_CSI2ToRaw10_Crosslink_map.ncd -pr
+     Crosslink_CSI2ToRaw10_Crosslink.prf -mp Crosslink_CSI2ToRaw10_Crosslink.mrp
+     -lpf C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/C
+     rosslink/Crosslink_CSI2ToRaw10_Crosslink.lpf -lpf C:/Users/Eduard/Documents
+     /GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10.lpf -gui
+     
+Target Vendor:  LATTICE
+Target Device:  LIF-MD6000CSFBGA81
+Target Performance:   6
+Mapper:  sn5w00,  version:  Diamond (64-bit) 3.11.3.469
+Mapped on:  09/29/20  00:16:50
+
+Design Summary
+--------------
+
+   Number of registers:    132 out of  6047 (2%)
+      PFU registers:          132 out of  5936 (2%)
+      PIO registers:            0 out of   111 (0%)
+   Number of SLICEs:       189 out of  2968 (6%)
+      SLICEs as Logic/ROM:    189 out of  2968 (6%)
+      SLICEs as RAM:            0 out of  2226 (0%)
+      SLICEs as Carry:         36 out of  2968 (1%)
+   Number of LUT4s:        269 out of  5936 (5%)
+      Number used as logic LUTs:        197
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       72
+      Number used as shift registers:     0
+   Number of PIO sites used: 28 out of 37 (76%)
+   Number of IDDR/ODDR/TDDR cells used: 1 out of 111 (1%)
+      Number of IDDR cells:   1
+      Number of ODDR cells:   0
+      Number of TDDR cells:   0
+   Number of PIO using at least one IDDR/ODDR/TDDR: 1 (0 differential)
+      Number of PIO using IDDR only:        1 (0 differential)
+      Number of PIO using ODDR only:        0 (0 differential)
+      Number of PIO using TDDR only:        0 (0 differential)
+      Number of PIO using IDDR/ODDR:        0 (0 differential)
+      Number of PIO using IDDR/TDDR:        0 (0 differential)
+      Number of PIO using ODDR/TDDR:        0 (0 differential)
+      Number of PIO using IDDR/ODDR/TDDR:   0 (0 differential)
+   Number of block RAMs:  1 out of 20 (5%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Power Management Unit (PMU):  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 2 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 2 (0%)
+   Number of DCC:  0 out of 14 (0%)
+   Number of DCS:  0 out of 1 (0%)
+   Number of PLLs:  0 out of 1 (0%)
+
+                                    Page 1
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Design Summary (cont)
+---------------------
+   Number of DDRDLLs:  0 out of 2 (0%)
+   Number of CLKDIV:  1 out of 4 (25%)
+   Number of ECLKSYNC:  1 out of 4 (25%)
+   Number of MIPIDPHY:  0 out of 2 (0%)
+   Number of I2C:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net csi2_dphy_clk_byte_fr_i_c: 53 loads, 53 rising, 0 falling (Driver: PIO
+     csi2_dphy_clk_byte_fr_i )
+     Net csi2_dphy_clk_byte_o_c: 29 loads, 29 rising, 0 falling (Driver: csi2_dp
+     hy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/c
+     lk_byte_o_I_0 )
+     Net csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_
+     rx/eclk: 2 loads, 2 rising, 0 falling (Driver: csi2_dphy_inst/dphy_rx_inst/
+     u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync )
+     Net csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_
+     rx/clk_rx/ohs: 1 loads, 1 rising, 0 falling (Driver: PIO csi2_dphy_clk_p_i
+     )
+   Number of Clock Enables:  6
+     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/clk_byte
+     _fr_i_enable_1: 1 loads, 1 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
+     rl_d0/lp11_ncr: 1 loads, 1 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/clk_byte_fr_i_enable_9: 4 loads, 4 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/clk_byte_fr_i_enable_2: 1 loads, 1 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fi
+     fo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016
+     161688/wren_i: 11 loads, 9 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fi
+     fo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016
+     161688/rden_i: 13 loads, 12 LSLICEs
+   Number of local set/reset loads for net csi2_dphy_reset_byte_fr_n_i_c merged
+     into GSR:  115
+   Number of LSRs:  5
+     Net csi2_dphy_reset_byte_fr_n_i_c: 2 loads, 0 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
+     rl_d0/lp11_reset_n: 1 loads, 1 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
+     rl_d0/hs_entry: 1 loads, 1 LSLICEs
+     Net csi2_dphy_reset_n_i_c: 10 loads, 10 LSLICEs
+     Net csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_
+     rx/reset_n_i_N_2: 2 loads, 0 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/hs_settl
+     e_en_o_N_37: 18 loads
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fi
+     fo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016
+     161688/rden_i: 17 loads
+     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
+
+                                    Page 2
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Design Summary (cont)
+---------------------
+     rl_d0/term_en_r: 17 loads
+     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
+     rl_d0/n486: 16 loads
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/bd0_shift2_r[2]: 15 loads
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/bd0_shift7_r[6]: 15 loads
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/n158: 14 loads
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/n164: 14 loads
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/bd0_shift1_1d_r[5]: 13 loads
+     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
+     ign/bd0_shift3_r[5]: 13 loads
+
+
+
+
+   Number of warnings:  3
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: input pad net 'csi2_dphy_pd_dphy_i' has no legal load.
+WARNING - map: Using local reset signal 'csi2_dphy_reset_byte_fr_n_i_c' to infer
+     global GSR net.
+WARNING - map: IO buffer missing for top level port csi2_dphy_pd_dphy_i...logic
+     will be discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[6]  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_d0_p_i    | BIDIR     | MIPI      |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_d0_n_i    | BIDIR     | MIPI      |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_clk_p_i   | BIDIR     | MIPI      |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_clk_n_i   | BIDIR     | MIPI      |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[2]  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[3]  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[7]  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[1]  | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 3
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[4]  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[5]  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_bd0_o[0]  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_lp_hs_state_clk_o[1]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_lp_hs_state_clk_o[0]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_lp_hs_state_d_o[1]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_lp_hs_state_d_o[0]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_capture_en_o| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_cd_d0_o   | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_clk_byte_hs_o| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_clk_byte_o| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_hs_d_en_o | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_hs_sync_o | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_lp_d0_rx_n_o| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_lp_d0_rx_p_o| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_term_clk_en_o| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_clk_byte_fr_i| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_reset_byte_fr_n_i| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| csi2_dphy_reset_n_i | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/i5 undriven or does not
+     drive anything - clipped.
+Block csi2_dphy_reset_lp_n_i_pad undriven or does not drive anything - clipped.
+Block csi2_dphy_reset_byte_n_i_pad undriven or does not drive anything -
+     clipped.
+Block csi2_dphy_pll_lock_i_pad undriven or does not drive anything - clipped.
+Block csi2_dphy_clk_lp_ctrl_i_pad undriven or does not drive anything - clipped.
+     
+Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
+     clk_rx/lp_rx_p_o_I_0_2_lut undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/i4 undriven or does not
+     drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+
+                                    Page 4
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_cmp_2 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_cmp_1 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_cmp_0 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_cmp_ci_a undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_ctr_2 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_ctr_1 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_ctr_0 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/af_set_ctr_cia undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/FF_2 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/FF_3 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/FF_5 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/LUT4_1 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/LUT4_0 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/FF_0 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/FF_1 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/FF_4 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/a3 undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_
+     d0/term_en_r_I_0_2_lut_3_lut_4_lut undriven or does not drive anything -
+     clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/reset_n_i_N_23 was
+     merged into signal csi2_dphy_reset_byte_fr_n_i_c
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+
+                                    Page 5
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/invout_1 was merged into signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wr
+     ap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_
+     genpmi_fifo_dcLIFMDasyncreg115016161688/Full
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/rRst was merged into signal
+     csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/reset_n_i_N_23
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/invout_0 was merged into signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wr
+     ap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/rxem
+     ptyfr0_o
+Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl
+     _d0/reset_n_i_N_41 was merged into signal csi2_dphy_reset_n_i_c
+Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/reset_byte
+     _fr_n_i_N_18 was merged into signal csi2_dphy_reset_byte_fr_n_i_c
+Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx
+     /d0_rx/lp_tx_n_c_N_5 undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/lp_d1_rx_p_o undriven or does not drive
+     anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/VCC_net
+     undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx
+     /d0_rx/delayg/VHI1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx
+     /d0_rx/delayg/VLO1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/scuba_vhi undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/VCC_net undriven or does
+     not drive anything - clipped.
+Signal csi2_dphy_reset_lp_n_i_c undriven or does not drive anything - clipped.
+Signal csi2_dphy_reset_lp_n_i undriven or does not drive anything - clipped.
+Signal csi2_dphy_reset_byte_n_i_c undriven or does not drive anything - clipped.
+     
+Signal csi2_dphy_reset_byte_n_i undriven or does not drive anything - clipped.
+Signal csi2_dphy_pll_lock_i_c undriven or does not drive anything - clipped.
+Signal csi2_dphy_pll_lock_i undriven or does not drive anything - clipped.
+Signal csi2_dphy_clk_lp_ctrl_i_c undriven or does not drive anything - clipped.
+Signal csi2_dphy_clk_lp_ctrl_i undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/cd_clk_o
+     undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/bd1_7 undriven or does not drive anything -
+     clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_2/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_1/S1 undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_1/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co1_7 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_0/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_0/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co0_7 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_ci_a/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_ci_a/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/cmp_ci_3 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_ci_a/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_ctr_2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co2_3 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co1_6 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co0_6 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_ctr_cia/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_ctr_cia/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_ctr_ci undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_ctr_cia/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/a2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+
+                                    Page 7
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+     1688/a2/CO undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_2/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_1/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_1/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_0/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_0/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_ci_a/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_ci_a/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_cmp_ci_a/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_ctr_2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co2_2 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_ctr_cia/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_ctr_cia/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/ae_set_ctr_cia/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/a1/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/a1/CO undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_2/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+
+                                    Page 8
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_1/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_1/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_0/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_0/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_ci_a/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_ci_a/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/full_cmp_ci_a/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/a0/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/a0/CO undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_2/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_1/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_1/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_0/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_0/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_ci_a/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_ci_a/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/empty_cmp_ci_a/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/r_gctr_2/S1 undriven or does not drive anything - clipped.
+
+                                    Page 9
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co2_1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/r_gctr_cia/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/r_gctr_cia/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/r_gctr_cia/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/w_gctr_2/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/co2 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/w_gctr_cia/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/w_gctr_cia/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/w_gctr_cia/CI undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_setcount_3 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/iaf_setcount_3 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_setcount_2 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/iaf_setcount_2 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_setcount_0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/iaf_setcount_0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_set undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_cmp_clr undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/partial_full undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+
+                                   Page 10
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+     1688/af_setcount_4 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/iaf_setcount_4 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_setcount_1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/iaf_setcount_1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/a3/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/a3/CO undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     1688/af_set_c undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/term_d0_en_w undriven or does not drive
+     anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
+     _2_17/S1 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
+     _2_17/CO undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
+     _2_1/S0 undriven or does not drive anything - clipped.
+Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
+     _2_1/CI undriven or does not drive anything - clipped.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/reset_n_i_I_0_1_lut was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/INV_1 was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/OR2_t8 was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/INV_0 was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_
+     d0/reset_n_i_I_0_83_1_lut was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/reset_byte_
+     fr_n_i_I_0_1_lut was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
+     d0_rx/i7_2_lut was optimized away.
+Block i1 was optimized away.
+Block i5 was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/i1 was
+     optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/i5 was
+     optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
+
+                                   Page 11
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+Removed logic (cont)
+--------------------
+     d0_rx/delayg/NEOONE was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
+     d0_rx/delayg/NEOZERO was optimized away.
+Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
+     688/scuba_vhi_inst was optimized away.
+
+Memory Usage
+------------
+
+/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fi
+     fo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 56
+    PFU Registers: 58
+    -Contains EBR pdp_ram_0_0_0:  TYPE= DP8KE,  Width_B= 8,  Depth_A= 16,
+         Depth_B= 16,  REGMODE_A= OUTREG,  REGMODE_B= OUTREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_LPC_FILE=
+         pmi_fifo_dcELar115016161688fe082cf__PMIX__16__8__8A
+
+     
+
+CLKDIV Summary
+--------------
+
+CLKDIV 1:                                     Pin/Node Value
+  CLKDIV Instance Name:                                csi2_dphy_inst/dphy_rx_in
+       st/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0
+  CLKDIV Type:                                         CLKDIVG
+  Clock Input:                             NODE     csi2_dphy_inst/dphy_rx_inst/
+       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
+  Reset Input:                             NODE     csi2_dphy_inst/dphy_rx_inst/
+       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/reset_n_i_N_2
+  Output Clock(CDIVX):                     PIN,NODE csi2_dphy_clk_byte_o_c
+  GSR:                                              DISABLED
+  CLK Divider:                                      4.0
+
+ECLKSYNC Summary
+----------------
+
+ECLKSYNC 1:                                     Pin/Node Value
+  ECLKSYNC Instance Name:                                csi2_dphy_inst/dphy_rx_
+       inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+  ECLKSYNC Type:                                         ECLKSYNCB
+  ECLKI Input:                             PIN      csi2_dphy_inst/dphy_rx_inst/
+       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+  STOP Input:                              NODE     csi2_dphy_inst/dphy_rx_inst/
+       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/reset_n_i_N_2
+  ECLKO Output:                            NODE     csi2_dphy_inst/dphy_rx_inst/
+       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
+
+
+
+
+
+                                   Page 12
+
+
+
+
+Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+
+ASIC Components
+---------------
+
+Instance Name: csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u
+     _rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg
+     115016161688/pdp_ram_0_0_0
+         Type: DP8KE
+Instance Name: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft
+     _dphy_rx/clk_rx/eclksync
+         Type: ECLKSYNCB
+Instance Name: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft
+     _dphy_rx/clk_rx/clk_byte_o_I_0
+         Type: CLKDIVG
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'csi2_dphy_reset_byte_fr_n_i_c' of the design has been
+        inferred as Global Set Reset (GSR). The reset signal used for GSR
+        control is 'csi2_dphy_reset_byte_fr_n_i_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'csi2_dphy_reset_byte_fr_n_i_c' via the local reset on the component and
+     not the GSR component.
+
+     Type and number of components of the type: 
+   DP8KE = 2
+
+     Type and instance name of component: 
+   DP8KE : csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_
+        fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg1
+        15016161688/pdp_ram_0_0_0
+   DP8KE : csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_
+        fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg1
+        15016161688/pdp_ram_0_0_0
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 37 MB
+        
+
+
+
+
+                                   Page 13
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.

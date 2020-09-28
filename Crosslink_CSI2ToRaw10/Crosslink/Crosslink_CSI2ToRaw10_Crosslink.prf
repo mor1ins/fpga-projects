@@ -1,0 +1,15 @@
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.3.469 -- WARNING: Map write only section -- Tue Sep 29 00:16:50 2020
+
+SYSCONFIG SLAVE_SPI_PORT=ENABLE MASTER_SPI_PORT=DISABLE I2C_PORT=DISABLE MCCLK_FREQ=6 MY_ASSP=OFF ONE_TIME_PROGRAM_SRAM=DISABLE ONE_TIME_PROGRAM_NVCM=DISABLE SECURITY_SRAM=DISABLE SECURITY_NVCM=DISABLE TRANSFR=OFF BOOT_UP_SEQUENCE=NVCM CDONE_PORT=CDONE_USER_IO DONE_EX=OFF ;
+SCHEMATIC END ;
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+INDUSTRIAL ;
+
+// No timing preferences found. TRCE invokes auto-generation of timing preferences
+// Section Autogen
+FREQUENCY NET "csi2_dphy_clk_byte_fr_i_c" 293.858 MHz ;
+FREQUENCY NET "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk" 307.409 MHz ;
+FREQUENCY NET "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs" 307.409 MHz ;
+// End Section Autogen

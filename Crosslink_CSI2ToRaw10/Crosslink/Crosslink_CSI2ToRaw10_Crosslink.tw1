@@ -1,0 +1,538 @@
+
+Loading design for application trce from file crosslink_csi2toraw10_crosslink_map.ncd.
+Design name: Crosslink_CSI2ToRaw10
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LIF-MD6000
+Package:     CSFBGA81
+Performance: 6
+Loading device for application trce from file 'sn5w6000.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.38.
+Performance Hardware Data Status:   Final          Version 41.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.3.469
+Tue Sep 29 00:16:52 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o Crosslink_CSI2ToRaw10_Crosslink.tw1 -gui Crosslink_CSI2ToRaw10_Crosslink_map.ncd Crosslink_CSI2ToRaw10_Crosslink.prf 
+Design file:     crosslink_csi2toraw10_crosslink_map.ncd
+Preference file: crosslink_csi2toraw10_crosslink.prf
+Device,speed:    LIF-MD6000,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "csi2_dphy_clk_byte_fr_i_c" 293.858000 MHz ;
+            2814 items scored, 2062 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 2.367ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/bd0_shift7_r_i6  (from csi2_dphy_clk_byte_fr_i_c +)
+   Destination:    FF         Data in        csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/bd0_sync_r__i1  (to csi2_dphy_clk_byte_fr_i_c +)
+
+   Delay:               5.349ns  (35.7% logic, 64.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      5.349ns physical path delay csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_80 to csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_36 exceeds
+      3.403ns delay constraint less
+      0.421ns DIN_SET requirement (totaling 2.982ns) by 2.367ns
+
+ Physical Path Details:
+
+      Data path csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_80 to csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.422 */SLICE_80.CLK to *n/SLICE_80.Q0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_80 (from csi2_dphy_clk_byte_fr_i_c)
+ROUTE        15   e 0.573 *n/SLICE_80.Q0 to */SLICE_169.A0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/bd0_shift7_r[6]
+CTOF_DEL    ---     0.202 */SLICE_169.A0 to */SLICE_169.F0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_169
+ROUTE         1   e 0.573 */SLICE_169.F0 to */SLICE_129.C0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/n1319
+CTOOFX_DEL  ---     0.334 */SLICE_129.C0 to *LICE_129.OFX0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/i258/SLICE_129
+ROUTE         6   e 0.573 *LICE_129.OFX0 to */SLICE_183.B0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/n160
+CTOF_DEL    ---     0.202 */SLICE_183.B0 to */SLICE_183.F0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_183
+ROUTE         9   e 0.573 */SLICE_183.F0 to */SLICE_121.M0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/n1564
+MTOF_DEL    ---     0.214 */SLICE_121.M0 to *LICE_121.OFX0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/i1824/SLICE_121
+ROUTE         1   e 0.573 *LICE_121.OFX0 to */SLICE_119.A1 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/n2045
+CTOOFX_DEL  ---     0.334 */SLICE_119.A1 to *LICE_119.OFX0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/i1827/SLICE_119
+ROUTE         1   e 0.573 *LICE_119.OFX0 to *n/SLICE_36.D1 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/bd0_o_7__N_27[1]
+CTOF_DEL    ---     0.202 *n/SLICE_36.D1 to *n/SLICE_36.F1 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/SLICE_36
+ROUTE         1   e 0.001 *n/SLICE_36.F1 to */SLICE_36.DI1 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_align/n15 (to csi2_dphy_clk_byte_fr_i_c)
+                  --------
+                    5.349   (35.7% logic, 64.3% route), 7 logic levels.
+
+Warning: 173.310MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk" 307.409000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs" 307.409000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Internal Preference: Timing Rule Check
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+This section of the Trace report will identify any inherent timing rule violations
+in the design. These rules may be affected by other preferences.
+
+
+Passed: csi2_dphy_d0_p_i_MGIOL meets ECLK to CLK skew range from -6.484ns to 6.495ns
+
+   Max skew of -1.029ns meets timing requirement of 6.495ns by 7.524ns
+
+   Max ECLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.239 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.573 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.573 *clksync.ECLKO to *_i_MGIOL.ECLK csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk (to csi2_dphy_clk_byte_o_c)
+                  --------
+                    1.385   (17.3% logic, 82.7% route), 2 logic levels.
+
+   Min CLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.239 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.573 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.573 *clksync.ECLKO to *te_o_I_0.CLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
+CLKOUT_DEL  ---     0.456 *te_o_I_0.CLKI to *e_o_I_0.CDIVX csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0
+ROUTE        31   e 0.573 *e_o_I_0.CDIVX to *p_i_MGIOL.CLK csi2_dphy_clk_byte_o_c
+                  --------
+                    2.414   (28.8% logic, 71.2% route), 3 logic levels.
+
+   Min skew of -1.030ns meets timing requirement of -6.484ns by 5.454ns
+
+   Min ECLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.244 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.573 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.573 *clksync.ECLKO to *_i_MGIOL.ECLK csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk (to csi2_dphy_clk_byte_o_c)
+                  --------
+                    1.390   (17.6% logic, 82.4% route), 2 logic levels.
+
+   Max CLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.244 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.573 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.573 *clksync.ECLKO to *te_o_I_0.CLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
+CLKOUT_DEL  ---     0.457 *te_o_I_0.CLKI to *e_o_I_0.CDIVX csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0
+ROUTE        31   e 0.573 *e_o_I_0.CDIVX to *p_i_MGIOL.CLK csi2_dphy_clk_byte_o_c
+                  --------
+                    2.420   (29.0% logic, 71.0% route), 3 logic levels.
+
+
+================================================================================
+Internal Preference: FREQUENCY NET "csi2_dphy_clk_byte_o_c" 76.852250 MHz ;
+            134 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 9.580ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/FF_15  (from csi2_dphy_clk_byte_o_c +)
+   Destination:    FF         Data in        csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/FF_12  (to csi2_dphy_clk_byte_o_c +)
+
+   Delay:               3.013ns  (54.9% logic, 45.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      3.013ns physical path delay csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_49 to csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_26 meets
+     13.012ns delay constraint less
+      0.419ns DIN_SET requirement (totaling 12.593ns) by 9.580ns
+
+ Physical Path Details:
+
+      Data path csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_49 to csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.422 */SLICE_49.CLK to *8/SLICE_49.Q0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_49 (from csi2_dphy_clk_byte_o_c)
+ROUTE         3   e 0.573 *8/SLICE_49.Q0 to */SLICE_145.B0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/r_gcount_w23
+CTOF_DEL    ---     0.202 */SLICE_145.B0 to */SLICE_145.F0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_145
+ROUTE         2   e 0.208 */SLICE_145.F0 to */SLICE_145.A1 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/rcount_w3
+CTOF_DEL    ---     0.202 */SLICE_145.A1 to */SLICE_145.F1 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_145
+ROUTE         1   e 0.573 */SLICE_145.F1 to *8/SLICE_23.B0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/rcount_w0
+C0TOFCO_DE  ---     0.352 *8/SLICE_23.B0 to */SLICE_23.FCO csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_23
+ROUTE         1   e 0.001 */SLICE_23.FCO to */SLICE_24.FCI csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/co0_3
+FCITOFCO_D  ---     0.057 */SLICE_24.FCI to */SLICE_24.FCO csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_24
+ROUTE         1   e 0.001 */SLICE_24.FCO to */SLICE_25.FCI csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/co1_3
+FCITOFCO_D  ---     0.057 */SLICE_25.FCI to */SLICE_25.FCO csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_25
+ROUTE         1   e 0.001 */SLICE_25.FCO to */SLICE_26.FCI csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/full_d_c
+FCITOF0_DE  ---     0.363 */SLICE_26.FCI to *8/SLICE_26.F0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/SLICE_26
+ROUTE         1   e 0.001 *8/SLICE_26.F0 to */SLICE_26.DI0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688/full_d (to csi2_dphy_clk_byte_o_c)
+                  --------
+                    3.013   (54.9% logic, 45.1% route), 7 logic levels.
+
+Report:  291.375MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"csi2_dphy_clk_byte_fr_i_c" 293.858000  |             |             |
+MHz ;                                   |  293.858 MHz|  173.310 MHz|   7 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"csi2_dphy_inst/dphy_rx_inst/u_dphy_wrap|             |             |
+per/LATTICE.dphy_rx/u_soft_dphy_rx/eclk"|             |             |
+ 307.409000 MHz ;                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"csi2_dphy_inst/dphy_rx_inst/u_dphy_wrap|             |             |
+per/LATTICE.dphy_rx/u_soft_dphy_rx/clk_r|             |             |
+x/ohs" 307.409000 MHz ;                 |            -|            -|   0  
+                                        |             |             |
+Timing Rule Check                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "csi2_dphy_clk_byte_o_c"  |             |             |
+76.852250 MHz ;                         |   76.852 MHz|  291.375 MHz|   7  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/n1567|       8|     576|     27.93%
+                                        |        |        |
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/clk_b|        |        |
+yte_fr_i_enable_9                       |       4|     380|     18.43%
+                                        |        |        |
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/n158 |      14|     354|     17.17%
+                                        |        |        |
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/n1572|       1|     288|     13.97%
+                                        |        |        |
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/n216 |      10|     277|     13.43%
+                                        |        |        |
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/n160 |       6|     264|     12.80%
+                                        |        |        |
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/n162 |       7|     264|     12.80%
+                                        |        |        |
+csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap|        |        |
+_inst/dsi_rx/WORD_ALIGN_ON.w_align/n164 |      14|     252|     12.22%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync.ECLKO   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs   Source: csi2_dphy_clk_p_i.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: csi2_dphy_clk_byte_o_c   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0.CDIVX   Loads: 31
+   Covered under: FREQUENCY NET "csi2_dphy_clk_byte_o_c" 76.852250 MHz ;
+
+   Data transfers from:
+   Clock Domain: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync.ECLKO
+      Covered under: Timing Rule Check   Transfers: 1
+
+   Clock Domain: csi2_dphy_clk_byte_fr_i_c   Source: csi2_dphy_clk_byte_fr_i.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: csi2_dphy_clk_byte_fr_i_c   Source: csi2_dphy_clk_byte_fr_i.PAD   Loads: 53
+   Covered under: FREQUENCY NET "csi2_dphy_clk_byte_fr_i_c" 293.858000 MHz ;
+
+   Data transfers from:
+   Clock Domain: csi2_dphy_clk_byte_o_c   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0.CDIVX
+      Not reported because source and destination domains are unrelated.
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 2062  Score: 2288278
+Cumulative negative slack: 2288278
+
+Constraints cover 2949 paths, 4 nets, and 937 connections (90.53% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.3.469
+Tue Sep 29 00:16:52 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o Crosslink_CSI2ToRaw10_Crosslink.tw1 -gui Crosslink_CSI2ToRaw10_Crosslink_map.ncd Crosslink_CSI2ToRaw10_Crosslink.prf 
+Design file:     crosslink_csi2toraw10_crosslink_map.ncd
+Preference file: crosslink_csi2toraw10_crosslink.prf
+Device,speed:    LIF-MD6000,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "csi2_dphy_clk_byte_fr_i_c" 293.858000 MHz ;
+            2814 items scored, 16 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.114ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/fr_data_vld_47  (from csi2_dphy_clk_byte_fr_i_c +)
+   Destination:    FF         Data in        csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/fr_data_vld_r_48  (to csi2_dphy_clk_byte_fr_i_c +)
+
+   Delay:               0.199ns  (70.9% logic, 29.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.199ns physical path delay csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/SLICE_86 to csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/SLICE_86 exceeds
+      0.313ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.313ns) by 0.114ns
+
+ Physical Path Details:
+
+      Data path csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/SLICE_86 to csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/SLICE_86:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.141 */SLICE_86.CLK to *t/SLICE_86.Q1 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/SLICE_86 (from csi2_dphy_clk_byte_fr_i_c)
+ROUTE         2   e 0.058 *t/SLICE_86.Q1 to *t/SLICE_86.M0 csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/fr_data_vld (to csi2_dphy_clk_byte_fr_i_c)
+                  --------
+                    0.199   (70.9% logic, 29.1% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk" 307.409000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs" 307.409000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "csi2_dphy_clk_byte_o_c" 76.852250 MHz ;
+            134 items scored, 12 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 0.100ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/lp_rx_n_i_ncr1_74  (from csi2_dphy_clk_byte_o_c +)
+   Destination:    FF         Data in        csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/lp_rx_n_i_ncr2_75  (to csi2_dphy_clk_byte_o_c +)
+
+   Delay:               0.200ns  (71.0% logic, 29.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.200ns physical path delay csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/SLICE_91 to csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/SLICE_91 exceeds
+      0.300ns M_HLD and
+      0.000ns delay constraint requirement (totaling 0.300ns) by 0.100ns
+
+ Physical Path Details:
+
+      Data path csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/SLICE_91 to csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/SLICE_91:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.142 */SLICE_91.CLK to *0/SLICE_91.Q0 csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/SLICE_91 (from csi2_dphy_clk_byte_o_c)
+ROUTE         1   e 0.058 *0/SLICE_91.Q0 to *0/SLICE_91.M1 csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_d0/lp_rx_n_i_ncr1 (to csi2_dphy_clk_byte_o_c)
+                  --------
+                    0.200   (71.0% logic, 29.0% route), 1 logic levels.
+
+
+================================================================================
+Internal Preference: Timing Rule Check
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: csi2_dphy_d0_p_i_MGIOL meets ECLK to CLK skew range from -6.496ns to 6.499ns
+
+   Max skew of -0.429ns meets timing requirement of 6.499ns by 6.928ns
+
+   Max ECLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.165 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.199 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.199 *clksync.ECLKO to *_i_MGIOL.ECLK csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk (to csi2_dphy_clk_byte_o_c)
+                  --------
+                    0.563   (29.3% logic, 70.7% route), 2 logic levels.
+
+   Min CLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.165 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.199 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.199 *clksync.ECLKO to *te_o_I_0.CLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
+CLKOUT_DEL  ---     0.230 *te_o_I_0.CLKI to *e_o_I_0.CDIVX csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0
+ROUTE        31   e 0.199 *e_o_I_0.CDIVX to *p_i_MGIOL.CLK csi2_dphy_clk_byte_o_c
+                  --------
+                    0.992   (39.8% logic, 60.2% route), 3 logic levels.
+
+   Min skew of -0.429ns meets timing requirement of -6.496ns by 6.067ns
+
+   Min ECLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.166 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.199 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.199 *clksync.ECLKO to *_i_MGIOL.ECLK csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk (to csi2_dphy_clk_byte_o_c)
+                  --------
+                    0.564   (29.4% logic, 70.6% route), 2 logic levels.
+
+   Max CLK:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.166 *y_clk_p_i.PAD to *clk_p_i.PADDI csi2_dphy_clk_p_i
+ROUTE         1   e 0.199 *clk_p_i.PADDI to *clksync.ECLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
+C2OUT_DEL   ---     0.000 *clksync.ECLKI to *clksync.ECLKO csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
+ROUTE         2   e 0.199 *clksync.ECLKO to *te_o_I_0.CLKI csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
+CLKOUT_DEL  ---     0.230 *te_o_I_0.CLKI to *e_o_I_0.CDIVX csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0
+ROUTE        31   e 0.199 *e_o_I_0.CDIVX to *p_i_MGIOL.CLK csi2_dphy_clk_byte_o_c
+                  --------
+                    0.993   (39.9% logic, 60.1% route), 3 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"csi2_dphy_clk_byte_fr_i_c" 293.858000  |             |             |
+MHz ;                                   |     0.000 ns|    -0.114 ns|   1 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"csi2_dphy_inst/dphy_rx_inst/u_dphy_wrap|             |             |
+per/LATTICE.dphy_rx/u_soft_dphy_rx/eclk"|             |             |
+ 307.409000 MHz ;                       |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"csi2_dphy_inst/dphy_rx_inst/u_dphy_wrap|             |             |
+per/LATTICE.dphy_rx/u_soft_dphy_rx/clk_r|             |             |
+x/ohs" 307.409000 MHz ;                 |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "csi2_dphy_clk_byte_o_c"  |             |             |
+76.852250 MHz ;                         |     0.000 ns|    -0.100 ns|   1 *
+                                        |             |             |
+Timing Rule Check                       |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+2 preferences(marked by "*" above) not met.
+
+No net is responsible for more than 10% of the timing errors.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 4 clocks:
+
+Clock Domain: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync.ECLKO   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs   Source: csi2_dphy_clk_p_i.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: csi2_dphy_clk_byte_o_c   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0.CDIVX   Loads: 31
+   Covered under: FREQUENCY NET "csi2_dphy_clk_byte_o_c" 76.852250 MHz ;
+
+   Data transfers from:
+   Clock Domain: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync.ECLKO
+      Covered under: Timing Rule Check   Transfers: 1
+
+   Clock Domain: csi2_dphy_clk_byte_fr_i_c   Source: csi2_dphy_clk_byte_fr_i.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: csi2_dphy_clk_byte_fr_i_c   Source: csi2_dphy_clk_byte_fr_i.PAD   Loads: 53
+   Covered under: FREQUENCY NET "csi2_dphy_clk_byte_fr_i_c" 293.858000 MHz ;
+
+   Data transfers from:
+   Clock Domain: csi2_dphy_clk_byte_o_c   Source: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0.CDIVX
+      Not reported because source and destination domains are unrelated.
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 28  Score: 1782
+Cumulative negative slack: 1782
+
+Constraints cover 2949 paths, 4 nets, and 937 connections (90.53% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 2062 (setup), 28 (hold)
+Score: 2288278 (setup), 1782 (hold)
+Cumulative negative slack: 2290060 (2288278+1782)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
