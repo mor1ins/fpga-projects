@@ -409,8 +409,8 @@
             <lattice:device>LIF-MD6000-6MG81I</lattice:device>
             <lattice:synthesis>lse</lattice:synthesis>
             <lattice:date>2016-06-17.10:39:30</lattice:date>
-            <lattice:modified>2017-04-26.11:20:35</lattice:modified>
-            <lattice:diamond>3.9.0.201.0</lattice:diamond>
+            <lattice:modified>2020-09-29.00:46:57</lattice:modified>
+            <lattice:diamond>3.11.3.469</lattice:diamond>
             <lattice:language>Verilog</lattice:language>
             <lattice:attributes>
                 <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
@@ -574,7 +574,7 @@
                     </spirit:model>
                     <spirit:vendorExtensions>
                         <lattice:synthesis>lse</lattice:synthesis>
-                        <lattice:modified>2017-04-26.11:20:35</lattice:modified>
+                        <lattice:modified>2020-09-29.00:46:57</lattice:modified>
                         <lattice:attributes>
                             <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                             <lattice:attribute lattice:name="BBox">false</lattice:attribute>
@@ -925,7 +925,7 @@
                     </spirit:model>
                     <spirit:vendorExtensions>
                         <lattice:synthesis>lse</lattice:synthesis>
-                        <lattice:modified>2017-04-26.11:20:35</lattice:modified>
+                        <lattice:modified>2020-09-29.00:46:57</lattice:modified>
                         <lattice:attributes>
                             <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                             <lattice:attribute lattice:name="BBox">false</lattice:attribute>
@@ -1232,7 +1232,7 @@
                     </spirit:model>
                     <spirit:vendorExtensions>
                         <lattice:synthesis>lse</lattice:synthesis>
-                        <lattice:modified>2017-04-26.11:20:35</lattice:modified>
+                        <lattice:modified>2020-09-29.00:46:57</lattice:modified>
                         <lattice:attributes>
                             <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                             <lattice:attribute lattice:name="BBox">false</lattice:attribute>

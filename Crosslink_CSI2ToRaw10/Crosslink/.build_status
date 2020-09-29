@@ -9,9 +9,9 @@
             <Task name="Jedecgen" build_result="0" update_result="3" update_time="0"/>
             <Task name="Promgen" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1601327811">
-            <Task name="Map" build_result="2" update_result="0" update_time="1601327811"/>
-            <Task name="MapTrace" build_result="2" update_result="0" update_time="1601327812"/>
+        <Milestone name="Map" build_result="0" build_time="1601327811">
+            <Task name="Map" build_result="0" update_result="2" update_time="1601327811"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1601327812"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
@@ -20,12 +20,12 @@
             <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1601327803">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1601327803"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1601327803"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1601327803">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1601327803"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1601327803"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="0" update_result="2" update_time="1601327533"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1601331439"/>
             <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
             <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>

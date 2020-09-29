@@ -1,0 +1,11 @@
+lappend auto_path "C:/lscc/diamond/3.11_x64/data/script"
+package require symbol_generation
+
+set ::bali::Para(MODNAME) top
+set ::bali::Para(PROJECT) DualCSI2toRaw10
+set ::bali::Para(PACKAGE) {"C:/lscc/diamond/3.11_x64/cae_library/vhdl_packages/vdbs"}
+set ::bali::Para(PRIMITIVEFILE) {"C:/lscc/diamond/3.11_x64/cae_library/synthesis/verilog/lifmd.v"}
+set ::bali::Para(FILELIST) {"C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/top.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/control_capture_lane4_bb.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/dphy_rx_wrap.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/raw10_lane4_bb.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/rx_global_ctrl_bb.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/sip4_demo_dphy_rx_wrap.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/sip4_demo_rx_global_ctrl.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/user_sdr_cmd_ctrl_bb.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/clarity/dual_camera/LUT_FIFO/LUT_FIFO.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/clarity/dual_camera/cross_domain_fifo/cross_domain_fifo.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/clarity/dual_camera/pll_double/pll_double.v=work" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/Crosslink_DualCSI2toRaw10/source/clarity/dual_camera/dual_camera.v=work" }
+set ::bali::Para(INCLUDEPATH) {}
+puts "set parameters done"
+::bali::GenerateSymbol

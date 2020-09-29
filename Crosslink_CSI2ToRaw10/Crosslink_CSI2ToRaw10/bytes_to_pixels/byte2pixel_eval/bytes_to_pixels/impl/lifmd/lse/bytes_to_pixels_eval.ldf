@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="bytes_to_pixels_eval" device="LIF-MD6000-6MG81I" synthesis="lse" default_implementation="bytes_to_pixels_eval">
+    <Implementation title="bytes_to_pixels_eval" dir="bytes_to_pixels_eval" description="bytes_to_pixels_eval" default_strategy="bytes_to_pixels_top">
+        <Options>
+            <Option name="HDL type" value="Verilog"/>
+            <Option name="top" value="bytes_to_pixels"/>
+        </Options>
+        <Source name="../../../../../bytes_to_pixels_byte2pixel_bb.v" type="Verilog"/>
+        <Source name="../../../../../bytes_to_pixels.v" type="Verilog"/>
+        <Source name="bytes_to_pixels_top.lpf" type="Logic Preference"/>
+    </Implementation>
+    <Strategy name="bytes_to_pixels_top" file="bytes_to_pixels_top.sty"/>
+</BaliProject>

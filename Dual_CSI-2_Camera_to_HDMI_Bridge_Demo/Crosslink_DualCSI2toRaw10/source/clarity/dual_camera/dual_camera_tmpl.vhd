@@ -34,14 +34,14 @@ component dual_camera is
     );
     
 end component dual_camera; -- sbp_module=true 
-_inst: dual_camera port map (cross_domain_fifo_Data => __,cross_domain_fifo_Q => __,
-            cross_domain_fifo_AlmostEmpty => __,cross_domain_fifo_AlmostFull => __,
-            cross_domain_fifo_Empty => __,cross_domain_fifo_Full => __,cross_domain_fifo_RPReset => __,
-            cross_domain_fifo_RdClock => __,cross_domain_fifo_RdEn => __,cross_domain_fifo_Reset => __,
-            cross_domain_fifo_WrClock => __,cross_domain_fifo_WrEn => __,pll_double_CLKI => __,
-            pll_double_CLKOP => __,pll_double_CLKOS => __,pll_double_CLKOS2 => __,
-            pll_double_LOCK => __,pll_double_RST => __,LUT_FIFO_Data => __,
-            LUT_FIFO_Q => __,LUT_FIFO_AlmostEmpty => __,LUT_FIFO_AlmostFull => __,
-            LUT_FIFO_Empty => __,LUT_FIFO_Full => __,LUT_FIFO_RPReset => __,
-            LUT_FIFO_RdClock => __,LUT_FIFO_RdEn => __,LUT_FIFO_Reset => __,
-            LUT_FIFO_WrClock => __,LUT_FIFO_WrEn => __);
+_inst: dual_camera port map (LUT_FIFO_Data => __,LUT_FIFO_Q => __,LUT_FIFO_AlmostEmpty => __,
+            LUT_FIFO_AlmostFull => __,LUT_FIFO_Empty => __,LUT_FIFO_Full => __,
+            LUT_FIFO_RPReset => __,LUT_FIFO_RdClock => __,LUT_FIFO_RdEn => __,
+            LUT_FIFO_Reset => __,LUT_FIFO_WrClock => __,LUT_FIFO_WrEn => __,
+            cross_domain_fifo_Data => __,cross_domain_fifo_Q => __,cross_domain_fifo_AlmostEmpty => __,
+            cross_domain_fifo_AlmostFull => __,cross_domain_fifo_Empty => __,
+            cross_domain_fifo_Full => __,cross_domain_fifo_RPReset => __,cross_domain_fifo_RdClock => __,
+            cross_domain_fifo_RdEn => __,cross_domain_fifo_Reset => __,cross_domain_fifo_WrClock => __,
+            cross_domain_fifo_WrEn => __,pll_double_CLKI => __,pll_double_CLKOP => __,
+            pll_double_CLKOS => __,pll_double_CLKOS2 => __,pll_double_LOCK => __,
+            pll_double_RST => __);
