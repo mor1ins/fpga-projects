@@ -232,57 +232,57 @@ sip4_demo_dphy_rx_wrap
 		
 
 //........................Second camera DPHY....................// 
-sip4_demo_dphy_rx_wrap 
-        csi_rx_second (
-            .reset_n_i        (reset_n_i),
-            .reset_byte_n_i   (reset_n_i),
-            .reset_byte_fr_n_i(reset_byte_fr_n_sync),
-            .clk_byte_fr_i    (clk_byte_hs_s),
-            .clk_p_i          (clk_p_i_s),
-            .clk_n_i          (clk_n_i_s),
-            .d0_p_io          (d0_p_i_s),
-            .d0_n_io          (d0_n_i_s),
-            .d1_p_i           (d1_p_i_s),
-            .d1_n_i           (d1_n_i_s),
-            .d2_p_i           (d2_p_i_s),
-            .d2_n_i           (d2_n_i_s),
-            .d3_p_i           (d3_p_i_s),
-            .d3_n_i           (d3_n_i_s),
-            .term_clk_en_i    (term_clk_en_o_s),
-            .term_d0_en_i     (term_d0_en_w_s),
-            .term_d1_en_i     (term_d1_en_w_s),
-            .term_d2_en_i     (term_d2_en_w_s),
-            .term_d3_en_i     (term_d3_en_w_s),
-            .hs_d0_en_i       (hs_d_en_o_s),
-            .hs_d1_en_i       (hs_d1_en_w_s),
-            .hs_d2_en_i       (hs_d2_en_w_s),
-            .hs_d3_en_i       (hs_d3_en_w_s),
-            .lp_d0_tx_en_i    (1'b0),
-            .lp_d0_tx_p_i     (1'b0),
-            .lp_d0_tx_n_i     (1'b0),
-
-            .clk_hs_o         (clk_byte_hs_s),
-            .clk_byte_o       (clk_byte_o_s),
-            .bd0_o            (bd0_s),
-            .bd1_o            (bd1_s),
-            .bd2_o            (bd2_s),
-            .bd3_o            (bd3_s),
-            .hs_sync_o        (hs_sync_o_s),
-
-            .lp_clk_rx_p_o    (lp_clk_rx_p_s),
-            .lp_clk_rx_n_o    (lp_clk_rx_n_s),
-            .lp_d0_rx_p_o     (lp_d0_rx_p_o_s),
-            .lp_d0_rx_n_o     (lp_d0_rx_n_o_s),
-            .lp_d1_rx_p_o     (lp_d1_rx_p_o_s),
-            .lp_d1_rx_n_o     (lp_d1_rx_n_o_s),
-            .lp_d2_rx_p_o     (lp_d2_rx_p_o_s),
-            .lp_d2_rx_n_o     (lp_d2_rx_n_o_s),
-            .lp_d3_rx_p_o     (lp_d3_rx_p_o_s),
-            .lp_d3_rx_n_o     (lp_d3_rx_n_o_s),
-            .cd_clk_o         (),
-            .cd_d0_o          (cd_d0_o_s),
-			.dphy_sync (dphy_sync_s)
-        );		
+//sip4_demo_dphy_rx_wrap 
+//        csi_rx_second (
+//            .reset_n_i        (reset_n_i),
+//            .reset_byte_n_i   (reset_n_i),
+//            .reset_byte_fr_n_i(reset_byte_fr_n_sync),
+//            .clk_byte_fr_i    (clk_byte_hs_s),
+//            .clk_p_i          (clk_p_i_s),
+//            .clk_n_i          (clk_n_i_s),
+//            .d0_p_io          (d0_p_i_s),
+//            .d0_n_io          (d0_n_i_s),
+//            .d1_p_i           (d1_p_i_s),
+//            .d1_n_i           (d1_n_i_s),
+//            .d2_p_i           (d2_p_i_s),
+//            .d2_n_i           (d2_n_i_s),
+//            .d3_p_i           (d3_p_i_s),
+//            .d3_n_i           (d3_n_i_s),
+//            .term_clk_en_i    (term_clk_en_o_s),
+//            .term_d0_en_i     (term_d0_en_w_s),
+//            .term_d1_en_i     (term_d1_en_w_s),
+//            .term_d2_en_i     (term_d2_en_w_s),
+//            .term_d3_en_i     (term_d3_en_w_s),
+//            .hs_d0_en_i       (hs_d_en_o_s),
+//            .hs_d1_en_i       (hs_d1_en_w_s),
+//            .hs_d2_en_i       (hs_d2_en_w_s),
+//            .hs_d3_en_i       (hs_d3_en_w_s),
+//            .lp_d0_tx_en_i    (1'b0),
+//            .lp_d0_tx_p_i     (1'b0),
+//            .lp_d0_tx_n_i     (1'b0),
+//
+//            .clk_hs_o         (clk_byte_hs_s),
+//            .clk_byte_o       (clk_byte_o_s),
+//            .bd0_o            (bd0_s),
+//            .bd1_o            (bd1_s),
+//            .bd2_o            (bd2_s),
+//            .bd3_o            (bd3_s),
+//            .hs_sync_o        (hs_sync_o_s),
+//
+//            .lp_clk_rx_p_o    (lp_clk_rx_p_s),
+//            .lp_clk_rx_n_o    (lp_clk_rx_n_s),
+//            .lp_d0_rx_p_o     (lp_d0_rx_p_o_s),
+//            .lp_d0_rx_n_o     (lp_d0_rx_n_o_s),
+//            .lp_d1_rx_p_o     (lp_d1_rx_p_o_s),
+//            .lp_d1_rx_n_o     (lp_d1_rx_n_o_s),
+//            .lp_d2_rx_p_o     (lp_d2_rx_p_o_s),
+//            .lp_d2_rx_n_o     (lp_d2_rx_n_o_s),
+//            .lp_d3_rx_p_o     (lp_d3_rx_p_o_s),
+//            .lp_d3_rx_n_o     (lp_d3_rx_n_o_s),
+//            .cd_clk_o         (),
+//            .cd_d0_o          (cd_d0_o_s),
+//			.dphy_sync (dphy_sync_s)
+//        );		
 		
 		
 		
@@ -348,60 +348,61 @@ assign term_d1_en_w = term_d0_en_w;
 
 
 //........................Second camera RX controller....................// 
-sip4_demo_rx_global_ctrl 
-rx_global_ctrl_second (
-    .reset_n_i         (reset_n_i),
-    .reset_lp_n_i      (reset_lp_n_i),
-    .reset_byte_fr_n_i (reset_byte_fr_n_sync),
-    .clk_lp_ctrl_i     (refclk),
-    .clk_byte_i        (clk_byte_o_s),
-    .clk_byte_hs_i     (clk_byte_hs_s),
-    .clk_byte_fr_i     (clk_byte_hs_s),
-    .pll_lock_i        (pll_lock),
-    .bd0_i             (bd0_s),
-    .bd1_i             (bd1_s),
-    .bd2_i             (bd2_s),
-    .bd3_i             (bd3_s),
-    .lp_clk_p_i        (lp_clk_rx_p_s),
-    .lp_clk_n_i        (lp_clk_rx_n_s),
-    .lp_d0_p_i         (lp_d0_rx_p_o_s),
-    .lp_d0_n_i         (lp_d0_rx_n_o_s),
-    .lp_d1_p_i         (lp_d1_rx_p_o_s),
-    .lp_d1_n_i         (lp_d1_rx_n_o_s),
-    .lp_d2_p_i         (lp_d2_rx_p_o_s),
-    .lp_d2_n_i         (lp_d2_rx_n_o_s),
-    .lp_d3_p_i         (lp_d3_rx_p_o_s),
-    .lp_d3_n_i         (lp_d3_rx_n_o_s),
-    .hs_sync_i         (hs_sync_o_s),
-    .bd0_o             (bd0_pre_s),
-    .bd1_o             (bd1_pre_s),
-    .bd2_o             (bd2_pre_s),
-    .bd3_o             (bd3_pre_s),
-    .term_clk_en_o     (term_clk_en_o_s),
-    .term_d0_en_o      (term_d0_en_w_s),
-    .hs_d0_en_o        (hs_d_en_o_s),
-    .term_d1_en_o      (term_d1_en_temp_w_s),
-    .hs_d1_en_o        (hs_d1_en_temp_w_s),
-    .term_d2_en_o      (term_d2_en_temp_w_s),
-    .hs_d2_en_o        (hs_d2_en_temp_w_s),
-    .term_d3_en_o      (term_d3_en_temp_w_s),
-    .hs_d3_en_o        (hs_d3_en_temp_w_s),
-    .hs_sync_o         (capture_en_pre_s),
-    .lp_hs_state_clk_o (lp_hs_state_clk_o_s),
-    .lp_hs_state_d_o   (lp_hs_state_d_o_s)
-);		
+//sip4_demo_rx_global_ctrl 
+//rx_global_ctrl_second (
+//    .reset_n_i         (reset_n_i),
+//    .reset_lp_n_i      (reset_lp_n_i),
+//    .reset_byte_fr_n_i (reset_byte_fr_n_sync),
+//    .clk_lp_ctrl_i     (refclk),
+//    .clk_byte_i        (clk_byte_o_s),
+//    .clk_byte_hs_i     (clk_byte_hs_s),
+//    .clk_byte_fr_i     (clk_byte_hs_s),
+//    .pll_lock_i        (pll_lock),
+//    .bd0_i             (bd0_s),
+//    .bd1_i             (bd1_s),
+//    .bd2_i             (bd2_s),
+//    .bd3_i             (bd3_s),
+//    .lp_clk_p_i        (lp_clk_rx_p_s),
+//    .lp_clk_n_i        (lp_clk_rx_n_s),
+//    .lp_d0_p_i         (lp_d0_rx_p_o_s),
+//    .lp_d0_n_i         (lp_d0_rx_n_o_s),
+//    .lp_d1_p_i         (lp_d1_rx_p_o_s),
+//    .lp_d1_n_i         (lp_d1_rx_n_o_s),
+//    .lp_d2_p_i         (lp_d2_rx_p_o_s),
+//    .lp_d2_n_i         (lp_d2_rx_n_o_s),
+//    .lp_d3_p_i         (lp_d3_rx_p_o_s),
+//    .lp_d3_n_i         (lp_d3_rx_n_o_s),
+//    .hs_sync_i         (hs_sync_o_s),
+//    .bd0_o             (bd0_pre_s),
+//    .bd1_o             (bd1_pre_s),
+//    .bd2_o             (bd2_pre_s),
+//    .bd3_o             (bd3_pre_s),
+//    .term_clk_en_o     (term_clk_en_o_s),
+//    .term_d0_en_o      (term_d0_en_w_s),
+//    .hs_d0_en_o        (hs_d_en_o_s),
+//    .term_d1_en_o      (term_d1_en_temp_w_s),
+//    .hs_d1_en_o        (hs_d1_en_temp_w_s),
+//    .term_d2_en_o      (term_d2_en_temp_w_s),
+//    .hs_d2_en_o        (hs_d2_en_temp_w_s),
+//    .term_d3_en_o      (term_d3_en_temp_w_s),
+//    .hs_d3_en_o        (hs_d3_en_temp_w_s),
+//    .hs_sync_o         (capture_en_pre_s),
+//    .lp_hs_state_clk_o (lp_hs_state_clk_o_s),
+//    .lp_hs_state_d_o   (lp_hs_state_d_o_s)
+//);		
 	
-assign term_d1_en_w_s = term_d0_en_w_s;
-  assign term_d2_en_w_s = term_d0_en_w_s;
-  assign term_d3_en_w_s = term_d0_en_w_s;
-  assign hs_d1_en_w_s   = hs_d_en_o_s;
-  assign hs_d2_en_w_s   = hs_d_en_o_s;
-  assign hs_d3_en_w_s   = hs_d_en_o_s;		
+// assign term_d1_en_w_s = term_d0_en_w_s;
+//   assign term_d2_en_w_s = term_d0_en_w_s;
+//   assign term_d3_en_w_s = term_d0_en_w_s;
+//   assign hs_d1_en_w_s   = hs_d_en_o_s;
+//   assign hs_d2_en_w_s   = hs_d_en_o_s;
+//   assign hs_d3_en_w_s   = hs_d_en_o_s;		
 	
 
-wire [31:0] bytedata,bytedata_s;
+wire [31:0] bytedata;
+//wire [31:0] bytedata,bytedata_s;
 wire [7:0] bd3_pre_out,bd2_pre_out,bd1_pre_out,bd0_pre_out;
-wire [7:0] bd3_pre_s_out,bd2_pre_s_out,bd1_pre_s_out,bd0_pre_s_out;
+//wire [7:0] bd3_pre_s_out,bd2_pre_s_out,bd1_pre_s_out,bd0_pre_s_out;
 
 wire empty,read_en;
 //-------------First Cross Domain FIFO...........//
@@ -409,7 +410,7 @@ wire empty,read_en;
 cross_domain_fifo fifo_first(.Data({bd3_pre,bd2_pre,bd1_pre,bd0_pre}), .WrClock(clk_byte_hs), .RdClock(read_clk), .WrEn(1), .RdEn(1), .Reset(~(reset_n_i)), .RPReset(~(reset_n_i)), .Q({bd3_pre_out,bd2_pre_out,bd1_pre_out,bd0_pre_out}), .Empty(empty), .Full(), .AlmostEmpty(), .AlmostFull());
 
 //-------------Second Cross Domain FIFO...........//
-cross_domain_fifo fifo_second(.Data({bd3_pre_s,bd2_pre_s,bd1_pre_s,bd0_pre_s}), .WrClock(~clk_byte_hs_s), .RdClock(read_clk), .WrEn(1), .RdEn(1), .Reset(~(reset_n_i)), .RPReset(~(reset_n_i)), .Q({bd3_pre_s_out,bd2_pre_s_out,bd1_pre_s_out,bd0_pre_s_out}), .Empty(empty_s), .Full(), .AlmostEmpty(), .AlmostFull());
+//cross_domain_fifo fifo_second(.Data({bd3_pre_s,bd2_pre_s,bd1_pre_s,bd0_pre_s}), .WrClock(~clk_byte_hs_s), .RdClock(read_clk), .WrEn(1), .RdEn(1), .Reset(~(reset_n_i)), .RPReset(~(reset_n_i)), .Q({bd3_pre_s_out,bd2_pre_s_out,bd1_pre_s_out,bd0_pre_s_out}), .Empty(empty_s), .Full(), .AlmostEmpty(), .AlmostFull());
 
 //--------------PLL Generating pixel clock and double pixel clock...............//
 pll_double pll(.CLKI(clk_byte_hs), .RST(~reset_n_i), .CLKOP(pixel_clock),  .CLKOS2(read_clk), .LOCK(pll_lock));
@@ -417,7 +418,7 @@ pll_double pll(.CLKI(clk_byte_hs), .RST(~reset_n_i), .CLKOP(pixel_clock),  .CLKO
 //...................shift register for fifo read enable..................
 
 reg [8:0]shift;
-reg [4:0] shift_s;
+//reg [4:0] shift_s;
 
 
 control_capture_lane4 
@@ -425,46 +426,47 @@ control_capture_lane4
 						.fv(fv_8bit), .lv(lv_8bit), .dout(payload), .vc(vc_o), .dt_correct(dt_correct), .wc_correct(wc_correct),
 						.dt(dt_o), .wc(wc_o), .ecc(ecc_o), .line_length_detect(1'b0), .line_length(line_length));
 						
-control_capture_lane4 
-	u_control_capture2(.rstn(reset_byte_fr_n_sync), .clk(read_clk), .din({bd3_pre_s_out,bd2_pre_s_out,bd1_pre_s_out,bd0_pre_s_out}), 
-						.fv(fv_8bit_s), .lv(lv_8bit_s), .dout(payload_s), .vc(vc_o_s), .dt_correct(dt_correct_s), .wc_correct(wc_correct_s),
-						.dt(dt_o_s), .wc(wc_o_s), .ecc(ecc_o_s), .line_length_detect(1'b0), .line_length(line_length));
+//control_capture_lane4 
+//	u_control_capture2(.rstn(reset_byte_fr_n_sync), .clk(read_clk), .din({bd3_pre_s_out,bd2_pre_s_out,bd1_pre_s_out,bd0_pre_s_out}), 
+//						.fv(fv_8bit_s), .lv(lv_8bit_s), .dout(payload_s), .vc(vc_o_s), .dt_correct(dt_correct_s), .wc_correct(wc_correct_s),
+//						.dt(dt_o_s), .wc(wc_o_s), .ecc(ecc_o_s), .line_length_detect(1'b0), .line_length(line_length));
 
 
 
-wire [9:0]pd_o,pd_o_s;
+//wire [9:0]pd_o,pd_o_s;
+wire [9:0]pd_o;
 
 raw10_lane4 #(.bus_width(10), .lane_width(4)) 
-			byte_pixel (.rstn(reset_n_i), .clk(read_clk), .pixclk(pixel_clock), .din(payload), .fv_8bit(fv_8bit),
-						.lv_8bit(lv_8bit), .pixdata(pd_o), .fv(fv_o), .lv(lv_o));
+			byte_pixel (.rstn(reset_n_i), .clk(read_clk), .pixclk(pixel_clock), .din(payload), 
+						.fv_8bit(fv_8bit), .lv_8bit(lv_8bit), .pixdata(pd_o), .fv(fv_o), .lv(lv_o));
 						
-raw10_lane4 #(.bus_width(10), .lane_width(4)) 
-			byte_pixel_second (.rstn(reset_n_i), .clk(read_clk), .pixclk(pixel_clock), .din(payload_s), .fv_8bit(fv_8bit_s), 
-								.lv_8bit(lv_8bit_s), .pixdata(pd_o_s), .fv(fv_o_s), .lv(lv_o_s));
+//raw10_lane4 #(.bus_width(10), .lane_width(4)) 
+//			byte_pixel_second (.rstn(reset_n_i), .clk(read_clk), .pixclk(pixel_clock), .din(payload_s), .fv_8bit(fv_8bit_s), 
+//								.lv_8bit(lv_8bit_s), .pixdata(pd_o_s), .fv(fv_o_s), .lv(lv_o_s));
 
 //.........................Merging ...................//
 
 
 
-SDR_user_ctrl u_SDR_user_ctrl(
-	.i_rst_n		(reset_n_i),
-	.i_clk			(pixel_clock),
-	.i_clk_2		(pixel_clock), 
-	.i_clk_x2       ( pixel_clock),
-
-	.ia_fv			(fv_o),
-	.ia_lv			(lv_o),
-	.ia_data		(pd_o),
-	
-	.ib_fv			(fv_o_s),
-	.ib_lv			(lv_o_s),
-	.ib_data		(pd_o_s),
-
-	.o_vsync		(fv_o_out),
-	.o_hsync		(lv_o_out),
-	.o_data			(pixdata_out)
-);
-wire [9:0]pixdata_out;
+//SDR_user_ctrl u_SDR_user_ctrl(
+//	.i_rst_n		(reset_n_i),
+//	.i_clk			(pixel_clock),
+//	.i_clk_2		(pixel_clock), 
+//	.i_clk_x2       (pixel_clock),
+//
+//	.ia_fv			(fv_o),
+//	.ia_lv			(lv_o),
+//	.ia_data		(pd_o),
+//	
+//	.ib_fv			(fv_o_s),
+//	.ib_lv			(lv_o_s),
+//	.ib_data		(pd_o_s),
+//
+//	.o_vsync		(fv_o_out),
+//	.o_hsync		(lv_o_out),
+//	.o_data			(pixdata_out)
+//);
+//wire [9:0]pixdata_out;
 
 genvar i;
 generate
@@ -473,7 +475,7 @@ generate
             begin : pixel_data
                 OFS1P3DX r_ff_i
                 (
-                    .D     (pixdata_out[i]),
+                    .D     (pd_o[i]),
                     .SP    (1'b1),
                     .SCLK  (pixel_clock),
                     .CD    (~reset_pixel_n_sync),
@@ -497,7 +499,7 @@ ODDRX1F pclk_ddr
 
 OFS1P3DX fv_ff
         (
-            .D     (fv_o_out),
+            .D     (fv_o),
             .SP    (1'b1),
             .SCLK  (pixel_clock),
             .CD    (~reset_pixel_n_sync),
@@ -506,7 +508,7 @@ OFS1P3DX fv_ff
 
 OFS1P3DX lv_ff
         (
-            .D     (lv_o_out),
+            .D     (lv_o),
             .SP    (1'b1),
             .SCLK  (pixel_clock),
             .CD    (~reset_pixel_n_sync),
