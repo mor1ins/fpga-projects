@@ -2,12 +2,33 @@
 <BaliProject version="3.2" title="Crosslink_CSI2ToRaw10" device="LIF-MD6000-6MG81I" default_implementation="Crosslink">
     <Options/>
     <Implementation title="Crosslink" dir="Crosslink" description="Crosslink" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="top"/>
-        <Source name="Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10.sbx" type="sbx" type_short="SBX">
-            <Options top_module="Crosslink_CSI2ToRaw10"/>
+        <Options def_top="camera"/>
+        <Source name="source/control_capture_lane4_bb.v" type="Verilog" type_short="Verilog">
+            <Options/>
         </Source>
-        <Source name="top.vhd" type="VHDL" type_short="VHDL">
+        <Source name="source/dphy_rx_wrap.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/raw10_lane4_bb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/rx_global_ctrl_bb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/sip4_demo_dphy_rx_wrap.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/sip4_demo_rx_global_ctrl.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/top.v" type="Verilog" type_short="Verilog">
             <Options top_module="top"/>
+        </Source>
+        <Source name="source/user_sdr_cmd_ctrl_bb.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="source/clarity/camera/camera.sbx" type="sbx" type_short="SBX">
+            <Options top_module="camera"/>
         </Source>
         <Source name="Crosslink_CSI2ToRaw10.lpf" type="Logic Preference" type_short="LPF">
             <Options/>

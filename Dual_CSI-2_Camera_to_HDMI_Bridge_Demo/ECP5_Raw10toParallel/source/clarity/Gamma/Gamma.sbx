@@ -10,16 +10,16 @@
                 <spirit:name>Diamond_Synthesis</spirit:name>
                 <spirit:group>synthesis</spirit:group>
                 <spirit:file>
-                    <spirit:name>./Gamma.v</spirit:name>
-                    <spirit:fileType>verilogSource</spirit:fileType>
+                    <spirit:name>./Gamma.vhd</spirit:name>
+                    <spirit:fileType>vhdlSource</spirit:fileType>
                 </spirit:file>
             </spirit:fileset>
             <spirit:fileset>
                 <spirit:name>Diamond_Simulation</spirit:name>
                 <spirit:group>simulation</spirit:group>
                 <spirit:file>
-                    <spirit:name>./Gamma.v</spirit:name>
-                    <spirit:fileType>verilogSource</spirit:fileType>
+                    <spirit:name>./Gamma.vhd</spirit:name>
+                    <spirit:fileType>vhdlSource</spirit:fileType>
                 </spirit:file>
             </spirit:fileset>
         </spirit:fileSets>
@@ -174,12 +174,12 @@
             </spirit:ports>
         </spirit:model>
         <spirit:vendorExtensions>
-            <lattice:device>LFE5UM-85F-8BG756C</lattice:device>
+            <lattice:device>LFE5UM-85F-8BG756I</lattice:device>
             <lattice:synthesis>synplify</lattice:synthesis>
-            <lattice:date>2017-04-07.12:43:51</lattice:date>
-            <lattice:modified>2017-11-30.15:11:19</lattice:modified>
-            <lattice:diamond>3.10.0.111.2</lattice:diamond>
-            <lattice:language>Verilog</lattice:language>
+            <lattice:date>2020-11-11.03:12:48</lattice:date>
+            <lattice:modified>2020-11-11.03:36:09</lattice:modified>
+            <lattice:diamond>3.5.0.102</lattice:diamond>
+            <lattice:language>VHDL</lattice:language>
             <lattice:attributes>
                 <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                 <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
@@ -210,374 +210,22 @@
                     <spirit:vendor>Lattice Semiconductor Corporation</spirit:vendor>
                     <spirit:library>LEGACY</spirit:library>
                     <spirit:name>Gamma Corrector</spirit:name>
-                    <spirit:version>2.2</spirit:version>
+                    <spirit:version>2.1</spirit:version>
                     <spirit:fileSets>
                         <spirit:fileset>
                             <spirit:name>Diamond_Simulation</spirit:name>
                             <spirit:group>simulation</spirit:group>
                             <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
+                                <spirit:name>./gammaCorrector/gammaCorrector_top.vhd</spirit:name>
+                                <spirit:fileType>vhdlSource</spirit:fileType>
                             </spirit:file>
                         </spirit:fileset>
                         <spirit:fileset>
                             <spirit:name>Diamond_Synthesis</spirit:name>
                             <spirit:group>synthesis</spirit:group>
                             <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector.ngo</spirit:name>
-                                <spirit:userFileType>NGO</spirit:userFileType>
-                            </spirit:file>
-                            <spirit:file>
-                                <spirit:name>./gammaCorrector/gammaCorrector_top.v</spirit:name>
-                                <spirit:fileType>verilogSource</spirit:fileType>
+                                <spirit:name>./gammaCorrector/gammaCorrector_top.vhd</spirit:name>
+                                <spirit:fileType>vhdlSource</spirit:fileType>
                             </spirit:file>
                             <spirit:file>
                                 <spirit:name>./gammaCorrector/gammaCorrector_bb.v</spirit:name>
@@ -595,12 +243,6 @@
                             <spirit:apiType>none</spirit:apiType>
                             <spirit:generatorExe>${sbp_path}/${instance}/generate_core.tcl</spirit:generatorExe>
                             <spirit:group>CONFIG</spirit:group>
-                        </spirit:componentGenerator>
-                        <spirit:componentGenerator spirit:hidden="true" spirit:scope="instance">
-                            <spirit:name>Generation</spirit:name>
-                            <spirit:apiType>none</spirit:apiType>
-                            <spirit:generatorExe>${sbp_path}/${instance}/generate_core.tcl</spirit:generatorExe>
-                            <spirit:group>GENERATE</spirit:group>
                         </spirit:componentGenerator>
                     </spirit:componentGenerators>
                     <spirit:model>
@@ -705,7 +347,7 @@
                     <spirit:vendorExtensions>
                         <lattice:synthesis>synplify</lattice:synthesis>
                         <lattice:date>2014-12-04.14:10:00</lattice:date>
-                        <lattice:modified>2017-11-30.15:11:19</lattice:modified>
+                        <lattice:modified>2020-11-11.03:36:09</lattice:modified>
                         <lattice:attributes>
                             <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                             <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
@@ -731,7 +373,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>OperatingCondition</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">COM</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">IND</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>Package</lattice:lpckey>
@@ -739,7 +381,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>PartName</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">LFE5UM-85F-8BG756C</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">LFE5UM-85F-8BG756I</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>PartType</lattice:lpckey>
@@ -760,7 +402,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>CoreRevision</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">2.2</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">2.1</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>CoreStatus</lattice:lpckey>
@@ -772,7 +414,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>Date</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">11/30/2017</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">11/11/2020</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>ModuleName</lattice:lpckey>
@@ -780,15 +422,15 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>ParameterFileVersion</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">2.2</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">1.2</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>SourceFormat</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">verilog</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">vhdl</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>Time</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">15:11:00</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">03:35:38</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>VendorName</lattice:lpckey>
@@ -841,7 +483,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>gamma0val</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">1.0</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">3.3</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>gamma1programmable</lattice:lpckey>
@@ -849,7 +491,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>gamma1val</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">1.0</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">3.3</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>gamma2programmable</lattice:lpckey>
@@ -857,7 +499,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>gamma2val</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">1.0</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">3.3</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>markall</lattice:lpckey>

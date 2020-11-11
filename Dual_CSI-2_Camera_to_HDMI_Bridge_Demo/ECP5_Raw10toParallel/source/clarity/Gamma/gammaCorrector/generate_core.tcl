@@ -74,7 +74,7 @@ package forget IP_Generate
 package forget IP_Templates
 set auto_path "$auto_path"
 set Para(install_dir) $env(TOOLRTF)
-set Para(CoreIndex) "gamma_v2.2"
+set Para(CoreIndex) "gamma_v2.1"
 set Para(CoreRoot) ""
 set fid [open $idxfile r]
 while {[gets $fid line ]>=0} {
@@ -102,7 +102,7 @@ set Para(CoreName) "Gamma Corrector"
 set Para(arch) "sa5p00m"
 set Para(family) "ecp5um"
 set Para(Family) "ecp5um"
-set Para(design) "verilog"
+set Para(design) "vhdl"
 set Para(Bin) "[file join $Para(install_dir) bin $os]"
 set Para(SpeedGrade) "8"
 set Para(FPGAPath) "[file join $Para(install_dir) ispfpga bin $os]"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BaliProject version="3.2" title="Raw10toParallel" device="LFE5UM-85F-8BG756C" default_implementation="impl1">
+<BaliProject version="3.2" title="Raw10toParallel" device="LFE5UM-85F-8BG756I" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
         <Options def_top="gammaCorrector_top" top="RAW10toParallel"/>
@@ -42,9 +42,6 @@
         <Source name="source/clarity/dp_ram/dp_ram.sbx" type="sbx" type_short="SBX">
             <Options/>
         </Source>
-        <Source name="source/clarity/Gamma/Gamma.sbx" type="sbx" type_short="SBX">
-            <Options/>
-        </Source>
         <Source name="source/clarity/image_fifo/image_fifo.sbx" type="sbx" type_short="SBX">
             <Options/>
         </Source>
@@ -52,6 +49,18 @@
             <Options/>
         </Source>
         <Source name="source/clarity/CSC/CSC.sbx" type="sbx" type_short="SBX">
+            <Options/>
+        </Source>
+        <Source name="source/clarity/Gamma/Gamma.sbx" type="sbx" type_short="SBX">
+            <Options/>
+        </Source>
+        <Source name="source/convert_to_gray.vhd" type="VHDL" type_short="VHDL" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="source/comvert_to_gray.v" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
         <Source name="Raw10toParallel.lpf" type="Logic Preference" type_short="LPF">

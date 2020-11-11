@@ -137,8 +137,8 @@
             <lattice:device>LFE5UM-85F-8BG756I</lattice:device>
             <lattice:synthesis>synplify</lattice:synthesis>
             <lattice:date>2017-04-27.13:57:41</lattice:date>
-            <lattice:modified>2017-06-02.10:45:35</lattice:modified>
-            <lattice:diamond>3.9.0.99.2</lattice:diamond>
+            <lattice:modified>2020-11-11.03:11:20</lattice:modified>
+            <lattice:diamond>3.5.0.102</lattice:diamond>
             <lattice:language>Verilog</lattice:language>
             <lattice:attributes>
                 <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
@@ -274,7 +274,7 @@
                     </spirit:model>
                     <spirit:vendorExtensions>
                         <lattice:synthesis>synplify</lattice:synthesis>
-                        <lattice:modified>2017-06-02.10:45:35</lattice:modified>
+                        <lattice:modified>2020-11-11.03:11:20</lattice:modified>
                         <lattice:attributes>
                             <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                             <lattice:attribute lattice:name="BBox">false</lattice:attribute>

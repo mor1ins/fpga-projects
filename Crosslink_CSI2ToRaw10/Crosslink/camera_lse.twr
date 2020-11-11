@@ -1,0 +1,680 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Nov 11 00:01:28 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     camera
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets cross_domain_fifo_RdClock_c]
+            424 items scored, 72 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.316ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \cross_domain_fifo_inst/FF_49  (from cross_domain_fifo_RdClock_c +)
+   Destination:    FD1S3BX    D              \cross_domain_fifo_inst/FF_19  (to cross_domain_fifo_RdClock_c +)
+
+   Delay:                   6.316ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      6.316ns data_path \cross_domain_fifo_inst/FF_49 to \cross_domain_fifo_inst/FF_19 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.316ns
+
+ Path Details: \cross_domain_fifo_inst/FF_49 to \cross_domain_fifo_inst/FF_19
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \cross_domain_fifo_inst/FF_49 (from cross_domain_fifo_RdClock_c)
+Route         9   e 1.559                                  \cross_domain_fifo_inst/w_gcount_r27
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_31
+Route         6   e 1.378                                  \cross_domain_fifo_inst/w_g2b_xor_cluster_1
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_24
+Route         3   e 1.239                                  \cross_domain_fifo_inst/wcount_r1
+A1_TO_FCO   ---     0.000           B[2] to COUT           \cross_domain_fifo_inst/ae_set_cmp_0
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co0_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_1
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co1_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_2
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co2_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_3
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co3_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_4
+Route         1   e 0.020                                  \cross_domain_fifo_inst/ae_set_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \cross_domain_fifo_inst/a2
+Route         1   e 1.020                                  \cross_domain_fifo_inst/ae_set_d
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_5
+Route         1   e 1.020                                  \cross_domain_fifo_inst/ae_d
+                  --------
+                    6.316  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 1.316ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \cross_domain_fifo_inst/FF_49  (from cross_domain_fifo_RdClock_c +)
+   Destination:    FD1S3BX    D              \cross_domain_fifo_inst/FF_19  (to cross_domain_fifo_RdClock_c +)
+
+   Delay:                   6.316ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      6.316ns data_path \cross_domain_fifo_inst/FF_49 to \cross_domain_fifo_inst/FF_19 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.316ns
+
+ Path Details: \cross_domain_fifo_inst/FF_49 to \cross_domain_fifo_inst/FF_19
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \cross_domain_fifo_inst/FF_49 (from cross_domain_fifo_RdClock_c)
+Route         9   e 1.559                                  \cross_domain_fifo_inst/w_gcount_r27
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_31
+Route         6   e 1.378                                  \cross_domain_fifo_inst/w_g2b_xor_cluster_1
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_23
+Route         3   e 1.239                                  \cross_domain_fifo_inst/wcount_r0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \cross_domain_fifo_inst/ae_clr_cmp_0
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co0_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_clr_cmp_1
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co1_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_clr_cmp_2
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co2_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_clr_cmp_3
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co3_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_clr_cmp_4
+Route         1   e 0.020                                  \cross_domain_fifo_inst/ae_clr_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \cross_domain_fifo_inst/a3
+Route         1   e 1.020                                  \cross_domain_fifo_inst/ae_set_d
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_5
+Route         1   e 1.020                                  \cross_domain_fifo_inst/ae_d
+                  --------
+                    6.316  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 1.316ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \cross_domain_fifo_inst/FF_49  (from cross_domain_fifo_RdClock_c +)
+   Destination:    FD1S3BX    D              \cross_domain_fifo_inst/FF_19  (to cross_domain_fifo_RdClock_c +)
+
+   Delay:                   6.316ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      6.316ns data_path \cross_domain_fifo_inst/FF_49 to \cross_domain_fifo_inst/FF_19 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.316ns
+
+ Path Details: \cross_domain_fifo_inst/FF_49 to \cross_domain_fifo_inst/FF_19
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \cross_domain_fifo_inst/FF_49 (from cross_domain_fifo_RdClock_c)
+Route         9   e 1.559                                  \cross_domain_fifo_inst/w_gcount_r27
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_31
+Route         6   e 1.378                                  \cross_domain_fifo_inst/w_g2b_xor_cluster_1
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_23
+Route         3   e 1.239                                  \cross_domain_fifo_inst/wcount_r0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \cross_domain_fifo_inst/ae_set_cmp_0
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co0_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_1
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co1_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_2
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co2_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_3
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co3_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/ae_set_cmp_4
+Route         1   e 0.020                                  \cross_domain_fifo_inst/ae_set_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \cross_domain_fifo_inst/a2
+Route         1   e 1.020                                  \cross_domain_fifo_inst/ae_set_d
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_5
+Route         1   e 1.020                                  \cross_domain_fifo_inst/ae_d
+                  --------
+                    6.316  (0.0% logic, 100.0% route), 10 logic levels.
+
+Warning: 6.316 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets cross_domain_fifo_WrClock_c]
+            424 items scored, 72 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.316ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \cross_domain_fifo_inst/FF_40  (from cross_domain_fifo_WrClock_c +)
+   Destination:    FD1S3DX    D              \cross_domain_fifo_inst/FF_0  (to cross_domain_fifo_WrClock_c +)
+
+   Delay:                   6.316ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      6.316ns data_path \cross_domain_fifo_inst/FF_40 to \cross_domain_fifo_inst/FF_0 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.316ns
+
+ Path Details: \cross_domain_fifo_inst/FF_40 to \cross_domain_fifo_inst/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \cross_domain_fifo_inst/FF_40 (from cross_domain_fifo_WrClock_c)
+Route         9   e 1.559                                  \cross_domain_fifo_inst/r_gcount_w25
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_22
+Route         6   e 1.378                                  \cross_domain_fifo_inst/r_g2b_xor_cluster_0
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_14
+Route         3   e 1.239                                  \cross_domain_fifo_inst/rcount_w0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \cross_domain_fifo_inst/af_clr_cmp_0
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co0_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_1
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co1_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_2
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co2_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_3
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co3_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_4
+Route         1   e 0.020                                  \cross_domain_fifo_inst/af_clr_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \cross_domain_fifo_inst/a5
+Route         1   e 1.020                                  \cross_domain_fifo_inst/af_set
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_0
+Route         1   e 1.020                                  \cross_domain_fifo_inst/af_d
+                  --------
+                    6.316  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 1.316ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \cross_domain_fifo_inst/FF_40  (from cross_domain_fifo_WrClock_c +)
+   Destination:    FD1S3DX    D              \cross_domain_fifo_inst/FF_0  (to cross_domain_fifo_WrClock_c +)
+
+   Delay:                   6.316ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      6.316ns data_path \cross_domain_fifo_inst/FF_40 to \cross_domain_fifo_inst/FF_0 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.316ns
+
+ Path Details: \cross_domain_fifo_inst/FF_40 to \cross_domain_fifo_inst/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \cross_domain_fifo_inst/FF_40 (from cross_domain_fifo_WrClock_c)
+Route         9   e 1.559                                  \cross_domain_fifo_inst/r_gcount_w25
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_22
+Route         6   e 1.378                                  \cross_domain_fifo_inst/r_g2b_xor_cluster_0
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_14
+Route         3   e 1.239                                  \cross_domain_fifo_inst/rcount_w0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \cross_domain_fifo_inst/af_set_cmp_0
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co0_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_set_cmp_1
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co1_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_set_cmp_2
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co2_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_set_cmp_3
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co3_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_set_cmp_4
+Route         1   e 0.020                                  \cross_domain_fifo_inst/af_set_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \cross_domain_fifo_inst/a4
+Route         1   e 1.020                                  \cross_domain_fifo_inst/af_set
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_0
+Route         1   e 1.020                                  \cross_domain_fifo_inst/af_d
+                  --------
+                    6.316  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Error:  The following path violates requirements by 1.316ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \cross_domain_fifo_inst/FF_40  (from cross_domain_fifo_WrClock_c +)
+   Destination:    FD1S3DX    D              \cross_domain_fifo_inst/FF_0  (to cross_domain_fifo_WrClock_c +)
+
+   Delay:                   6.316ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      6.316ns data_path \cross_domain_fifo_inst/FF_40 to \cross_domain_fifo_inst/FF_0 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.316ns
+
+ Path Details: \cross_domain_fifo_inst/FF_40 to \cross_domain_fifo_inst/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \cross_domain_fifo_inst/FF_40 (from cross_domain_fifo_WrClock_c)
+Route         9   e 1.559                                  \cross_domain_fifo_inst/r_gcount_w25
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_22
+Route         6   e 1.378                                  \cross_domain_fifo_inst/r_g2b_xor_cluster_0
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_15
+Route         3   e 1.239                                  \cross_domain_fifo_inst/rcount_w1
+A1_TO_FCO   ---     0.000           B[2] to COUT           \cross_domain_fifo_inst/af_clr_cmp_0
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co0_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_1
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co1_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_2
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co2_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_3
+Route         1   e 0.020                                  \cross_domain_fifo_inst/co3_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \cross_domain_fifo_inst/af_clr_cmp_4
+Route         1   e 0.020                                  \cross_domain_fifo_inst/af_clr_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \cross_domain_fifo_inst/a5
+Route         1   e 1.020                                  \cross_domain_fifo_inst/af_set
+LUT4        ---     0.000                to                \cross_domain_fifo_inst/LUT4_0
+Route         1   e 1.020                                  \cross_domain_fifo_inst/af_d
+                  --------
+                    6.316  (0.0% logic, 100.0% route), 10 logic levels.
+
+Warning: 6.316 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets LUT_FIFO_RdClock_c]
+            412 items scored, 156 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.417ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \LUT_FIFO_inst/FF_64  (from LUT_FIFO_RdClock_c +)
+   Destination:    FD1S3BX    D              \LUT_FIFO_inst/FF_25  (to LUT_FIFO_RdClock_c +)
+
+   Delay:                   6.417ns  (0.0% logic, 100.0% route), 11 logic levels.
+
+ Constraint Details:
+
+      6.417ns data_path \LUT_FIFO_inst/FF_64 to \LUT_FIFO_inst/FF_25 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.417ns
+
+ Path Details: \LUT_FIFO_inst/FF_64 to \LUT_FIFO_inst/FF_25
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \LUT_FIFO_inst/FF_64 (from LUT_FIFO_RdClock_c)
+Route         9   e 1.559                                  \LUT_FIFO_inst/w_gcount_r211
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_41
+Route         9   e 1.459                                  \LUT_FIFO_inst/w_g2b_xor_cluster_2_1
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_29
+Route         3   e 1.239                                  \LUT_FIFO_inst/wcount_r1
+A1_TO_FCO   ---     0.000           B[2] to COUT           \LUT_FIFO_inst/ae_set_cmp_0
+Route         1   e 0.020                                  \LUT_FIFO_inst/co0_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_set_cmp_1
+Route         1   e 0.020                                  \LUT_FIFO_inst/co1_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_set_cmp_2
+Route         1   e 0.020                                  \LUT_FIFO_inst/co2_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_set_cmp_3
+Route         1   e 0.020                                  \LUT_FIFO_inst/co3_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_set_cmp_4
+Route         1   e 0.020                                  \LUT_FIFO_inst/co4_5
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_set_cmp_5
+Route         1   e 0.020                                  \LUT_FIFO_inst/ae_set_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \LUT_FIFO_inst/a2
+Route         1   e 1.020                                  \LUT_FIFO_inst/ae_clr_d
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_5
+Route         1   e 1.020                                  \LUT_FIFO_inst/ae_d
+                  --------
+                    6.417  (0.0% logic, 100.0% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 1.417ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \LUT_FIFO_inst/FF_64  (from LUT_FIFO_RdClock_c +)
+   Destination:    FD1S3BX    D              \LUT_FIFO_inst/FF_25  (to LUT_FIFO_RdClock_c +)
+
+   Delay:                   6.417ns  (0.0% logic, 100.0% route), 11 logic levels.
+
+ Constraint Details:
+
+      6.417ns data_path \LUT_FIFO_inst/FF_64 to \LUT_FIFO_inst/FF_25 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.417ns
+
+ Path Details: \LUT_FIFO_inst/FF_64 to \LUT_FIFO_inst/FF_25
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \LUT_FIFO_inst/FF_64 (from LUT_FIFO_RdClock_c)
+Route         9   e 1.559                                  \LUT_FIFO_inst/w_gcount_r211
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_41
+Route         9   e 1.459                                  \LUT_FIFO_inst/w_g2b_xor_cluster_2_1
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_29
+Route         3   e 1.239                                  \LUT_FIFO_inst/wcount_r1
+A1_TO_FCO   ---     0.000           B[2] to COUT           \LUT_FIFO_inst/ae_clr_cmp_0
+Route         1   e 0.020                                  \LUT_FIFO_inst/co0_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_1
+Route         1   e 0.020                                  \LUT_FIFO_inst/co1_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_2
+Route         1   e 0.020                                  \LUT_FIFO_inst/co2_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_3
+Route         1   e 0.020                                  \LUT_FIFO_inst/co3_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_4
+Route         1   e 0.020                                  \LUT_FIFO_inst/co4_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_5
+Route         1   e 0.020                                  \LUT_FIFO_inst/ae_clr_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \LUT_FIFO_inst/a3
+Route         1   e 1.020                                  \LUT_FIFO_inst/ae_clr_d
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_5
+Route         1   e 1.020                                  \LUT_FIFO_inst/ae_d
+                  --------
+                    6.417  (0.0% logic, 100.0% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 1.417ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \LUT_FIFO_inst/FF_64  (from LUT_FIFO_RdClock_c +)
+   Destination:    FD1S3BX    D              \LUT_FIFO_inst/FF_25  (to LUT_FIFO_RdClock_c +)
+
+   Delay:                   6.417ns  (0.0% logic, 100.0% route), 11 logic levels.
+
+ Constraint Details:
+
+      6.417ns data_path \LUT_FIFO_inst/FF_64 to \LUT_FIFO_inst/FF_25 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.417ns
+
+ Path Details: \LUT_FIFO_inst/FF_64 to \LUT_FIFO_inst/FF_25
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \LUT_FIFO_inst/FF_64 (from LUT_FIFO_RdClock_c)
+Route         9   e 1.559                                  \LUT_FIFO_inst/w_gcount_r211
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_41
+Route         9   e 1.459                                  \LUT_FIFO_inst/w_g2b_xor_cluster_0
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_28
+Route         3   e 1.239                                  \LUT_FIFO_inst/wcount_r0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \LUT_FIFO_inst/ae_clr_cmp_0
+Route         1   e 0.020                                  \LUT_FIFO_inst/co0_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_1
+Route         1   e 0.020                                  \LUT_FIFO_inst/co1_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_2
+Route         1   e 0.020                                  \LUT_FIFO_inst/co2_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_3
+Route         1   e 0.020                                  \LUT_FIFO_inst/co3_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_4
+Route         1   e 0.020                                  \LUT_FIFO_inst/co4_7
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/ae_clr_cmp_5
+Route         1   e 0.020                                  \LUT_FIFO_inst/ae_clr_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \LUT_FIFO_inst/a3
+Route         1   e 1.020                                  \LUT_FIFO_inst/ae_clr_d
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_5
+Route         1   e 1.020                                  \LUT_FIFO_inst/ae_d
+                  --------
+                    6.417  (0.0% logic, 100.0% route), 11 logic levels.
+
+Warning: 6.417 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets LUT_FIFO_WrClock_c]
+            412 items scored, 156 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.417ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \LUT_FIFO_inst/FF_52  (from LUT_FIFO_WrClock_c +)
+   Destination:    FD1S3DX    D              \LUT_FIFO_inst/FF_0  (to LUT_FIFO_WrClock_c +)
+
+   Delay:                   6.417ns  (0.0% logic, 100.0% route), 11 logic levels.
+
+ Constraint Details:
+
+      6.417ns data_path \LUT_FIFO_inst/FF_52 to \LUT_FIFO_inst/FF_0 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.417ns
+
+ Path Details: \LUT_FIFO_inst/FF_52 to \LUT_FIFO_inst/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \LUT_FIFO_inst/FF_52 (from LUT_FIFO_WrClock_c)
+Route         9   e 1.559                                  \LUT_FIFO_inst/r_gcount_w29
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_27
+Route         9   e 1.459                                  \LUT_FIFO_inst/r_g2b_xor_cluster_1
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_15
+Route         3   e 1.239                                  \LUT_FIFO_inst/rcount_w1
+A1_TO_FCO   ---     0.000           B[2] to COUT           \LUT_FIFO_inst/af_set_cmp_0
+Route         1   e 0.020                                  \LUT_FIFO_inst/co0_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_set_cmp_1
+Route         1   e 0.020                                  \LUT_FIFO_inst/co1_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_set_cmp_2
+Route         1   e 0.020                                  \LUT_FIFO_inst/co2_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_set_cmp_3
+Route         1   e 0.020                                  \LUT_FIFO_inst/co3_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_set_cmp_4
+Route         1   e 0.020                                  \LUT_FIFO_inst/co4_9
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_set_cmp_5
+Route         1   e 0.020                                  \LUT_FIFO_inst/af_set_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \LUT_FIFO_inst/a4
+Route         1   e 1.020                                  \LUT_FIFO_inst/af_set
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_0
+Route         1   e 1.020                                  \LUT_FIFO_inst/af_d
+                  --------
+                    6.417  (0.0% logic, 100.0% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 1.417ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \LUT_FIFO_inst/FF_52  (from LUT_FIFO_WrClock_c +)
+   Destination:    FD1S3DX    D              \LUT_FIFO_inst/FF_0  (to LUT_FIFO_WrClock_c +)
+
+   Delay:                   6.417ns  (0.0% logic, 100.0% route), 11 logic levels.
+
+ Constraint Details:
+
+      6.417ns data_path \LUT_FIFO_inst/FF_52 to \LUT_FIFO_inst/FF_0 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.417ns
+
+ Path Details: \LUT_FIFO_inst/FF_52 to \LUT_FIFO_inst/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \LUT_FIFO_inst/FF_52 (from LUT_FIFO_WrClock_c)
+Route         9   e 1.559                                  \LUT_FIFO_inst/r_gcount_w29
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_27
+Route         9   e 1.459                                  \LUT_FIFO_inst/r_g2b_xor_cluster_1
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_15
+Route         3   e 1.239                                  \LUT_FIFO_inst/rcount_w1
+A1_TO_FCO   ---     0.000           B[2] to COUT           \LUT_FIFO_inst/af_clr_cmp_0
+Route         1   e 0.020                                  \LUT_FIFO_inst/co0_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_1
+Route         1   e 0.020                                  \LUT_FIFO_inst/co1_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_2
+Route         1   e 0.020                                  \LUT_FIFO_inst/co2_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_3
+Route         1   e 0.020                                  \LUT_FIFO_inst/co3_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_4
+Route         1   e 0.020                                  \LUT_FIFO_inst/co4_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_5
+Route         1   e 0.020                                  \LUT_FIFO_inst/af_clr_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \LUT_FIFO_inst/a5
+Route         1   e 1.020                                  \LUT_FIFO_inst/af_set
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_0
+Route         1   e 1.020                                  \LUT_FIFO_inst/af_d
+                  --------
+                    6.417  (0.0% logic, 100.0% route), 11 logic levels.
+
+
+Error:  The following path violates requirements by 1.417ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \LUT_FIFO_inst/FF_52  (from LUT_FIFO_WrClock_c +)
+   Destination:    FD1S3DX    D              \LUT_FIFO_inst/FF_0  (to LUT_FIFO_WrClock_c +)
+
+   Delay:                   6.417ns  (0.0% logic, 100.0% route), 11 logic levels.
+
+ Constraint Details:
+
+      6.417ns data_path \LUT_FIFO_inst/FF_52 to \LUT_FIFO_inst/FF_0 violates
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 1.417ns
+
+ Path Details: \LUT_FIFO_inst/FF_52 to \LUT_FIFO_inst/FF_0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \LUT_FIFO_inst/FF_52 (from LUT_FIFO_WrClock_c)
+Route         9   e 1.559                                  \LUT_FIFO_inst/r_gcount_w29
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_27
+Route         9   e 1.459                                  \LUT_FIFO_inst/r_g2b_xor_cluster_1
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_14
+Route         3   e 1.239                                  \LUT_FIFO_inst/rcount_w0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \LUT_FIFO_inst/af_clr_cmp_0
+Route         1   e 0.020                                  \LUT_FIFO_inst/co0_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_1
+Route         1   e 0.020                                  \LUT_FIFO_inst/co1_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_2
+Route         1   e 0.020                                  \LUT_FIFO_inst/co2_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_3
+Route         1   e 0.020                                  \LUT_FIFO_inst/co3_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_4
+Route         1   e 0.020                                  \LUT_FIFO_inst/co4_11
+FCI_TO_FCO  ---     0.000            CIN to COUT           \LUT_FIFO_inst/af_clr_cmp_5
+Route         1   e 0.020                                  \LUT_FIFO_inst/af_clr_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \LUT_FIFO_inst/a5
+Route         1   e 1.020                                  \LUT_FIFO_inst/af_set
+LUT4        ---     0.000                to                \LUT_FIFO_inst/LUT4_0
+Route         1   e 1.020                                  \LUT_FIFO_inst/af_d
+                  --------
+                    6.417  (0.0% logic, 100.0% route), 11 logic levels.
+
+Warning: 6.417 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets                          |             |             |
+cross_domain_fifo_RdClock_c]            |     5.000 ns|     6.316 ns|    10 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets                          |             |             |
+cross_domain_fifo_WrClock_c]            |     5.000 ns|     6.316 ns|    10 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets LUT_FIFO_RdClock_c]      |     5.000 ns|     6.417 ns|    11 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets LUT_FIFO_WrClock_c]      |     5.000 ns|     6.417 ns|    11 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+4 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\LUT_FIFO_inst/ae_clr_d                 |       1|     118|     25.88%
+                                        |        |        |
+\LUT_FIFO_inst/ae_d                     |       1|     118|     25.88%
+                                        |        |        |
+\LUT_FIFO_inst/af_d                     |       1|     118|     25.88%
+                                        |        |        |
+\LUT_FIFO_inst/af_set                   |       1|     118|     25.88%
+                                        |        |        |
+\LUT_FIFO_inst/w_gcount_r211            |       9|      86|     18.86%
+                                        |        |        |
+\LUT_FIFO_inst/r_gcount_w29             |       3|      81|     17.76%
+                                        |        |        |
+\LUT_FIFO_inst/r_g2b_xor_cluster_1      |       5|      80|     17.54%
+                                        |        |        |
+\LUT_FIFO_inst/w_g2b_xor_cluster_0      |       9|      66|     14.47%
+                                        |        |        |
+\LUT_FIFO_inst/r_gcount_w27             |       4|      62|     13.60%
+                                        |        |        |
+\LUT_FIFO_inst/ae_clr_d_c               |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/ae_set_d_c               |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/af_clr_c                 |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/af_set_c                 |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/co4_5                    |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/co4_7                    |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/co4_9                    |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/co4_11                   |       1|      59|     12.94%
+                                        |        |        |
+\LUT_FIFO_inst/co3_5                    |       1|      58|     12.72%
+                                        |        |        |
+\LUT_FIFO_inst/co3_7                    |       1|      58|     12.72%
+                                        |        |        |
+\LUT_FIFO_inst/co3_9                    |       1|      58|     12.72%
+                                        |        |        |
+\LUT_FIFO_inst/co3_11                   |       1|      58|     12.72%
+                                        |        |        |
+\LUT_FIFO_inst/r_gcount_w23             |       4|      58|     12.72%
+                                        |        |        |
+\cross_domain_fifo_inst/ae_d            |       1|      56|     12.28%
+                                        |        |        |
+\cross_domain_fifo_inst/ae_set_d        |       1|      56|     12.28%
+                                        |        |        |
+\cross_domain_fifo_inst/af_d            |       1|      56|     12.28%
+                                        |        |        |
+\cross_domain_fifo_inst/af_set          |       1|      56|     12.28%
+                                        |        |        |
+\cross_domain_fifo_inst/r_g2b_xor_cluste|        |        |
+r_0                                     |       6|      54|     11.84%
+                                        |        |        |
+\LUT_FIFO_inst/co2_5                    |       1|      53|     11.62%
+                                        |        |        |
+\LUT_FIFO_inst/co2_7                    |       1|      53|     11.62%
+                                        |        |        |
+\LUT_FIFO_inst/co2_9                    |       1|      53|     11.62%
+                                        |        |        |
+\LUT_FIFO_inst/co2_11                   |       1|      53|     11.62%
+                                        |        |        |
+\LUT_FIFO_inst/w_gcount_r24             |       1|      50|     10.96%
+                                        |        |        |
+\cross_domain_fifo_inst/r_gcount_w25    |       3|      50|     10.96%
+                                        |        |        |
+\cross_domain_fifo_inst/w_gcount_r27    |       3|      50|     10.96%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 456  Score: 378702
+
+Constraints cover  2236 paths, 654 nets, and 1762 connections (78.8% coverage)
+
+
+Peak memory: 88838144 bytes, TRCE: 1134592 bytes, DLYMAN: 151552 bytes
+CPU_TIME_REPORT: 0 secs 

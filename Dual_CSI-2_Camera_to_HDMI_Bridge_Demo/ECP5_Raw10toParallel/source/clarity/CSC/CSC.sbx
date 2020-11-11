@@ -150,11 +150,11 @@
             </spirit:ports>
         </spirit:model>
         <spirit:vendorExtensions>
-            <lattice:device>LFE5UM-85F-8BG756C</lattice:device>
+            <lattice:device>LFE5UM-85F-8BG756I</lattice:device>
             <lattice:synthesis>synplify</lattice:synthesis>
             <lattice:date>2017-10-12.15:20:24</lattice:date>
-            <lattice:modified>2017-11-30.12:28:24</lattice:modified>
-            <lattice:diamond>3.10.0.111.2</lattice:diamond>
+            <lattice:modified>2020-11-11.03:12:18</lattice:modified>
+            <lattice:diamond>3.5.0.102</lattice:diamond>
             <lattice:language>Verilog</lattice:language>
             <lattice:attributes>
                 <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
@@ -339,7 +339,7 @@
                     <spirit:vendorExtensions>
                         <lattice:synthesis>synplify</lattice:synthesis>
                         <lattice:date>2014-11-14.14:14:33</lattice:date>
-                        <lattice:modified>2017-11-30.12:28:24</lattice:modified>
+                        <lattice:modified>2020-11-11.03:12:18</lattice:modified>
                         <lattice:attributes>
                             <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                             <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>

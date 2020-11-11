@@ -1,54 +1,68 @@
 ----------------------------------------------------------------------
-Report for cell Crosslink_CSI2ToRaw10.TECH
-Register bits:  0 of 6047 (0.000%)
-I/O cells:      28
+Report for cell camera.TECH
+Register bits:  302 of 6047 (4.994%)
+I/O cells:      110
                                   Cell usage:
                                cell     count   Res Usage(%)
+                               AND2         4          100.0
+                              CCU2C       168          100.0
+                              DP8KE         3          100.0
+                            EHXPLLM         1          100.0
+                            FD1P3BX        37          100.0
+                            FD1P3DX       173          100.0
+                            FD1S3BX         4          100.0
+                            FD1S3DX        88          100.0
                                 GSR         1          100.0
-                                 IB         7          100.0
-                                 OB        21          100.0
+                                 IB        56          100.0
+                                INV         4          100.0
+                                 OB        54          100.0
+                                OR2         2          100.0
+                            PDPW8KE         2          100.0
+                           ROM16X1A        74          100.0
+                               XOR2        38          100.0
 SUB MODULES
-                          csi2_dphy         1
-csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT")         1
-             csi2_dphy_dphy_rx_wrap         1
-csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)         1
-           csi2_dphy_rx_global_ctrl         1
-             csi2_dphy_soft_dphy_rx         1
-                              TOTAL        35
+                           LUT_FIFO         1
+                  cross_domain_fifo         1
+                         pll_double         1
+                              TOTAL       712
 ----------------------------------------------------------------------
-Report for cell csi2_dphy.v1
-Instance Path : csi2_dphy_inst
-SUB MODULES
-csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT")         1
-             csi2_dphy_dphy_rx_wrap         1
-csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)         1
-           csi2_dphy_rx_global_ctrl         1
-             csi2_dphy_soft_dphy_rx         1
-                              TOTAL         5
+Report for cell cross_domain_fifo.v1
+Instance Path : cross_domain_fifo_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               AND2         2           50.0
+                              CCU2C        78           46.4
+                            FD1P3BX        20           54.1
+                            FD1P3DX        70           40.5
+                            FD1S3BX         2           50.0
+                            FD1S3DX        38           43.2
+                                INV         2           50.0
+                                OR2         1           50.0
+                            PDPW8KE         2          100.0
+                           ROM16X1A        32           43.2
+                               XOR2        16           42.1
+                              TOTAL       263
 ----------------------------------------------------------------------
-Report for cell csi2_dphy_dphy_rx(PARSER="OFF",RX_TYPE="CSI2",NUM_RX_LANE=1,RX_GEAR=8,DPHY_RX_IP="LATTICE",RX_CLK_MODE="HS_ONLY",WORD_ALIGN="ON",BYTECLK_MHZ=125,FIFO_TYPE="LUT").v1
-Instance Path : csi2_dphy_inst.dphy_rx_inst
-SUB MODULES
-             csi2_dphy_dphy_rx_wrap         1
-csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1)         1
-           csi2_dphy_rx_global_ctrl         1
-             csi2_dphy_soft_dphy_rx         1
-                              TOTAL         4
-----------------------------------------------------------------------
-Report for cell csi2_dphy_rx_global_ctrl.<NoName>
-Instance Path : 
-                              TOTAL         0
-----------------------------------------------------------------------
-Report for cell csi2_dphy_dphy_rx_wrap.<NoName>
-Instance Path : 
-                              TOTAL         0
-----------------------------------------------------------------------
-Report for cell csi2_dphy_dphy_wrapper(DPHY_RX_IP="LATTICE",RX_GEAR=8,NUM_RX_LANE=1).v1
-Instance Path : csi2_dphy_inst.dphy_rx_inst.u_dphy_wrapper
-SUB MODULES
-             csi2_dphy_soft_dphy_rx         1
+Report for cell pll_double.v1
+Instance Path : pll_double_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLM         1          100.0
                               TOTAL         1
 ----------------------------------------------------------------------
-Report for cell csi2_dphy_soft_dphy_rx.<NoName>
-Instance Path : 
-                              TOTAL         0
+Report for cell LUT_FIFO.v1
+Instance Path : LUT_FIFO_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               AND2         2           50.0
+                              CCU2C        90           53.6
+                              DP8KE         3          100.0
+                            FD1P3BX        17           45.9
+                            FD1P3DX       103           59.5
+                            FD1S3BX         2           50.0
+                            FD1S3DX        50           56.8
+                                INV         2           50.0
+                                OR2         1           50.0
+                           ROM16X1A        42           56.8
+                               XOR2        22           57.9
+                              TOTAL       334

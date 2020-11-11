@@ -1,0 +1,2 @@
+VHDL_ENTITY_ONLY pll_double DEFIN pll_double.vhd
+MODULE pll_double DEFIN pll_double.vhd

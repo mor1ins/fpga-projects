@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="gammaCorrector_top" device="LFE5UM-85F-8BG756I" synthesis="synplify" default_implementation="gammaCorrector_top">
+    <Implementation title="gammaCorrector_top" dir="gammaCorrector_top" description="gammaCorrector_top" default_strategy="gammaCorrector_top">
+        <Options>
+            <Option name="HDL type" value="Schematic/VHDL"/>
+            <Option name="top" value="gammaCorrector_top"/>
+        </Options>
+        <Source name="../../../models/ecp5/ecp5_pll.vhd" type="VHDL" excluded="TRUE"/>
+        <Source name="../../src/rtl/top/ecp5/gammaCorrector_top.vhd" type="VHDL"/>
+        <Source name="gammaCorrector_top.lpf" type="Logic Preference"/>
+    </Implementation>
+    <Strategy name="gammaCorrector_top" file="gammaCorrector_top.sty"/>
+</BaliProject>

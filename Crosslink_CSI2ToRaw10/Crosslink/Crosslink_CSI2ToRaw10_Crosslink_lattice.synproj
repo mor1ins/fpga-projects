@@ -31,19 +31,22 @@
 
 -lpf 1
 -p "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10"
--ver "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy/csi2_dphy.v"
-"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy/csi2_dphy_dphy_rx.v"
-"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy/csi2_dphy_dphy_wrapper.v"
-"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy/csi2_dphy_capture_ctrl_bb.v"
-"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy/csi2_dphy_dphy_rx_wrap_bb.v"
-"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy/csi2_dphy_rx_global_ctrl_bb.v"
-"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy/csi2_dphy_soft_dphy_rx_bb.v"
--lib "work" -vhd "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10.vhd"
-"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/top.vhd"
--top Crosslink_CSI2ToRaw10
+-ver "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/control_capture_lane4_bb.v"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/dphy_rx_wrap.v"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/raw10_lane4_bb.v"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/rx_global_ctrl_bb.v"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/sip4_demo_dphy_rx_wrap.v"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/sip4_demo_rx_global_ctrl.v"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/top.v"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/user_sdr_cmd_ctrl_bb.v"
+-lib "work" -vhd "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/clarity/camera/LUT_FIFO/LUT_FIFO.vhd"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/clarity/camera/cross_domain_fifo/cross_domain_fifo.vhd"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/clarity/camera/pll_double/pll_double.vhd"
+"C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/source/clarity/camera/camera.vhd"
+-top camera
 
 
--p "C:/lscc/diamond/3.11_x64/ispfpga/sn5w00/data" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10/csi2_dphy"
+-p "C:/lscc/diamond/3.11_x64/ispfpga/sn5w00/data" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink" "C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10"
 
 -ngd "Crosslink_CSI2ToRaw10_Crosslink.ngd"
 

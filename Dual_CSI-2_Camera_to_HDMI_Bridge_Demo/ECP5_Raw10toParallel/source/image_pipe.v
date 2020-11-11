@@ -58,6 +58,8 @@ wire [11:0] r_deb, g_deb, b_deb;
 wire vsync_rgb, hsync_rgb, de_rgb;
 wire [11:0] r_rgb, g_rgb, b_rgb;
 
+wire [11:0] r_gray, b_gray, g_gray;
+
 // Input Buffer and retiming
 // discard first frame
 reg fv_r;
@@ -188,6 +190,16 @@ color u_color (
 	.de_out		(de_rgb)
 );
 
+//convert_to_gray convert_to_gray {
+//	.r_in		(r_rgb), 
+//	.g_in		(g_rgb),
+//	.b_in		(b_rgb),
+//
+//	.r_out		(r_gray),
+//	.g_out		(b_gray),
+//	.b_out		(g_gray)
+//};
+
 gamma_correction u_gamma_correction (
      .clk		(clk),
      .rstn		(reset_n),
@@ -195,9 +207,9 @@ gamma_correction u_gamma_correction (
      .vsync_in	(vsync_rgb),
      .hsync_in	(hsync_rgb),
      .de_in		(de_rgb),
-     .r_in		(r_rgb), 
-     .g_in		(g_rgb),
-     .b_in		(b_rgb),
+     .r_in		(r_gray), 
+     .g_in		(b_gray),
+     .b_in		(g_gray),
 	 
      .vsync_out	(vsync),
      .hsync_out	(hsync),
@@ -206,6 +218,5 @@ gamma_correction u_gamma_correction (
      .g_out		(rgb_data[23:12]),
      .b_out		(rgb_data[11:0])
 	 );  
- 
  
 endmodule                     

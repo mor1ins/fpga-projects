@@ -1,1 +1,1 @@
-project -load C:/Users/crobinso/Documents/Training/FAEdec2017/Rev113017/LAB2/ECP5_Raw10toParallel/rtl/clarity/Gamma/gammaCorrector/syn_results/gammaCorrector.prj
+project -load C:/Users/Eduard/Desktop/Dual_CSI-2_Camera_to_HDMI_Bridge_Demo/ECP5_Raw10toParallel/source/clarity/Gamma/gammaCorrector/syn_results/gammaCorrector.prj

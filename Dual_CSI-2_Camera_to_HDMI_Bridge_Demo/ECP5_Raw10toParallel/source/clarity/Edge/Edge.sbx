@@ -1,0 +1,56 @@
+<!DOCTYPE Edge>
+<lattice:project>
+    <spirit:component>
+        <spirit:vendor>LATTICE</spirit:vendor>
+        <spirit:library>LOCAL</spirit:library>
+        <spirit:name>Edge</spirit:name>
+        <spirit:version>1.0</spirit:version>
+        <spirit:fileSets>
+            <spirit:fileset>
+                <spirit:name>Diamond_Synthesis</spirit:name>
+                <spirit:group>synthesis</spirit:group>
+            </spirit:fileset>
+            <spirit:fileset>
+                <spirit:name>Diamond_Simulation</spirit:name>
+                <spirit:group>simulation</spirit:group>
+            </spirit:fileset>
+        </spirit:fileSets>
+        <spirit:componentGenerators/>
+        <spirit:model>
+            <spirit:views/>
+            <spirit:ports/>
+        </spirit:model>
+        <spirit:vendorExtensions>
+            <lattice:device>LFE5UM-85F-8BG756I</lattice:device>
+            <lattice:synthesis>synplify</lattice:synthesis>
+            <lattice:date>2020-11-11.03:48:54</lattice:date>
+            <lattice:modified>2020-11-11.04:55:15</lattice:modified>
+            <lattice:diamond>3.5.0.102</lattice:diamond>
+            <lattice:language>VHDL</lattice:language>
+            <lattice:attributes>
+                <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
+                <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeConfig">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeConnect">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeDevice">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeLocate">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangePack">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangePart">false</lattice:attribute>
+                <lattice:attribute lattice:name="ChangeSynthesis">false</lattice:attribute>
+                <lattice:attribute lattice:name="Migrate">false</lattice:attribute>
+                <lattice:attribute lattice:name="RemovedComponent">false</lattice:attribute>
+            </lattice:attributes>
+            <lattice:elements/>
+            <lattice:lpc/>
+            <lattice:groups/>
+        </spirit:vendorExtensions>
+    </spirit:component>
+    <spirit:design>
+        <spirit:vendor>LATTICE</spirit:vendor>
+        <spirit:library>LOCAL</spirit:library>
+        <spirit:name>Edge</spirit:name>
+        <spirit:version>1.0</spirit:version>
+        <spirit:componentInstances/>
+        <spirit:adHocConnections/>
+    </spirit:design>
+</lattice:project>

@@ -1,1 +1,1 @@
-Crosslink_CSI2ToRaw10_rtl.vdb
+camera_rtl.vdb

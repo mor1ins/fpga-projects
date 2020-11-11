@@ -1,10 +1,10 @@
 [Device]
 Family=sa5p00m
 PartType=LFE5UM-85F
-PartName=LFE5UM-85F-8BG756C
+PartName=LFE5UM-85F-8BG756I
 SpeedGrade=8
 Package=CABGA756
-OperatingCondition=COM
+OperatingCondition=IND
 Status=P
 
 [IP]
@@ -12,12 +12,12 @@ VendorName=Lattice Semiconductor Corporation
 CoreType=IPCFG
 CoreStatus=
 CoreName=Gamma Corrector
-CoreRevision=2.2
+CoreRevision=2.1
 ModuleName=gammaCorrector
-SourceFormat=verilog
-ParameterFileVersion=2.2
-Date=11/30/2017
-Time=15:11:00
+SourceFormat=vhdl
+ParameterFileVersion=1.2
+Date=11/11/2020
+Time=03:35:38
 
 [Parameters]
 archtype=0
@@ -25,17 +25,17 @@ markall=1
 numcplanes=3
 data0width=12
 readgamma0fromfile=0
-gamma0val=1.0
+gamma0val=3.3
 file0=
 gamma0programmable=0
 data1width=12
 readgamma1fromfile=0
-gamma1val=1.0
+gamma1val=3.3
 file1=
 gamma1programmable=0
 data2width=12
 readgamma2fromfile=0
-gamma2val=1.0
+gamma2val=3.3
 file2=
 gamma2programmable=0
 addbypass=0

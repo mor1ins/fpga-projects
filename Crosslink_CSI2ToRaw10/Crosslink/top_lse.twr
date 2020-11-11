@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Mon Sep 28 22:35:15 2020
+Tue Nov 10 23:45:42 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -16,11 +16,337 @@ Report level:    verbose report, limited to 3 items per constraint
 --------------------------------------------------------------------------------
 
 
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk4 [get_nets clk_byte_o]
+            368 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 0.114ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \fifo_first/FF_38  (from \csi_rx/dsi_rx/bd2_mixel[3] +)
+   Destination:    FD1S3AX    D              \fifo_first/FF_38  (to \csi_rx/dsi_rx/bd2_mixel[3] +)
+
+   Delay:                   4.886ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      4.886ns data_path \fifo_first/FF_38 to \fifo_first/FF_38 meets
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 0.114ns
+
+ Path Details: \fifo_first/FF_38 to \fifo_first/FF_38
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \fifo_first/FF_38 (from \csi_rx/dsi_rx/bd2_mixel[3])
+Route         1   e 1.020                                  \fifo_first/Full
+LUT4        ---     0.000              A to Z              \fifo_first/INV_1
+Route         1   e 1.020                                  \fifo_first/invout_1
+LUT4        ---     0.000              B to Z              \fifo_first/AND2_t18
+Route        31   e 1.706                                  \fifo_first/wren_i
+A1_TO_FCO   ---     0.000           A[2] to COUT           \fifo_first/full_cmp_ci_a
+Route         1   e 0.020                                  \fifo_first/cmp_ci_1
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_0
+Route         1   e 0.020                                  \fifo_first/co0_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_1
+Route         1   e 0.020                                  \fifo_first/co1_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_2
+Route         1   e 0.020                                  \fifo_first/co2_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_3
+Route         1   e 0.020                                  \fifo_first/co3_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_4
+Route         1   e 0.020                                  \fifo_first/full_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \fifo_first/a1
+Route         1   e 1.020                                  \fifo_first/full_d
+                  --------
+                    4.886  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.114ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \fifo_first/FF_38  (from \csi_rx/dsi_rx/bd2_mixel[3] +)
+   Destination:    FD1S3AX    D              \fifo_first/FF_38  (to \csi_rx/dsi_rx/bd2_mixel[3] +)
+
+   Delay:                   4.886ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      4.886ns data_path \fifo_first/FF_38 to \fifo_first/FF_38 meets
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 0.114ns
+
+ Path Details: \fifo_first/FF_38 to \fifo_first/FF_38
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \fifo_first/FF_38 (from \csi_rx/dsi_rx/bd2_mixel[3])
+Route         1   e 1.020                                  \fifo_first/Full
+LUT4        ---     0.000              A to Z              \fifo_first/INV_1
+Route         1   e 1.020                                  \fifo_first/invout_1
+LUT4        ---     0.000              B to Z              \fifo_first/AND2_t18
+Route        31   e 1.706                                  \fifo_first/wren_i
+A1_TO_FCO   ---     0.000           B[2] to COUT           \fifo_first/full_cmp_ci_a
+Route         1   e 0.020                                  \fifo_first/cmp_ci_1
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_0
+Route         1   e 0.020                                  \fifo_first/co0_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_1
+Route         1   e 0.020                                  \fifo_first/co1_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_2
+Route         1   e 0.020                                  \fifo_first/co2_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_3
+Route         1   e 0.020                                  \fifo_first/co3_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_4
+Route         1   e 0.020                                  \fifo_first/full_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \fifo_first/a1
+Route         1   e 1.020                                  \fifo_first/full_d
+                  --------
+                    4.886  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.122ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3DX    CK             \fifo_first/FF_40  (from \csi_rx/dsi_rx/bd2_mixel[3] +)
+   Destination:    FD1S3AX    D              \fifo_first/FF_38  (to \csi_rx/dsi_rx/bd2_mixel[3] +)
+
+   Delay:                   4.878ns  (0.0% logic, 100.0% route), 9 logic levels.
+
+ Constraint Details:
+
+      4.878ns data_path \fifo_first/FF_40 to \fifo_first/FF_38 meets
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 0.122ns
+
+ Path Details: \fifo_first/FF_40 to \fifo_first/FF_38
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \fifo_first/FF_40 (from \csi_rx/dsi_rx/bd2_mixel[3])
+Route         5   e 1.441                                  \fifo_first/r_gcount_w25
+LUT4        ---     0.000                to                \fifo_first/LUT4_22
+Route         4   e 1.297                                  \fifo_first/r_g2b_xor_cluster_0
+LUT4        ---     0.000                to                \fifo_first/LUT4_14
+Route         1   e 1.020                                  \fifo_first/rcount_w0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \fifo_first/full_cmp_0
+Route         1   e 0.020                                  \fifo_first/co0_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_1
+Route         1   e 0.020                                  \fifo_first/co1_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_2
+Route         1   e 0.020                                  \fifo_first/co2_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_3
+Route         1   e 0.020                                  \fifo_first/co3_3
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/full_cmp_4
+Route         1   e 0.020                                  \fifo_first/full_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \fifo_first/a1
+Route         1   e 1.020                                  \fifo_first/full_d
+                  --------
+                    4.878  (0.0% logic, 100.0% route), 9 logic levels.
+
+Report: 4.886 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets read_clk]
+            189 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 0.101ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3BX    CK             \fifo_first/FF_39  (from read_clk +)
+   Destination:    FD1S3BX    D              \fifo_first/FF_39  (to read_clk +)
+
+   Delay:                   4.899ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      4.899ns data_path \fifo_first/FF_39 to \fifo_first/FF_39 meets
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 0.101ns
+
+ Path Details: \fifo_first/FF_39 to \fifo_first/FF_39
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \fifo_first/FF_39 (from read_clk)
+Route         1   e 1.020                                  \fifo_first/Empty
+LUT4        ---     0.000              A to Z              \fifo_first/INV_0
+Route         1   e 1.020                                  \fifo_first/invout_0
+LUT4        ---     0.000              B to Z              \fifo_first/AND2_t17
+Route        33   e 1.719                                  \fifo_first/rden_i
+A1_TO_FCO   ---     0.000           A[2] to COUT           \fifo_first/empty_cmp_ci_a
+Route         1   e 0.020                                  \fifo_first/cmp_ci
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_0
+Route         1   e 0.020                                  \fifo_first/co0_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_1
+Route         1   e 0.020                                  \fifo_first/co1_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_2
+Route         1   e 0.020                                  \fifo_first/co2_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_3
+Route         1   e 0.020                                  \fifo_first/co3_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_4
+Route         1   e 0.020                                  \fifo_first/empty_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \fifo_first/a0
+Route         1   e 1.020                                  \fifo_first/empty_d
+                  --------
+                    4.899  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.101ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3BX    CK             \fifo_first/FF_39  (from read_clk +)
+   Destination:    FD1S3BX    D              \fifo_first/FF_39  (to read_clk +)
+
+   Delay:                   4.899ns  (0.0% logic, 100.0% route), 10 logic levels.
+
+ Constraint Details:
+
+      4.899ns data_path \fifo_first/FF_39 to \fifo_first/FF_39 meets
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 0.101ns
+
+ Path Details: \fifo_first/FF_39 to \fifo_first/FF_39
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \fifo_first/FF_39 (from read_clk)
+Route         1   e 1.020                                  \fifo_first/Empty
+LUT4        ---     0.000              A to Z              \fifo_first/INV_0
+Route         1   e 1.020                                  \fifo_first/invout_0
+LUT4        ---     0.000              B to Z              \fifo_first/AND2_t17
+Route        33   e 1.719                                  \fifo_first/rden_i
+A1_TO_FCO   ---     0.000           B[2] to COUT           \fifo_first/empty_cmp_ci_a
+Route         1   e 0.020                                  \fifo_first/cmp_ci
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_0
+Route         1   e 0.020                                  \fifo_first/co0_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_1
+Route         1   e 0.020                                  \fifo_first/co1_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_2
+Route         1   e 0.020                                  \fifo_first/co2_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_3
+Route         1   e 0.020                                  \fifo_first/co3_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_4
+Route         1   e 0.020                                  \fifo_first/empty_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \fifo_first/a0
+Route         1   e 1.020                                  \fifo_first/empty_d
+                  --------
+                    4.899  (0.0% logic, 100.0% route), 10 logic levels.
+
+
+Passed:  The following path meets requirements by 0.122ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \fifo_first/FF_49  (from read_clk +)
+   Destination:    FD1S3BX    D              \fifo_first/FF_39  (to read_clk +)
+
+   Delay:                   4.878ns  (0.0% logic, 100.0% route), 9 logic levels.
+
+ Constraint Details:
+
+      4.878ns data_path \fifo_first/FF_49 to \fifo_first/FF_39 meets
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 0.122ns
+
+ Path Details: \fifo_first/FF_49 to \fifo_first/FF_39
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              \fifo_first/FF_49 (from read_clk)
+Route         5   e 1.441                                  \fifo_first/w_gcount_r27
+LUT4        ---     0.000                to                \fifo_first/LUT4_31
+Route         4   e 1.297                                  \fifo_first/w_g2b_xor_cluster_0
+LUT4        ---     0.000                to                \fifo_first/LUT4_23
+Route         1   e 1.020                                  \fifo_first/wcount_r0
+A1_TO_FCO   ---     0.000           B[2] to COUT           \fifo_first/empty_cmp_0
+Route         1   e 0.020                                  \fifo_first/co0_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_1
+Route         1   e 0.020                                  \fifo_first/co1_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_2
+Route         1   e 0.020                                  \fifo_first/co2_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_3
+Route         1   e 0.020                                  \fifo_first/co3_2
+FCI_TO_FCO  ---     0.000            CIN to COUT           \fifo_first/empty_cmp_4
+Route         1   e 0.020                                  \fifo_first/empty_d_c
+FCI_TO_F    ---     0.000            CIN to S[2]           \fifo_first/a0
+Route         1   e 1.020                                  \fifo_first/empty_d
+                  --------
+                    4.878  (0.0% logic, 100.0% route), 9 logic levels.
+
+Report: 4.899 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets clk_byte_hs]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets pixel_clock]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets refclk]
+            1 item scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 3.980ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             reset_ref_n_meta_34  (from refclk +)
+   Destination:    FD1S3AX    D              reset_ref_n_sync_35  (to refclk +)
+
+   Delay:                   1.020ns  (0.0% logic, 100.0% route), 1 logic levels.
+
+ Constraint Details:
+
+      1.020ns data_path reset_ref_n_meta_34 to reset_ref_n_sync_35 meets
+      5.000ns delay constraint less
+      0.000ns L_S requirement (totaling 5.000ns) by 3.980ns
+
+ Path Details: reset_ref_n_meta_34 to reset_ref_n_sync_35
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.000             CK to Q              reset_ref_n_meta_34 (from refclk)
+Route         1   e 1.020                                  reset_ref_n_meta
+                  --------
+                    1.020  (0.0% logic, 100.0% route), 1 logic levels.
+
+Report: 1.020 ns is the maximum delay for this constraint.
+
+
 Timing Report Summary
 --------------
 --------------------------------------------------------------------------------
 Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk4 [get_nets clk_byte_o]              |     5.000 ns|     4.886 ns|    10  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets read_clk]                |     5.000 ns|     4.899 ns|    10  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets clk_byte_hs]             |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets pixel_clock]             |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets refclk]                  |     5.000 ns|     1.020 ns|     1  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -34,8 +360,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  0 paths, 0 nets, and 0 connections (0.0% coverage)
+Constraints cover  1868 paths, 466 nets, and 1308 connections (72.2% coverage)
 
 
-Peak memory: 74051584 bytes, TRCE: 36864 bytes, DLYMAN: 0 bytes
+Peak memory: 66228224 bytes, TRCE: 1236992 bytes, DLYMAN: 163840 bytes
 CPU_TIME_REPORT: 0 secs 

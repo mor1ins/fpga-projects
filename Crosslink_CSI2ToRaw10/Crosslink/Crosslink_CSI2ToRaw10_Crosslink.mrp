@@ -1,5 +1,5 @@
 
-    Lattice Mapping Report File for Design Module 'Crosslink_CSI2ToRaw10'
+            Lattice Mapping Report File for Design Module 'camera'
 
 
 Design Information
@@ -12,42 +12,31 @@ Command line:   map -a LIFMD -p LIF-MD6000 -t CSFBGA81 -s 6 -oc Industrial
      -lpf C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw10/C
      rosslink/Crosslink_CSI2ToRaw10_Crosslink.lpf -lpf C:/Users/Eduard/Documents
      /GitHub/fpga-projects/Crosslink_CSI2ToRaw10/Crosslink_CSI2ToRaw10.lpf -gui
-     
+     -msgset C:/Users/Eduard/Documents/GitHub/fpga-projects/Crosslink_CSI2ToRaw1
+     0/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LIF-MD6000CSFBGA81
 Target Performance:   6
 Mapper:  sn5w00,  version:  Diamond (64-bit) 3.11.3.469
-Mapped on:  09/29/20  00:16:50
+Mapped on:  11/11/20  00:15:48
 
 Design Summary
 --------------
 
-   Number of registers:    132 out of  6047 (2%)
-      PFU registers:          132 out of  5936 (2%)
+   Number of registers:    302 out of  6047 (5%)
+      PFU registers:          302 out of  5936 (5%)
       PIO registers:            0 out of   111 (0%)
-   Number of SLICEs:       189 out of  2968 (6%)
-      SLICEs as Logic/ROM:    189 out of  2968 (6%)
+   Number of SLICEs:       299 out of  2968 (10%)
+      SLICEs as Logic/ROM:    299 out of  2968 (10%)
       SLICEs as RAM:            0 out of  2226 (0%)
-      SLICEs as Carry:         36 out of  2968 (1%)
-   Number of LUT4s:        269 out of  5936 (5%)
-      Number used as logic LUTs:        197
+      SLICEs as Carry:        168 out of  2968 (6%)
+   Number of LUT4s:        455 out of  5936 (8%)
+      Number used as logic LUTs:        119
       Number used as distributed RAM:     0
-      Number used as ripple logic:       72
+      Number used as ripple logic:      336
       Number used as shift registers:     0
-   Number of PIO sites used: 28 out of 37 (76%)
-   Number of IDDR/ODDR/TDDR cells used: 1 out of 111 (1%)
-      Number of IDDR cells:   1
-      Number of ODDR cells:   0
-      Number of TDDR cells:   0
-   Number of PIO using at least one IDDR/ODDR/TDDR: 1 (0 differential)
-      Number of PIO using IDDR only:        1 (0 differential)
-      Number of PIO using ODDR only:        0 (0 differential)
-      Number of PIO using TDDR only:        0 (0 differential)
-      Number of PIO using IDDR/ODDR:        0 (0 differential)
-      Number of PIO using IDDR/TDDR:        0 (0 differential)
-      Number of PIO using ODDR/TDDR:        0 (0 differential)
-      Number of PIO using IDDR/ODDR/TDDR:   0 (0 differential)
-   Number of block RAMs:  1 out of 20 (5%)
+   Number of PIO sites used: 110 out of 37 (297%)
+   Number of block RAMs:  5 out of 20 (25%)
    Number of GSRs:  1 out of 1 (100%)
    JTAG used :      No
    Readback used :  No
@@ -59,20 +48,10 @@ Design Summary
    Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 2 (0%)
    Number of DCC:  0 out of 14 (0%)
    Number of DCS:  0 out of 1 (0%)
-   Number of PLLs:  0 out of 1 (0%)
-
-                                    Page 1
-
-
-
-
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
-
-Design Summary (cont)
----------------------
+   Number of PLLs:  1 out of 1 (100%)
    Number of DDRDLLs:  0 out of 2 (0%)
-   Number of CLKDIV:  1 out of 4 (25%)
-   Number of ECLKSYNC:  1 out of 4 (25%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 4 (0%)
    Number of MIPIDPHY:  0 out of 2 (0%)
    Number of I2C:  0 out of 2 (0%)
    Notes:-
@@ -80,93 +59,81 @@ Design Summary (cont)
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  4
-     Net csi2_dphy_clk_byte_fr_i_c: 53 loads, 53 rising, 0 falling (Driver: PIO
-     csi2_dphy_clk_byte_fr_i )
-     Net csi2_dphy_clk_byte_o_c: 29 loads, 29 rising, 0 falling (Driver: csi2_dp
-     hy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/c
-     lk_byte_o_I_0 )
-     Net csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_
-     rx/eclk: 2 loads, 2 rising, 0 falling (Driver: csi2_dphy_inst/dphy_rx_inst/
-     u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync )
-     Net csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_
-     rx/clk_rx/ohs: 1 loads, 1 rising, 0 falling (Driver: PIO csi2_dphy_clk_p_i
-     )
-   Number of Clock Enables:  6
-     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/clk_byte
-     _fr_i_enable_1: 1 loads, 1 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
-     rl_d0/lp11_ncr: 1 loads, 1 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/clk_byte_fr_i_enable_9: 4 loads, 4 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/clk_byte_fr_i_enable_2: 1 loads, 1 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fi
-     fo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016
-     161688/wren_i: 11 loads, 9 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fi
-     fo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016
-     161688/rden_i: 13 loads, 12 LSLICEs
-   Number of local set/reset loads for net csi2_dphy_reset_byte_fr_n_i_c merged
-     into GSR:  115
+   Number of clocks:  8
+
+                                    Page 1
+
+
+
+
+Design:  camera                                        Date:  11/11/20  00:15:48
+
+Design Summary (cont)
+---------------------
+     Net cross_domain_fifo_WrClock_c: 38 loads, 38 rising, 0 falling (Driver:
+     PIO cross_domain_fifo_WrClock )
+     Net cross_domain_fifo_RdClock_c: 38 loads, 38 rising, 0 falling (Driver:
+     PIO cross_domain_fifo_RdClock )
+     Net pll_double_CLKI_c: 1 loads, 1 rising, 0 falling (Driver: PIO
+     pll_double_CLKI )
+     Net LUT_FIFO_WrClock_c: 47 loads, 47 rising, 0 falling (Driver: PIO
+     LUT_FIFO_WrClock )
+     Net LUT_FIFO_RdClock_c: 47 loads, 47 rising, 0 falling (Driver: PIO
+     LUT_FIFO_RdClock )
+     Net pll_double_CLKOP_c: 1 loads, 1 rising, 0 falling (Driver:
+     pll_double_inst/PLLInst_0 )
+     Net pll_double_CLKOS_c: 0 loads, 0 rising, 0 falling (Driver:
+     pll_double_inst/PLLInst_0 )
+     Net pll_double_CLKOS2_c: 0 loads, 0 rising, 0 falling (Driver:
+     pll_double_inst/PLLInst_0 )
+   Number of Clock Enables:  4
+     Net cross_domain_fifo_inst/wren_i: 27 loads, 25 LSLICEs
+     Net cross_domain_fifo_inst/rden_i: 29 loads, 25 LSLICEs
+     Net LUT_FIFO_inst/wren_i: 36 loads, 30 LSLICEs
+     Net LUT_FIFO_inst/rden_i: 36 loads, 30 LSLICEs
+   Number of local set/reset loads for net LUT_FIFO_Reset_c merged into GSR:  86
+     
    Number of LSRs:  5
-     Net csi2_dphy_reset_byte_fr_n_i_c: 2 loads, 0 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
-     rl_d0/lp11_reset_n: 1 loads, 1 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
-     rl_d0/hs_entry: 1 loads, 1 LSLICEs
-     Net csi2_dphy_reset_n_i_c: 10 loads, 10 LSLICEs
-     Net csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_
-     rx/reset_n_i_N_2: 2 loads, 0 LSLICEs
+     Net cross_domain_fifo_Reset_c: 38 loads, 36 LSLICEs
+     Net cross_domain_fifo_inst/rRst: 36 loads, 36 LSLICEs
+     Net pll_double_RST_c: 1 loads, 0 LSLICEs
+     Net LUT_FIFO_Reset_c: 6 loads, 0 LSLICEs
+     Net LUT_FIFO_inst/rRst: 44 loads, 44 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/hs_settl
-     e_en_o_N_37: 18 loads
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fi
-     fo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016
-     161688/rden_i: 17 loads
-     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
+     Net LUT_FIFO_inst/rRst: 44 loads
+     Net LUT_FIFO_inst/rden_i: 42 loads
+     Net LUT_FIFO_inst/wren_i: 42 loads
+     Net cross_domain_fifo_Reset_c: 39 loads
+     Net cross_domain_fifo_inst/rRst: 36 loads
+     Net cross_domain_fifo_inst/rden_i: 35 loads
+     Net cross_domain_fifo_inst/wren_i: 33 loads
+     Net cross_domain_fifo_inst/rcount_8: 10 loads
+     Net cross_domain_fifo_inst/wcount_8: 10 loads
+     Net LUT_FIFO_inst/rcount_11: 10 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    1
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: Using local reset signal 'LUT_FIFO_Reset_c' to infer global GSR
+     net.
+ERROR - map: Design doesn't fit into device specified, refer to the Map report
+     for more details.
 
                                     Page 2
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
-Design Summary (cont)
----------------------
-     rl_d0/term_en_r: 17 loads
-     Net csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ct
-     rl_d0/n486: 16 loads
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/bd0_shift2_r[2]: 15 loads
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/bd0_shift7_r[6]: 15 loads
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/n158: 14 loads
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/n164: 14 loads
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/bd0_shift1_1d_r[5]: 13 loads
-     Net csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/WORD_ALIGN_ON.w_al
-     ign/bd0_shift3_r[5]: 13 loads
-
-
-
-
-   Number of warnings:  3
-   Number of errors:    0
-     
-
-Design Errors/Warnings
-----------------------
-
-WARNING - map: input pad net 'csi2_dphy_pd_dphy_i' has no legal load.
-WARNING - map: Using local reset signal 'csi2_dphy_reset_byte_fr_n_i_c' to infer
-     global GSR net.
-WARNING - map: IO buffer missing for top level port csi2_dphy_pd_dphy_i...logic
-     will be discarded.
 
 IO (PIO) Attributes
 -------------------
@@ -175,646 +142,969 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[6]  | OUTPUT    | LVCMOS25  |            |
+| LUT_FIFO_Q[6]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_d0_p_i    | BIDIR     | MIPI      |            |
+| LUT_FIFO_Q[7]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_d0_n_i    | BIDIR     | MIPI      |            |
+| LUT_FIFO_Q[3]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_clk_p_i   | BIDIR     | MIPI      |            |
+| LUT_FIFO_Q[8]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_clk_n_i   | BIDIR     | MIPI      |            |
+| LUT_FIFO_Q[9]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[2]  | OUTPUT    | LVCMOS25  |            |
+| LUT_FIFO_Q[4]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[3]  | OUTPUT    | LVCMOS25  |            |
+| LUT_FIFO_Q[5]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[7]  | OUTPUT    | LVCMOS25  |            |
+| LUT_FIFO_Q[2]       | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[1]  | OUTPUT    | LVCMOS25  |            |
+| LUT_FIFO_Q[1]       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Q[0]       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[31]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[30]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[29]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[28]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[27]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[26]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[25]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[24]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[23]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[22]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[21]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[20]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[19]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[18]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Q[17]| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
 
                                     Page 3
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
 IO (PIO) Attributes (cont)
 --------------------------
+| cross_domain_fifo_Q[16]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[4]  | OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[15]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[5]  | OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[14]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_bd0_o[0]  | OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[13]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_lp_hs_state_clk_o[1]| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[12]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_lp_hs_state_clk_o[0]| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[11]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_lp_hs_state_d_o[1]| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[10]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_lp_hs_state_d_o[0]| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[9]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_capture_en_o| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[8]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_cd_d0_o   | OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[7]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_clk_byte_hs_o| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[6]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_clk_byte_o| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[5]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_hs_d_en_o | OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[4]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_hs_sync_o | OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[3]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_lp_d0_rx_n_o| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[2]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_lp_d0_rx_p_o| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[1]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_term_clk_en_o| OUTPUT    | LVCMOS25  |            |
+| cross_domain_fifo_Q[0]| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_clk_byte_fr_i| INPUT     | LVCMOS25  |            |
+| LUT_FIFO_AlmostEmpty| OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_reset_byte_fr_n_i| INPUT     | LVCMOS25  |            |
+| LUT_FIFO_AlmostFull | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| csi2_dphy_reset_n_i | INPUT     | LVCMOS25  |            |
+| LUT_FIFO_Empty      | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-
-Removed logic
--------------
-
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/i5 undriven or does not
-     drive anything - clipped.
-Block csi2_dphy_reset_lp_n_i_pad undriven or does not drive anything - clipped.
-Block csi2_dphy_reset_byte_n_i_pad undriven or does not drive anything -
-     clipped.
-Block csi2_dphy_pll_lock_i_pad undriven or does not drive anything - clipped.
-Block csi2_dphy_clk_lp_ctrl_i_pad undriven or does not drive anything - clipped.
-     
-Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
-     clk_rx/lp_rx_p_o_I_0_2_lut undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/i4 undriven or does not
-     drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
+| LUT_FIFO_Full       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_AlmostEmpty| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_AlmostFull| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Empty| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Full| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| pll_double_CLKOP    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| pll_double_CLKOS    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| pll_double_CLKOS2   | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
 
                                     Page 4
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
-Removed logic (cont)
---------------------
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_cmp_2 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_cmp_1 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_cmp_0 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_cmp_ci_a undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_ctr_2 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_ctr_1 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_ctr_0 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/af_set_ctr_cia undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/FF_2 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/FF_3 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/FF_5 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/LUT4_1 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/LUT4_0 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/FF_0 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/FF_1 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/FF_4 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/a3 undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_
-     d0/term_en_r_I_0_2_lut_3_lut_4_lut undriven or does not drive anything -
-     clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/reset_n_i_N_23 was
-     merged into signal csi2_dphy_reset_byte_fr_n_i_c
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+IO (PIO) Attributes (cont)
+--------------------------
+| pll_double_LOCK     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[9]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[8]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[7]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[6]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[5]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[4]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[3]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[2]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[1]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Data[0]    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[31]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[30]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[29]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[28]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[27]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[26]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[25]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[24]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[23]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[22]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[21]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[20]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[19]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[18]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[17]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[16]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[15]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
 
                                     Page 5
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
-Removed logic (cont)
---------------------
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/invout_1 was merged into signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wr
-     ap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_
-     genpmi_fifo_dcLIFMDasyncreg115016161688/Full
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/rRst was merged into signal
-     csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/reset_n_i_N_23
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/invout_0 was merged into signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wr
-     ap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fifo_single.rx_fifo_single_inst/rxem
-     ptyfr0_o
-Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl
-     _d0/reset_n_i_N_41 was merged into signal csi2_dphy_reset_n_i_c
-Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/reset_byte
-     _fr_n_i_N_18 was merged into signal csi2_dphy_reset_byte_fr_n_i_c
-Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx
-     /d0_rx/lp_tx_n_c_N_5 undriven or does not drive anything - clipped.
-Signal GND_net undriven or does not drive anything - clipped.
-Signal VCC_net undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/lp_d1_rx_p_o undriven or does not drive
-     anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/VCC_net
-     undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx
-     /d0_rx/delayg/VHI1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx
-     /d0_rx/delayg/VLO1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/scuba_vhi undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/VCC_net undriven or does
-     not drive anything - clipped.
-Signal csi2_dphy_reset_lp_n_i_c undriven or does not drive anything - clipped.
-Signal csi2_dphy_reset_lp_n_i undriven or does not drive anything - clipped.
-Signal csi2_dphy_reset_byte_n_i_c undriven or does not drive anything - clipped.
-     
-Signal csi2_dphy_reset_byte_n_i undriven or does not drive anything - clipped.
-Signal csi2_dphy_pll_lock_i_c undriven or does not drive anything - clipped.
-Signal csi2_dphy_pll_lock_i undriven or does not drive anything - clipped.
-Signal csi2_dphy_clk_lp_ctrl_i_c undriven or does not drive anything - clipped.
-Signal csi2_dphy_clk_lp_ctrl_i undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/cd_clk_o
-     undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/bd1_7 undriven or does not drive anything -
-     clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_2/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_1/S1 undriven or does not drive anything - clipped.
+IO (PIO) Attributes (cont)
+--------------------------
+| cross_domain_fifo_Data[14]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[13]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[12]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[11]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[10]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[9]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[8]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[7]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[6]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[5]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[4]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[3]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[2]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[1]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Data[0]| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_RPReset    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_RdClock    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_RdEn       | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_Reset      | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_WrClock    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LUT_FIFO_WrEn       | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_RPReset| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_RdClock| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_RdEn| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_Reset| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_WrClock| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| cross_domain_fifo_WrEn| INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| pll_double_CLKI     | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
 
                                     Page 6
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
-Removed logic (cont)
---------------------
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_1/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co1_7 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_0/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_0/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co0_7 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_ci_a/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_ci_a/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/cmp_ci_3 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_ci_a/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_ctr_2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co2_3 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co1_6 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co0_6 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_ctr_cia/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_ctr_cia/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_ctr_ci undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_ctr_cia/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/a2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+IO (PIO) Attributes (cont)
+--------------------------
+| pll_double_RST      | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal LUT_FIFO_inst/invout_0 was merged into signal LUT_FIFO_Empty_c
+Signal LUT_FIFO_inst/invout_1 was merged into signal LUT_FIFO_Full_c
+Signal cross_domain_fifo_inst/invout_0 was merged into signal
+     cross_domain_fifo_Empty_c
+Signal cross_domain_fifo_inst/invout_1 was merged into signal
+     cross_domain_fifo_Full_c
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/a5/S1 undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/a5/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_4/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_4/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_2/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_2/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_0/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_0/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_ci_a/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_ci_a/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_cmp_ci_a/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_ctr_5/CO undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_ctr_cia/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_ctr_cia/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_clr_ctr_cia/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/a4/S1 undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/a4/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/af_set_cmp_5/S1 undriven or does not drive anything -
 
                                     Page 7
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
 Removed logic (cont)
 --------------------
-     1688/a2/CO undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_2/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_1/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_1/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_0/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_0/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_ci_a/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_ci_a/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_cmp_ci_a/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_ctr_2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co2_2 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_ctr_cia/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_ctr_cia/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/ae_set_ctr_cia/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/a1/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/a1/CO undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_2/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_4/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_4/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_2/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_2/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_0/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_0/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_ci_a/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_ci_a/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_cmp_ci_a/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_ctr_5/CO undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_ctr_cia/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_ctr_cia/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/af_set_ctr_cia/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/a3/S1 undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/a3/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_4/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_4/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_2/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_2/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_1/S1 undriven or does not drive anything -
 
                                     Page 8
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
 Removed logic (cont)
 --------------------
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_1/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_1/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_0/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_0/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_ci_a/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_ci_a/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/full_cmp_ci_a/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/a0/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/a0/CO undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_2/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_1/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_1/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_0/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_0/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_ci_a/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_ci_a/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/empty_cmp_ci_a/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/r_gctr_2/S1 undriven or does not drive anything - clipped.
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_0/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_0/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_ci_a/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_ci_a/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_cmp_ci_a/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_ctr_5/CO undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_ctr_cia/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_ctr_cia/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_clr_ctr_cia/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/a2/S1 undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/a2/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_4/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_4/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_2/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_2/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_0/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_0/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_ci_a/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_ci_a/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_cmp_ci_a/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_ctr_5/CO undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_ctr_cia/S1 undriven or does not drive anything -
 
                                     Page 9
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
 Removed logic (cont)
 --------------------
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co2_1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/r_gctr_cia/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/r_gctr_cia/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/r_gctr_cia/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/w_gctr_2/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/co2 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/w_gctr_cia/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/w_gctr_cia/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/w_gctr_cia/CI undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_setcount_3 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/iaf_setcount_3 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_setcount_2 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/iaf_setcount_2 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_setcount_0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/iaf_setcount_0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_set undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_cmp_clr undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/partial_full undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
+     clipped.
+Signal LUT_FIFO_inst/ae_set_ctr_cia/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/ae_set_ctr_cia/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/a1/S1 undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/a1/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/full_cmp_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_4/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_4/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_2/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_2/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_1/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_0/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_0/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_ci_a/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_ci_a/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/full_cmp_ci_a/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/a0/S1 undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/a0/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/empty_cmp_5/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_5/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_4/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_4/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_3/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_3/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_2/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_2/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_1/S1 undriven or does not drive anything -
 
                                    Page 10
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
 Removed logic (cont)
 --------------------
-     1688/af_setcount_4 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/iaf_setcount_4 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_setcount_1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/iaf_setcount_1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/a3/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/a3/CO undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo
-     /rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg11501616
-     1688/af_set_c undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/term_d0_en_w undriven or does not drive
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_1/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_0/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_0/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_ci_a/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_ci_a/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/empty_cmp_ci_a/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/r_gctr_5/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/r_gctr_cia/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/r_gctr_cia/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/r_gctr_cia/CI undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/w_gctr_5/CO undriven or does not drive anything - clipped.
+Signal LUT_FIFO_inst/w_gctr_cia/S1 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/w_gctr_cia/S0 undriven or does not drive anything -
+     clipped.
+Signal LUT_FIFO_inst/w_gctr_cia/CI undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/a5/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/a5/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_4/S1 undriven or does not drive
      anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
-     _2_17/S1 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
-     _2_17/CO undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
-     _2_1/S0 undriven or does not drive anything - clipped.
-Signal csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/sub_29_add
-     _2_1/CI undriven or does not drive anything - clipped.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/reset_n_i_I_0_1_lut was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/INV_1 was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/OR2_t8 was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/INV_0 was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/lp_hs_ctrl_
-     d0/reset_n_i_I_0_83_1_lut was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/rx_global_ctrl_inst/rx_global_ctrl/reset_byte_
-     fr_n_i_I_0_1_lut was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
-     d0_rx/i7_2_lut was optimized away.
-Block i1 was optimized away.
-Block i5 was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/i1 was
-     optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/i5 was
-     optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
+Signal cross_domain_fifo_inst/af_clr_cmp_4/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_3/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_3/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_2/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_2/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_1/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_0/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_0/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_ci_a/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_ci_a/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_cmp_ci_a/CI undriven or does not drive
 
                                    Page 11
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
 
 Removed logic (cont)
 --------------------
-     d0_rx/delayg/NEOONE was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/
-     d0_rx/delayg/NEOZERO was optimized away.
-Block csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/
-     rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161
-     688/scuba_vhi_inst was optimized away.
-
-Memory Usage
-------------
-
-/csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_fifo/rx_fi
-     fo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg115016161688:
-    EBRs: 1
-    RAM SLICEs: 0
-    Logic SLICEs: 56
-    PFU Registers: 58
-    -Contains EBR pdp_ram_0_0_0:  TYPE= DP8KE,  Width_B= 8,  Depth_A= 16,
-         Depth_B= 16,  REGMODE_A= OUTREG,  REGMODE_B= OUTREG,  RESETMODE= ASYNC,
-         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
-         GSR= DISABLED,  MEM_LPC_FILE=
-         pmi_fifo_dcELar115016161688fe082cf__PMIX__16__8__8A
-
-     
-
-CLKDIV Summary
---------------
-
-CLKDIV 1:                                     Pin/Node Value
-  CLKDIV Instance Name:                                csi2_dphy_inst/dphy_rx_in
-       st/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/clk_byte_o_I_0
-  CLKDIV Type:                                         CLKDIVG
-  Clock Input:                             NODE     csi2_dphy_inst/dphy_rx_inst/
-       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
-  Reset Input:                             NODE     csi2_dphy_inst/dphy_rx_inst/
-       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/reset_n_i_N_2
-  Output Clock(CDIVX):                     PIN,NODE csi2_dphy_clk_byte_o_c
-  GSR:                                              DISABLED
-  CLK Divider:                                      4.0
-
-ECLKSYNC Summary
-----------------
-
-ECLKSYNC 1:                                     Pin/Node Value
-  ECLKSYNC Instance Name:                                csi2_dphy_inst/dphy_rx_
-       inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/eclksync
-  ECLKSYNC Type:                                         ECLKSYNCB
-  ECLKI Input:                             PIN      csi2_dphy_inst/dphy_rx_inst/
-       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/clk_rx/ohs
-  STOP Input:                              NODE     csi2_dphy_inst/dphy_rx_inst/
-       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/reset_n_i_N_2
-  ECLKO Output:                            NODE     csi2_dphy_inst/dphy_rx_inst/
-       u_dphy_wrapper/LATTICE.dphy_rx/u_soft_dphy_rx/eclk
-
-
-
-
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_ctr_4/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_ctr_4/CO undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_ctr_cia/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_ctr_cia/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_clr_ctr_cia/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/a4/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/a4/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_4/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_4/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_3/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_3/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_2/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_2/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_1/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_0/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_0/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_ci_a/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_ci_a/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_cmp_ci_a/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_ctr_4/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_ctr_4/CO undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_ctr_cia/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_ctr_cia/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/af_set_ctr_cia/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/a3/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/a3/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_4/S1 undriven or does not drive
 
                                    Page 12
 
 
 
 
-Design:  Crosslink_CSI2ToRaw10                         Date:  09/29/20  00:16:50
+Design:  camera                                        Date:  11/11/20  00:15:48
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_4/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_3/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_3/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_2/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_2/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_1/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_0/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_0/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_ci_a/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_ci_a/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_cmp_ci_a/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_ctr_4/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_ctr_4/CO undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_ctr_cia/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_ctr_cia/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_clr_ctr_cia/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/a2/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/a2/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_4/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_4/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_3/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_3/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_2/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_2/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_1/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_1/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_0/S1 undriven or does not drive
+
+                                   Page 13
+
+
+
+
+Design:  camera                                        Date:  11/11/20  00:15:48
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_0/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_ci_a/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_ci_a/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_cmp_ci_a/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_ctr_4/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_ctr_4/CO undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_ctr_cia/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_ctr_cia/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/ae_set_ctr_cia/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/a1/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/a1/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/full_cmp_4/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_4/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_3/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_3/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_2/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_2/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_1/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_1/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_0/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_0/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/full_cmp_ci_a/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/full_cmp_ci_a/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/full_cmp_ci_a/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/a0/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/a0/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/empty_cmp_4/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_4/S0 undriven or does not drive anything
+
+                                   Page 14
+
+
+
+
+Design:  camera                                        Date:  11/11/20  00:15:48
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_3/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_3/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_2/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_2/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_1/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_1/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_0/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_0/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_ci_a/S1 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_ci_a/S0 undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/empty_cmp_ci_a/CI undriven or does not drive
+     anything - clipped.
+Signal cross_domain_fifo_inst/r_gctr_4/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/r_gctr_4/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/r_gctr_cia/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/r_gctr_cia/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/r_gctr_cia/CI undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/w_gctr_4/S1 undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/w_gctr_4/CO undriven or does not drive anything -
+     clipped.
+Signal cross_domain_fifo_inst/w_gctr_cia/S1 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/w_gctr_cia/S0 undriven or does not drive anything
+     - clipped.
+Signal cross_domain_fifo_inst/w_gctr_cia/CI undriven or does not drive anything
+     - clipped.
+Block LUT_FIFO_inst/INV_0 was optimized away.
+Block LUT_FIFO_inst/INV_1 was optimized away.
+Block cross_domain_fifo_inst/INV_0 was optimized away.
+Block cross_domain_fifo_inst/INV_1 was optimized away.
+Block i5 was optimized away.
+
+Memory Usage
+------------
+
+/LUT_FIFO_inst:
+    EBRs: 3
+    RAM SLICEs: 0
+    Logic SLICEs: 163
+
+                                   Page 15
+
+
+
+
+Design:  camera                                        Date:  11/11/20  00:15:48
+
+Memory Usage (cont)
+-------------------
+    PFU Registers: 172
+    -Contains EBR pdp_ram_0_0_2:  TYPE= DP8KE,  Width_B= 4,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_INIT_FILE= ,  MEM_LPC_FILE= LUT_FIFO.lpc
+    -Contains EBR pdp_ram_0_1_1:  TYPE= DP8KE,  Width_B= 4,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_INIT_FILE= ,  MEM_LPC_FILE= LUT_FIFO.lpc
+    -Contains EBR pdp_ram_0_2_0:  TYPE= DP8KE,  Width_B= 2,  Depth_A= 2048,
+         Depth_B= 2048,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= ASYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_INIT_FILE= ,  MEM_LPC_FILE= LUT_FIFO.lpc
+/cross_domain_fifo_inst:
+    EBRs: 2
+    RAM SLICEs: 0
+    Logic SLICEs: 135
+    PFU Registers: 130
+    -Contains EBR pdp_ram_0_0_1:  TYPE= PDPW8KE,  Width= 18,  Depth_R= 256,
+         Depth_W= 256,  REGMODE= NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE=
+         SYNC,  GSR= DISABLED,  MEM_INIT_FILE= ,  MEM_LPC_FILE=
+         cross_domain_fifo.lpc
+    -Contains EBR pdp_ram_0_1_0:  TYPE= PDPW8KE,  Width= 14,  Depth_R= 256,
+         Depth_W= 256,  REGMODE= NOREG,  RESETMODE= ASYNC,  ASYNC_RESET_RELEASE=
+         SYNC,  GSR= DISABLED,  MEM_INIT_FILE= ,  MEM_LPC_FILE=
+         cross_domain_fifo.lpc
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                pll_double_inst/PLLInst_0
+  PLL Type:                                         EHXPLLM
+  Input Clock:                             PIN      pll_double_CLKI_c
+  Input Clock2:                                     NONE
+  Input Clock select:                               NONE
+  Output Clock(P):                         PIN,NODE pll_double_CLKOP_c
+  Output Clock(S):                         PIN      pll_double_CLKOS_c
+  Output Clock(S2):                        PIN      pll_double_CLKOS2_c
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     pll_double_CLKOP_c
+  Reset Signal:                            PIN      pll_double_RST_c
+  PLL LOCK signal:                         PIN      pll_double_LOCK_c
+  PLL Internal LOCK Signal:                         NONE
+  Input Clock Frequency (MHz):                      90.0000
+  Output Clock(P) Frequency (MHz):                  288.0000
+  Output Clock(S) Frequency (MHz):                  288.0000
+  Output Clock(S2) Frequency (MHz):                 90.0000
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      REFCLK
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              NONE
+  Pre Divider B Input:                              NONE
+  Pre Divider C Input:                              NONE
+
+                                   Page 16
+
+
+
+
+Design:  camera                                        Date:  11/11/20  00:15:48
+
+PLL/DLL Summary (cont)
+----------------------
+  Pre Divider D Input:                              NONE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     5
+  CLKFB Divider:                                    16
+  CLKOP Divider:                                    3
+  CLKOS Divider:                                    3
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             NONE
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 FALLING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                90
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS2 Trim Option Rising/Falling:                NONE
+  CLKOS2 Trim Option Delay:                         NONE
+  CLKOS3 Desired Phase Shift(degree):               0
+  CLKOS3 Trim Option Rising/Falling:                NONE
+  CLKOS3 Trim Option Delay:                         NONE
 
 ASIC Components
 ---------------
 
-Instance Name: csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u
-     _rx_fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg
-     115016161688/pdp_ram_0_0_0
+Instance Name: cross_domain_fifo_inst/pdp_ram_0_0_1
+         Type: PDPW8KE
+Instance Name: cross_domain_fifo_inst/pdp_ram_0_1_0
+         Type: PDPW8KE
+Instance Name: pll_double_inst/PLLInst_0
+         Type: EHXPLLM
+Instance Name: LUT_FIFO_inst/pdp_ram_0_0_2
          Type: DP8KE
-Instance Name: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft
-     _dphy_rx/clk_rx/eclksync
-         Type: ECLKSYNCB
-Instance Name: csi2_dphy_inst/dphy_rx_inst/u_dphy_wrapper/LATTICE.dphy_rx/u_soft
-     _dphy_rx/clk_rx/clk_byte_o_I_0
-         Type: CLKDIVG
+Instance Name: LUT_FIFO_inst/pdp_ram_0_1_1
+         Type: DP8KE
+Instance Name: LUT_FIFO_inst/pdp_ram_0_2_0
+         Type: DP8KE
 
 GSR Usage
 ---------
 
 GSR Component:
-   The local reset signal 'csi2_dphy_reset_byte_fr_n_i_c' of the design has been
-        inferred as Global Set Reset (GSR). The reset signal used for GSR
-        control is 'csi2_dphy_reset_byte_fr_n_i_c'.
+   The local reset signal 'LUT_FIFO_Reset_c' of the design has been inferred as
+        Global Set Reset (GSR). The reset signal used for GSR control is
+        'LUT_FIFO_Reset_c'.
         
 
      GSR Property:
@@ -826,34 +1116,74 @@ GSR Component:
      Components on inferred reset domain with GSR Property disabled
 --------------------------------------------------------------
 
+
+                                   Page 17
+
+
+
+
+Design:  camera                                        Date:  11/11/20  00:15:48
+
+GSR Usage (cont)
+----------------
      These components have the GSR property set to DISABLED and are on the
      inferred reset domain. The components will respond to the reset signal
-     'csi2_dphy_reset_byte_fr_n_i_c' via the local reset on the component and
-     not the GSR component.
+     'LUT_FIFO_Reset_c' via the local reset on the component and not the GSR
+     component.
 
      Type and number of components of the type: 
-   DP8KE = 2
+   DP8KE = 6
 
      Type and instance name of component: 
-   DP8KE : csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_
-        fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg1
-        15016161688/pdp_ram_0_0_0
-   DP8KE : csi2_dphy_inst/dphy_rx_inst/dphy_rx_wrap_inst/dsi_rx/RX_FIFO_ON.u_rx_
-        fifo/rx_fifo_single.rx_fifo_single_inst/pmi_genpmi_fifo_dcLIFMDasyncreg1
-        15016161688/pdp_ram_0_0_0
+   DP8KE : LUT_FIFO_inst/pdp_ram_0_2_0
+   DP8KE : LUT_FIFO_inst/pdp_ram_0_2_0
+   DP8KE : LUT_FIFO_inst/pdp_ram_0_1_1
+   DP8KE : LUT_FIFO_inst/pdp_ram_0_1_1
+   DP8KE : LUT_FIFO_inst/pdp_ram_0_0_2
+   DP8KE : LUT_FIFO_inst/pdp_ram_0_0_2
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 37 MB
+   Peak Memory Usage: 38 MB
         
 
 
 
 
-                                   Page 13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 18
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

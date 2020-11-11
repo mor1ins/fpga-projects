@@ -1,0 +1,2 @@
+VHDL_ENTITY_ONLY cross_domain_fifo DEFIN cross_domain_fifo.vhd
+MODULE cross_domain_fifo DEFIN cross_domain_fifo.vhd

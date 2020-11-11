@@ -1,0 +1,12 @@
+Data i
+WrClock  i
+RdClock  i
+WrEn  i
+RdEn  i
+Reset  i
+RPReset  i
+Q o
+Empty  o
+Full  o
+AlmostEmpty  o
+AlmostFull  o
