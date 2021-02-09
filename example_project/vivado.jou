@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb  9 23:21:01 2021
+# Process ID: 16036
+# Current directory: C:/Users/Eduard/Documents/GitHub/fpga-projects/example_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8760 C:\Users\Eduard\Documents\GitHub\fpga-projects\example_project\example_project.xpr
+# Log file: C:/Users/Eduard/Documents/GitHub/fpga-projects/example_project/vivado.log
+# Journal file: C:/Users/Eduard/Documents/GitHub/fpga-projects/example_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Eduard/Documents/GitHub/fpga-projects/example_project/example_project.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+close_sim
